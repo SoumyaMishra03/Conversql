@@ -15,7 +15,6 @@ def insert_from_csv():
         cnx = mysql.connector.connect(**config)
         cursor = cnx.cursor()
 
-        # Insert into patients table
         with open('patients.csv', mode='r', encoding='utf-8') as file:
             reader = csv.DictReader(file)
             patient_data = [

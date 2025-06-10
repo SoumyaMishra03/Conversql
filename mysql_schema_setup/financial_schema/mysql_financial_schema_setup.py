@@ -3,7 +3,7 @@ from mysql.connector import errorcode
 
 def create_database(cursor, db_name):
     try:
-        cursor.execute(f"drop database {db_name}");
+        cursor.execute(f"drop database {db_name}")
         cursor.execute(f"CREATE DATABASE IF NOT EXISTS {db_name}")
         print(f"Database '{db_name}' created or already exists.")
     except mysql.connector.Error as err:
@@ -20,7 +20,7 @@ def create_tables(cursor):
         "  CustGender VARCHAR(10), "
         "  CustLocation VARCHAR(50), "
         "  CustAccountBalance FLOAT"
-        ") ENGINE=InnoDB"
+        ") "
     )
     
 
@@ -31,7 +31,7 @@ def create_tables(cursor):
         "  TransactionDate varchar(30), "
         "  TransactionTime varchar(30), "
         "  TransactionAmount_INR FLOAT"
-        ") ENGINE=InnoDB"
+        ")"
     )
 
     for table_name in TABLES:

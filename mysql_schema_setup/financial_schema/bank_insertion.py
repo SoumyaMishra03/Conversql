@@ -1,7 +1,6 @@
 import mysql.connector
 import csv
 
-# DB Configuration
 config = {
     'host': 'localhost',
     'user': 'root',
@@ -9,7 +8,6 @@ config = {
     'database': 'financial_transaction'
 }
 
-# Insert into customers table
 def insert_customers(cursor, filepath):
     with open(filepath, 'r', encoding='utf-8') as file:
         reader = csv.DictReader(file)

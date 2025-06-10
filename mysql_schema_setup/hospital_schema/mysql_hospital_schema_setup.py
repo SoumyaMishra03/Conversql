@@ -4,17 +4,13 @@ from mysql.connector import errorcode
 def create_database(cursor, db_name):
     try:
         cursor.execute(f"drop database {db_name}")
-        cursor.execute(f"CREATE DATABASE IF NOT EXISTS {db_name}")
+        cursor.execute(f"CREATE DATABASE {db_name}")
         print(f"Database '{db_name}' created or already exists.")
     except mysql.connector.Error as err:
         print(f"Failed creating database: {err}")
         exit(1)
 
 def create_tables(cursor):
-    """
-    Creates the necessary tables for the hospital data schema:
-    patients and hospital_encounters.
-    """
     TABLES = {}
 
     TABLES['patients'] = (
@@ -22,7 +18,7 @@ def create_tables(cursor):
         "  Patient_ID VARCHAR(20), "
         "  Age INT, "
         "  Gender VARCHAR(10)"
-        ") ENGINE=InnoDB"
+        ") "
     )
 
     TABLES['hospital_encounters'] = (
@@ -35,7 +31,7 @@ def create_tables(cursor):
         "  Readmission VARCHAR(10), "
         "  Outcome VARCHAR(50), "
         "  Satisfaction VARCHAR(50)"
-        ") ENGINE=InnoDB"
+        ") "
     )
 
     for table_name, ddl in TABLES.items():

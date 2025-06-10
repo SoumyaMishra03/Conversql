@@ -3,8 +3,8 @@ import mysql.connector
 def create_database(cursor, db_name):
     try:
         cursor.execute(f"drop database {db_name}")
-        cursor.execute(f"CREATE DATABASE IF NOT EXISTS {db_name}")
-        print(f"Database '{db_name}' created or already exists.")
+        cursor.execute(f"CREATE DATABASE {db_name}")
+        print(f"Database '{db_name}' created .")
     except mysql.connector.Error as err:
         print(f"Failed creating database: {err}")
         exit(1)
@@ -12,7 +12,6 @@ def create_database(cursor, db_name):
 def create_tables(cursor):
     TABLES = {}
 
-    # Passengers Table
     TABLES['passengers'] = (
         "CREATE TABLE IF NOT EXISTS passengers ("
         "  PassengerID VARCHAR(10) , "
@@ -21,27 +20,25 @@ def create_tables(cursor):
         "  Gender VARCHAR(10), "
         "  Age INT, "
         "  Nationality VARCHAR(50)"
-        ") ENGINE=InnoDB"
+        ")"
     )
 
-    # Airports Table
     TABLES['airports'] = (
         "CREATE TABLE IF NOT EXISTS airports ("           
         "  AirportName VARCHAR(100) , "
         "  CountryCode VARCHAR(10), "
         "  CountryName VARCHAR(50), "
         "  Continent VARCHAR(50)"
-        ") ENGINE=InnoDB"
+        ")"
     )
 
-    # Flights Table
     TABLES['flights'] = (
         "CREATE TABLE IF NOT EXISTS flights ("
         "  PassengerID Varchar(10), "
         "  DepartureDate Varchar(20), "
         "  PilotName VARCHAR(50), "
         "  FlightStatus VARCHAR(20)"
-        ") ENGINE=InnoDB"
+        ")"
     )
 
     for table_name, ddl in TABLES.items():

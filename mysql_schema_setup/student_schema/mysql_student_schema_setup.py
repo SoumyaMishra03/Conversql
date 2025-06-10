@@ -3,9 +3,9 @@ from mysql.connector import errorcode
 
 def create_database(cursor, db_name):
     try:
-        # cursor.execute(f"drop database {db_name}")
-        cursor.execute(f"CREATE DATABASE IF NOT EXISTS {db_name}")
-        print(f"Database '{db_name}' created or already exists.")
+        cursor.execute(f"drop database {db_name}")
+        cursor.execute(f"CREATE DATABASE {db_name}")
+        print(f"Database '{db_name}' created .")
     except mysql.connector.Error as err:
         print(f"Failed creating database: {err}")
         exit(1)
@@ -17,7 +17,7 @@ def create_tables(cursor):
         "  Student_Names VARCHAR(100) NOT NULL, "
         "  Phone_No VARCHAR(20), "
         "  Gender VARCHAR(10)"
-        ") ENGINE=InnoDB"
+        ") "
     )
 
     TABLES['student_academic'] = (
@@ -30,7 +30,7 @@ def create_tables(cursor):
         "  Chemistry FLOAT, "
         "  Grade VARCHAR(10), "
         "  Comment VARCHAR(255)"
-        ") ENGINE=InnoDB"
+        ") "
     )
 
 
@@ -41,7 +41,7 @@ def create_tables(cursor):
         "  CourseCode VARCHAR(50), "
         "  ListofCourses VARCHAR(255), "
         "  RatingOfCourses FLOAT"
-        ") ENGINE=InnoDB"
+        ") "
     )
 
     for table_name, ddl in TABLES.items():

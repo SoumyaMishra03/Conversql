@@ -4,8 +4,8 @@ from mysql.connector import errorcode
 def create_database(cursor, db_name):
     try:
         cursor.execute(f"drop database {db_name}")
-        cursor.execute(f"CREATE DATABASE IF NOT EXISTS {db_name}")
-        print(f"Database '{db_name}' created or already exists.")
+        cursor.execute(f"CREATE DATABASE {db_name}")
+        print(f"Database '{db_name}' created .")
     except mysql.connector.Error as err:
         print(f"Failed creating database: {err}")
         exit(1)
@@ -24,7 +24,7 @@ def create_tables(cursor):
         "  State VARCHAR(50), "
         "  LocationCode VARCHAR(50), "
         "  ADEmail VARCHAR(100) "
-        ") ENGINE=InnoDB"
+        ") "
     )
     TABLES['employee_employment'] = (
         "CREATE TABLE IF NOT EXISTS employee_employment ("
@@ -43,7 +43,7 @@ def create_tables(cursor):
         "  JobFunctionDescription VARCHAR(100), "
         "  PerformanceScore FLOAT, "
         "  CurrentEmployeeRating FLOAT "
-        ") ENGINE=InnoDB"
+        ")"
     )
 
     TABLES['employee_termination'] = (
@@ -51,7 +51,7 @@ def create_tables(cursor):
         "  EmpID VARCHAR(20) , "
         "  TerminationType VARCHAR(50), "
         "  TerminationDescription VARCHAR(255) "
-        ") ENGINE=InnoDB"
+        ")"
     )
 
 
