@@ -28,6 +28,7 @@ def insert_from_csv():
         )
         cursor.executemany(patient_query, patient_data)
         print(f"Inserted {cursor.rowcount} rows into 'patients' table.")
+
         with open('hospital_encounters.csv', mode='r', encoding='utf-8') as file:
             reader = csv.DictReader(file)
             encounter_data = [

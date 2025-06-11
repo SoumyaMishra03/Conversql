@@ -11,55 +11,71 @@ config = {
 def insert_passengers(cursor, filepath):
     with open(filepath, 'r', encoding='utf-8') as file:
         reader = csv.DictReader(file)
+        data = []
         for row in reader:
-            query = """
-                INSERT INTO passengers (PassengerID, FirstName, LastName, Gender, Age, Nationality)
-                VALUES (%s, %s, %s, %s, %s, %s)
-            """
-            try:
-                age_val = int(row['Age']) if row['Age'] else None
-                values = (
-                    row['Passenger ID'], row['First Name'], row['Last Name'],
-                    row['Gender'], age_val, row['Nationality']
-                )
-                cursor.execute(query, values)
-                print(f"Inserted passenger: {values}")
-            except mysql.connector.Error as e:
-                print(f"Error inserting passenger {row['PassengerID']}: {e}")
+            age_val = int(row['Age']) if row['Age'] else None
+            data.append((
+                row['Passenger ID'],
+                row['First Name'],
+                row['Last Name'],
+                row['Gender'],
+                age_val,
+                row['Nationality']
+            ))
+
+    query = """
+        INSERT INTO passengers (PassengerID, FirstName, LastName, Gender, Age, Nationality)
+        VALUES (%s, %s, %s, %s, %s, %s)
+    """
+    try:
+        cursor.executemany(query, data)
+        print(f"Inserted {len(data)} passengers.")
+    except mysql.connector.Error as e:
+        print(f"Error inserting passengers: {e}")
 
 def insert_airports(cursor, filepath):
     with open(filepath, 'r', encoding='utf-8') as file:
         reader = csv.DictReader(file)
-        for row in reader:
-            query = """
-                INSERT INTO airports (AirportName, CountryCode, CountryName, Continent)
-                VALUES (%s, %s, %s, %s)
-            """
-            try:
-                values = (
-                    row['Airport Name'], row['Airport Country Code'], row['Country Name'], row['Airport Continent']
-                )
-                cursor.execute(query, values)
-                print(f"Inserted airport: {values}")
-            except mysql.connector.Error as e:
-                print(f"Error inserting airport {row['Airport Name']}: {e}")
+        data = [
+            (
+                row['Airport Name'],
+                row['Airport Country Code'],
+                row['Country Name'],
+                row['Airport Continent']
+            ) for row in reader
+        ]
+
+    query = """
+        INSERT INTO airports (AirportName, CountryCode, CountryName, Continent)
+        VALUES (%s, %s, %s, %s)
+    """
+    try:
+        cursor.executemany(query, data)
+        print(f"Inserted {len(data)} airports.")
+    except mysql.connector.Error as e:
+        print(f"Error inserting airports: {e}")
 
 def insert_flights(cursor, filepath):
     with open(filepath, 'r', encoding='utf-8') as file:
         reader = csv.DictReader(file)
-        for row in reader:
-            query = """
-                INSERT INTO flights (PassengerID, DepartureDate, PilotName, FlightStatus)
-                VALUES (%s, %s, %s, %s)
-            """
-            try:
-                values = (
-                    row['Passenger ID'],row['Departure Date'], row['Pilot Name'], row['Flight Status']
-                )
-                cursor.execute(query, values)
-                print(f"Inserted flight: {values}")
-            except mysql.connector.Error as e:
-                print(f"Error inserting flight for passenger {row['Passenger ID']}: {e}")
+        data = [
+            (
+                row['Passenger ID'],
+                row['Departure Date'],
+                row['Pilot Name'],
+                row['Flight Status']
+            ) for row in reader
+        ]
+
+    query = """
+        INSERT INTO flights (PassengerID, DepartureDate, PilotName, FlightStatus)
+        VALUES (%s, %s, %s, %s)
+    """
+    try:
+        cursor.executemany(query, data)
+        print(f"Inserted {len(data)} flights.")
+    except mysql.connector.Error as e:
+        print(f"Error inserting flights: {e}")
 
 def main():
     try:
@@ -71,7 +87,7 @@ def main():
         insert_flights(cursor, 'flights_table.csv')
 
         conn.commit()
-        print("Data inserted successfully!")
+        print("All data inserted successfully!")
 
     except mysql.connector.Error as e:
         print(f"Database error: {e}")
