@@ -12,25 +12,35 @@ def insert_customers(cursor, filepath):
     with open(filepath, 'r', encoding='utf-8') as file:
         reader = csv.DictReader(file)
         data = []
+        seen_ids = set()
         for row in reader:
-            values = (
-                row['CustomerID'],
-                row['CustomerDOB'],
-                row['CustGender'],
-                row['CustLocation'],
-                float(row['CustAccountBalance']) if row['CustAccountBalance'] else None
-            )
-            data.append(values)
+            try:
+                cust_id = row['CustomerID']
+                if cust_id in seen_ids:
+                    continue  
+                seen_ids.add(cust_id)
+
+                account_balance = float(row['CustAccountBalance']) if row['CustAccountBalance'] else 0.0
+                values = (
+                    cust_id,
+                    row['CustomerDOB'],
+                    row['CustGender'],
+                    row['CustLocation'],
+                    account_balance
+                )
+                data.append(values)
+            except (ValueError, KeyError) as e:
+                print(f"Skipping customer row due to error: {e} -> {row}")
 
     query = """
-        INSERT INTO customers (
+        INSERT IGNORE INTO customers (
             CustomerID, CustomerDOB, CustGender, 
             CustLocation, CustAccountBalance
         ) VALUES (%s, %s, %s, %s, %s)
     """
     try:
         cursor.executemany(query, data)
-        print(f"Inserted {len(data)} customers.")
+        print(f"Inserted {len(data)} unique customers.")
     except mysql.connector.Error as e:
         print(f"Error inserting customers: {e}")
 
@@ -39,14 +49,18 @@ def insert_transactions(cursor, filepath):
         reader = csv.DictReader(file)
         data = []
         for row in reader:
-            values = (
-                row['TransactionID'],
-                row['CustomerID'],
-                row['TransactionDate'],
-                row['TransactionTime'],
-                float(row['TransactionAmount (INR)']) if row['TransactionAmount (INR)'] else None
-            )
-            data.append(values)
+            try:
+                txn_amount = float(row['TransactionAmount (INR)']) if row['TransactionAmount (INR)'] else 0.0
+                values = (
+                    row['TransactionID'],
+                    row['CustomerID'],
+                    row['TransactionDate'],
+                    row['TransactionTime'],
+                    txn_amount
+                )
+                data.append(values)
+            except (ValueError, KeyError) as e:
+                print(f"Skipping transaction row due to error: {e} -> {row}")
 
     query = """
         INSERT INTO transactions (
@@ -75,8 +89,10 @@ def main():
         print(f"Database error: {err}")
 
     finally:
-        cursor.close()
-        conn.close()
+        if cursor:
+            cursor.close()
+        if conn:
+            conn.close()
 
 if __name__ == "__main__":
     main()

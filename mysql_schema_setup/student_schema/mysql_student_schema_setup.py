@@ -3,26 +3,29 @@ from mysql.connector import errorcode
 
 def create_database(cursor, db_name):
     try:
-        cursor.execute(f"drop database {db_name}")
+        cursor.execute(f"DROP DATABASE IF EXISTS {db_name}")
         cursor.execute(f"CREATE DATABASE {db_name}")
-        print(f"Database '{db_name}' created .")
+        print(f"Database '{db_name}' created.")
     except mysql.connector.Error as err:
         print(f"Failed creating database: {err}")
         exit(1)
 
 def create_tables(cursor):
     TABLES = {}
+
     TABLES['student_personal'] = (
         "CREATE TABLE IF NOT EXISTS student_personal ("
+        "  Roll_No INT, "
         "  Student_Names VARCHAR(100) NOT NULL, "
         "  Phone_No VARCHAR(20), "
         "  Gender VARCHAR(10)"
-        ") "
+        ")"
     )
 
     TABLES['student_academic'] = (
         "CREATE TABLE IF NOT EXISTS student_academic ("
-        "  Student_Names varchar(100), "
+        "  Roll_No INT, "
+        "  Student_Names VARCHAR(100), "
         "  Study_Hours FLOAT, "
         "  Part_Time_Job VARCHAR(10), "
         "  Math FLOAT, "
@@ -30,18 +33,18 @@ def create_tables(cursor):
         "  Chemistry FLOAT, "
         "  Grade VARCHAR(10), "
         "  Comment VARCHAR(255)"
-        ") "
+        ")"
     )
-
 
     TABLES['student_courses'] = (
         "CREATE TABLE IF NOT EXISTS student_courses ("
-        "  Student_Names varchar(100), "
+        "  Roll_No INT, "
+        "  Student_Names VARCHAR(100), "
         "  Course_Recommendation VARCHAR(255), "
         "  CourseCode VARCHAR(50), "
         "  ListofCourses VARCHAR(255), "
         "  RatingOfCourses FLOAT"
-        ") "
+        ")"
     )
 
     for table_name, ddl in TABLES.items():
@@ -58,9 +61,9 @@ def create_tables(cursor):
 def main():
     db_name = 'student_db'
     config = {
-        'user': 'root',    
-        'password': 'root',  
-        'host': 'localhost',        
+        'user': 'root',
+        'password': 'root',
+        'host': 'localhost',
         'raise_on_warnings': True
     }
 

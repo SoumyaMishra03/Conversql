@@ -11,10 +11,15 @@ config = {
 def insert_properties(cursor, filepath):
     with open(filepath, 'r', encoding='utf-8') as file:
         reader = csv.DictReader(file)
-        data = [
-            (row['Name'], row['Property Title'], row['Price'], row['Description'])
-            for row in reader
-        ]
+        data = []
+        seen_names = set()
+        for row in reader:
+            name = row['Name']
+            name_key = name.strip().lower()  
+            if name_key in seen_names:
+                continue  
+            seen_names.add(name_key)
+            data.append((name, row['Property Title'], row['Price'], row['Description']))
 
     query = """
         INSERT INTO properties (
@@ -23,7 +28,7 @@ def insert_properties(cursor, filepath):
     """
     try:
         cursor.executemany(query, data)
-        print(f"Inserted {len(data)} rows into properties.")
+        print(f"Inserted {len(data)} unique rows into properties.")
     except mysql.connector.Error as e:
         print(f"Error inserting into properties: {e}")
 
@@ -31,10 +36,16 @@ def insert_locations(cursor, filepath):
     with open(filepath, 'r', encoding='utf-8') as file:
         reader = csv.DictReader(file)
         data = []
+        seen_names = set()
         for row in reader:
+            name = row['Name']
+            name_key = name.strip().lower()
+            if name_key in seen_names:
+                continue
             try:
+                seen_names.add(name_key)
                 data.append((
-                    row['Name'],
+                    name,
                     row['Location'],
                     float(row['Total_Area']) if row['Total_Area'] else None,
                     float(row['Price_per_SQFT']) if row['Price_per_SQFT'] else None
@@ -49,7 +60,7 @@ def insert_locations(cursor, filepath):
     """
     try:
         cursor.executemany(query, data)
-        print(f"Inserted {len(data)} rows into locations.")
+        print(f"Inserted {len(data)} unique rows into locations.")
     except mysql.connector.Error as e:
         print(f"Error inserting into locations: {e}")
 
@@ -57,10 +68,16 @@ def insert_features(cursor, filepath):
     with open(filepath, 'r', encoding='utf-8') as file:
         reader = csv.DictReader(file)
         data = []
+        seen_names = set()
         for row in reader:
+            name = row['Name']
+            name_key = name.strip().lower()
+            if name_key in seen_names:
+                continue
             try:
+                seen_names.add(name_key)
                 data.append((
-                    row['Name'],
+                    name,
                     int(row['Baths']) if row['Baths'] else None,
                     row['Balcony']
                 ))
@@ -74,7 +91,7 @@ def insert_features(cursor, filepath):
     """
     try:
         cursor.executemany(query, data)
-        print(f"Inserted {len(data)} rows into features.")
+        print(f"Inserted {len(data)} unique rows into features.")
     except mysql.connector.Error as e:
         print(f"Error inserting into features: {e}")
 
@@ -94,8 +111,10 @@ def main():
         print(f"Database connection error: {err}")
 
     finally:
-        if cursor: cursor.close()
-        if cnx: cnx.close()
+        if cursor:
+            cursor.close()
+        if cnx:
+            cnx.close()
 
 if __name__ == "__main__":
     main()
