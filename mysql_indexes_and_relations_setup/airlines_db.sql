@@ -43,3 +43,5 @@ delete from passengers where passengerid="mzwjgo" limit 1;
 delete from passengers where passengerid="pqvgsy" limit 1;
 
 alter table passengers add primary key(passengerid);
+
+alter table flights add foreign key(passengerid) references passengers(passengerid);

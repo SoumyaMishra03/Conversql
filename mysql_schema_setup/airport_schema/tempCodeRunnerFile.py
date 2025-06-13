@@ -1,110 +1,76 @@
 import mysql.connector
-import csv
 
-config = {
-    'host': 'localhost',
-    'user': 'root',
-    'password': 'root',
-    'database': 'airline_db'
-}
-
-def insert_passengers(cursor, filepath):
-    with open(filepath, 'r', encoding='utf-8') as file:
-        reader = csv.DictReader(file)
-        data = []
-        seen = set()
-        for row in reader:
-            key = row['Passenger ID']
-            if key in seen:
-                continue
-            seen.add(key)
-            age_val = int(row['Age']) if row['Age'] else None
-            data.append((
-                key,
-                row['First Name'],
-                row['Last Name'],
-                row['Gender'],
-                age_val,
-                row['Nationality']
-            ))
-
-    query = """
-        INSERT INTO passengers (PassengerID, FirstName, LastName, Gender, Age, Nationality)
-        VALUES (%s, %s, %s, %s, %s, %s)
-    """
+def create_database(cursor, db_name):
     try:
-        cursor.executemany(query, data)
-        print(f"Inserted {len(data)} unique passengers.")
-    except mysql.connector.Error as e:
-        print(f"Error inserting passengers: {e}")
+        cursor.execute(f"drop database {db_name}")
+        cursor.execute(f"CREATE DATABASE {db_name}")
+        print(f"Database '{db_name}' created .")
+    except mysql.connector.Error as err:
+        print(f"Failed creating database: {err}")
+        exit(1)
 
-def insert_airports(cursor, filepath):
-    with open(filepath, 'r', encoding='utf-8') as file:
-        reader = csv.DictReader(file)
-        data = []
-        seen = set()
-        for row in reader:
-            key = (row['Airport Name'], row['Airport Country Code'])
-            if key in seen:
-                continue
-            seen.add(key)
-            data.append((
-                row['Airport Name'],
-                row['Airport Country Code'],
-                row['Country Name'],
-                row['Airport Continent']
-            ))
+def create_tables(cursor):
+    TABLES = {}
 
-    query = """
-        INSERT INTO airports (AirportName, CountryCode, CountryName, Continent)
-        VALUES (%s, %s, %s, %s)
-    """
-    try:
-        cursor.executemany(query, data)
-        print(f"Inserted {len(data)} unique airports.")
-    except mysql.connector.Error as e:
-        print(f"Error inserting airports: {e}")
+    TABLES['passengers'] = (
+        "CREATE TABLE IF NOT EXISTS passengers ("
+        "  PassengerID VARCHAR(10) , "
+        "  FirstName VARCHAR(50), "
+        "  LastName VARCHAR(50), "
+        "  Gender VARCHAR(10), "
+        "  Age INT, "
+        "  Nationality VARCHAR(50)"
+        ")"
+    )
 
-def insert_flights(cursor, filepath):
-    with open(filepath, 'r', encoding='utf-8') as file:
-        reader = csv.DictReader(file)
-        data = []
-        seen = set()
-        for row in reader:
-            key = (row['Passenger ID'], row['Departure Date'], row['Pilot Name'], row['Flight Status'])
-            if key in seen:
-                continue
-            seen.add(key)
-            data.append(key)
+    TABLES['airports'] = (
+        "CREATE TABLE IF NOT EXISTS airports ("           
+        "  AirportName VARCHAR(100) , "
+        "  CountryCode VARCHAR(10), "
+        "  CountryName VARCHAR(50), "
+        "  Continent VARCHAR(50)"
+        ")"
+    )
 
-    query = """
-        INSERT INTO flights (PassengerID, DepartureDate, PilotName, FlightStatus)
-        VALUES (%s, %s, %s, %s)
-    """
-    try:
-        cursor.executemany(query, data)
-        print(f"Inserted {len(data)} unique flights.")
-    except mysql.connector.Error as e:
-        print(f"Error inserting flights: {e}")
+    TABLES['flights'] = (
+        "CREATE TABLE IF NOT EXISTS flights ("
+        "  PassengerID Varchar(10), "
+        "  DepartureDate Varchar(20), "
+        "  PilotName VARCHAR(50), "
+        "  FlightStatus VARCHAR(20)"
+        ")"
+    )
+
+    for table_name, ddl in TABLES.items():
+        try:
+            print(f"Creating table `{table_name}`: ", end="")
+            cursor.execute(ddl)
+            print("OK")
+        except mysql.connector.Error as err:
+            print(f"Error creating table `{table_name}`: {err.msg}")
 
 def main():
+    db_name = 'airline_db'
+    config = {
+        'user': 'root',
+        'password': 'root',
+        'host': 'localhost',
+        'raise_on_warnings': True
+    }
+
     try:
-        conn = mysql.connector.connect(**config)
-        cursor = conn.cursor()
-
-        insert_passengers(cursor, 'passengers_table.csv')
-        insert_airports(cursor, 'airports_table.csv')
-        insert_flights(cursor, 'flights_table.csv')
-
-        conn.commit()
-        print("All data inserted successfully.")
-
-    except mysql.connector.Error as e:
-        print(f"Database error: {e}")
-
-    finally:
+        cnx = mysql.connector.connect(**config)
+        cursor = cnx.cursor()
+        create_database(cursor, db_name)
+        cursor.execute(f"USE {db_name}")
+        create_tables(cursor)
+        cnx.commit()
         cursor.close()
-        conn.close()
+        cnx.close()
+        print("All tables created successfully in the database.")
+    except mysql.connector.Error as err:
+        print(f"Error: {err}")
+        exit(1)
 
 if __name__ == "__main__":
     main()

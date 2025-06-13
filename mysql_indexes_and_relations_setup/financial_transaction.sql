@@ -12,3 +12,5 @@ select count(distinct customerid) from transactions;
 alter table transactions add primary key(transactionid);
 
 alter table customers add primary key(customerid);
+
+alter table transactions add foreign key(customerid) references customers(customerid);
