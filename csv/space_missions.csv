@@ -1,4 +1,4 @@
-Unnamed: 0,Organisation,Location,Datetime,Details,Rocket_Status,Price,Mission_Status
+no.,Organisation,Location,Datetime,Details,Rocket_Status,Price,Mission_Status
 0,VKS RF,"Site 43/4, Plesetsk Cosmodrome, Russia","Fri Feb 09, 2024 07:03 UTC",Soyuz 2.1v | Cosmos 2575,Active,,Success
 1,SpaceX,"SLC-40, Cape Canaveral SFS, Florida, USA","Thu Feb 08, 2024 06:33 UTC",Falcon 9 Block 5 | PACE,Active,67,Success
 2,CASC,"Bo Run Jiu Zhou Barge (Area 2), China Coastal Waters","Sat Feb 03, 2024 03:06 UTC",Jielong-3 | 9 satellites,Active,,Success
