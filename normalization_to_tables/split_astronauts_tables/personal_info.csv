@@ -1,0 +1,1278 @@
+id,number,nationwide_number,name,original_name,sex,year_of_birth,nationality,military_civilian
+1,1,1,"Gagarin, Yuri",ГАГАРИН Юрий Алексеевич,male,1934,U.S.S.R/Russia,military
+2,2,2,"Titov, Gherman",ТИТОВ Герман Степанович,male,1935,U.S.S.R/Russia,military
+3,3,1,"Glenn, John H., Jr.","Glenn, John H., Jr.",male,1921,U.S.,military
+4,3,1,"Glenn, John H., Jr.","Glenn, John H., Jr.",male,1921,U.S.,military
+5,4,2,"Carpenter, M. Scott","Carpenter, M. Scott",male,1925,U.S.,military
+6,5,2,"Nikolayev, Andriyan",НИКОЛАЕВ Андриян Григорьевич,male,1929,U.S.S.R/Russia,military
+7,5,2,"Nikolayev, Andriyan",НИКОЛАЕВ Андриян Григорьевич,male,1929,U.S.S.R/Russia,military
+8,6,4,"Popovich, Pavel",ПОПОВИЧ Павел Романович,male,1930,U.S.S.R/Russia,military
+9,6,4,"Popovich, Pavel",ПОПОВИЧ Павел Романович,male,1930,U.S.S.R/Russia,military
+10,7,3,"Schirra, Walter M., Jr.","Schirra, Walter M., Jr.",male,1923,U.S.,military
+11,7,3,"Schirra, Walter M., Jr.","Schirra, Walter M., Jr.",male,1923,U.S.,military
+12,7,3,"Schirra, Walter M., Jr.","Schirra, Walter M., Jr.",male,1923,U.S.,military
+13,8,4,"Cooper, L. Gordon, Jr.","Cooper, L. Gordon, Jr.",male,1927,U.S.,military
+14,8,4,"Cooper, L. Gordon, Jr.","Cooper, L. Gordon, Jr.",male,1927,U.S.,military
+15,9,5,"Bykovsky, Valery",БЫКОВСКИЙ Валерий Федорович,male,1934,U.S.S.R/Russia,military
+16,9,5,"Bykovsky, Valery",БЫКОВСКИЙ Валерий Федорович,male,1934,U.S.S.R/Russia,military
+17,9,5,"Bykovsky, Valery",БЫКОВСКИЙ Валерий Федорович,male,1934,U.S.S.R/Russia,military
+18,10,6,"Tereshkova, Valentina",ТЕРЕШКОВА Валентина Владимировна,female,1937,U.S.S.R/Russia,military
+19,11,7,"Komarov, Vladimir",КОМАРОВ Владимир Михайлович,male,1927,U.S.S.R/Russia,military
+20,11,7,"Komarov, Vladimir",КОМАРОВ Владимир Михайлович,male,1927,U.S.S.R/Russia,military
+21,12,8,"Feoktistov, Konstantin",ФЕОКТИСТОВ Константин Петрович,male,1926,U.S.S.R/Russia,civilian
+22,13,9,"Yegorov, Boris",ЕГОРОВ Борис Борисович,male,1937,U.S.S.R/Russia,civilian
+23,14,10,"Belyayev, Pavel",БЕЛЯЕВ Павел Иванович,male,1925,U.S.S.R/Russia,military
+24,15,11,"Leonov, Aleksei",ЛЕОНОВ Алексей Архипович,male,1934,U.S.S.R/Russia,military
+25,15,11,"Leonov, Aleksei",ЛЕОНОВ Алексей Архипович,male,1934,U.S.S.R/Russia,military
+26,16,5,"Grissom, Virgil I.","Grissom, Virgil I.",male,1926,U.S.,military
+27,17,6,"Young, John W.","Young, John W.",male,1930,U.S.,military
+28,17,6,"Young, John W.","Young, John W.",male,1930,U.S.,military
+29,17,6,"Young, John W.","Young, John W.",male,1930,U.S.,military
+30,17,6,"Young, John W.","Young, John W.",male,1930,U.S.,military
+31,17,6,"Young, John W.","Young, John W.",male,1930,U.S.,military
+32,17,6,"Young, John W.","Young, John W.",male,1930,U.S.,military
+33,18,7,"McDivitt, James A.","McDivitt, James A.",male,1929,U.S.,military
+34,18,7,"McDivitt, James A.","McDivitt, James A.",male,1929,U.S.,military
+35,19,8,"White, Edward H., II","White, Edward H., II",male,1930,U.S.,military
+36,20,9,"Conrad, Charles, Jr.","Conrad, Charles, Jr.",male,1930,U.S.,military
+37,20,9,"Conrad, Charles, Jr.","Conrad, Charles, Jr.",male,1930,U.S.,military
+38,20,9,"Conrad, Charles, Jr.","Conrad, Charles, Jr.",male,1930,U.S.,military
+39,20,9,"Conrad, Charles, Jr.","Conrad, Charles, Jr.",male,1930,U.S.,military
+40,21,10,"Borman, Frank","Borman, Frank",male,1928,U.S.,military
+41,21,10,"Borman, Frank","Borman, Frank",male,1928,U.S.,military
+42,22,11,"Lovell, James A., Jr.","Lovell, James A., Jr.",male,1928,U.S.,military
+43,22,11,"Lovell, James A., Jr.","Lovell, James A., Jr.",male,1928,U.S.,military
+44,22,11,"Lovell, James A., Jr.","Lovell, James A., Jr.",male,1928,U.S.,military
+45,22,11,"Lovell, James A., Jr.","Lovell, James A., Jr.",male,1928,U.S.,military
+46,23,12,"Stafford, Thomas P.","Stafford, Thomas P.",male,1930,U.S.,military
+47,23,12,"Stafford, Thomas P.","Stafford, Thomas P.",male,1930,U.S.,military
+48,23,12,"Stafford, Thomas P.","Stafford, Thomas P.",male,1930,U.S.,military
+49,23,12,"Stafford, Thomas P.","Stafford, Thomas P.",male,1930,U.S.,military
+50,24,13,"Armstrong, Neil A.","Armstrong, Neil A.",male,1930,U.S.,civilian
+51,24,13,"Armstrong, Neil A.","Armstrong, Neil A.",male,1930,U.S.,civilian
+52,25,14,"Scott, David R.","Scott, David R.",male,1932,U.S.,military
+53,25,14,"Scott, David R.","Scott, David R.",male,1932,U.S.,military
+54,25,14,"Scott, David R.","Scott, David R.",male,1932,U.S.,military
+55,26,15,"Cernan, Eugene A.","Cernan, Eugene A.",male,1934,U.S.,military
+56,26,15,"Cernan, Eugene A.","Cernan, Eugene A.",male,1934,U.S.,military
+57,26,15,"Cernan, Eugene A.","Cernan, Eugene A.",male,1934,U.S.,military
+58,27,16,"Collins, Michael","Collins, Michael",male,1930,U.S.,civilian
+59,27,16,"Collins, Michael","Collins, Michael",male,1930,U.S.,civilian
+60,28,17,"Gordon, Richard F., Jr.","Gordon, Richard F., Jr.",male,1929,U.S.,military
+61,28,17,"Gordon, Richard F., Jr.","Gordon, Richard F., Jr.",male,1929,U.S.,military
+62,29,18,"Aldrin, Edwin Eugene, Jr.","Aldrin, Edwin Eugene, Jr.",male,1930,U.S.,military
+63,29,18,"Aldrin, Edwin Eugene, Jr.","Aldrin, Edwin Eugene, Jr.",male,1930,U.S.,military
+64,30,19,"Eisele, Donn F.","Eisele, Donn F.",male,1930,U.S.,military
+65,31,20,"Cunningham, Ronnie Walter","Cunningham, Ronnie Walter",male,1932,U.S.,civilian
+66,100,50,"Savinykh, Viktor",Виктор Петрович Савиных,male,1940,U.S.S.R/Russia,civilian
+67,100,50,"Savinykh, Viktor",Виктор Петрович Савиных,male,1940,U.S.S.R/Russia,civilian
+68,101,1,Jugderdemidiin Gurragchaa,Жүгдэрдэмидийн Гүррагчаа,male,1947,Mongolia,civilian
+69,102,44,"Crippen, Robert L.","Crippen, Robert L.",male,1937,U.S.,military
+70,102,44,"Crippen, Robert L.","Crippen, Robert L.",male,1937,U.S.,military
+71,102,44,"Crippen, Robert L.","Crippen, Robert L.",male,1937,U.S.,military
+72,102,44,"Crippen, Robert L.","Crippen, Robert L.",male,1937,U.S.,military
+73,103,1,Dumitru Prunariu,Dumitru-Dorin Prunariu,male,1952,Romania,civilian
+74,104,45,"Engle, Joe H.","Engle, Joe H.",male,1932,U.S.,military
+75,104,45,"Engle, Joe H.","Engle, Joe H.",male,1932,U.S.,military
+76,105,46,"Truly, Richard H.","Truly, Richard H.",male,1937,U.S.,military
+77,105,46,"Truly, Richard H.","Truly, Richard H.",male,1937,U.S.,military
+78,106,47,"Fullerton, Charles G.","Fullerton, Charles G.",male,1936,U.S.,military
+79,106,47,"Fullerton, Charles G.","Fullerton, Charles G.",male,1936,U.S.,military
+80,107,51,"Berezovoy, Anatoly",Анатолий Николаевич Березовой,male,1942,U.S.S.R/Russia,military
+81,108,1,"Chrétien, Jean-Loup","Chrétien, Jean-Loup",male,1938,France,military
+82,108,1,"Chrétien, Jean-Loup","Chrétien, Jean-Loup",male,1938,France,military
+83,108,1,"Chrétien, Jean-Loup","Chrétien, Jean-Loup",male,1938,France,military
+84,109,48,"Hartsfield, Henry W., Jr.","Hartsfield, Henry W., Jr.",male,1933,U.S.,military
+85,109,48,"Hartsfield, Henry W., Jr.","Hartsfield, Henry W., Jr.",male,1933,U.S.,military
+86,109,48,"Hartsfield, Henry W., Jr.","Hartsfield, Henry W., Jr.",male,1933,U.S.,military
+87,110,52,"Serebrov, Aleksandr",Александр Александрович Серебров,male,1944,U.S.S.R/Russia,civilian
+88,32,12,"Beregovoi, Georgi",БЕРЕГОВОЙ Георгий Тимофеевич,male,1921,U.S.S.R/Russia,military
+89,33,21,"Anders, William Alison","Anders, William Alison",male,1933,U.S.,civilian
+90,34,13,"Shatalov, Vladimir",ШАТАЛОВ Владимир Александрович,male,1927,U.S.S.R/Russia,military
+91,34,13,"Shatalov, Vladimir",ШАТАЛОВ Владимир Александрович,male,1927,U.S.S.R/Russia,military
+92,34,13,"Shatalov, Vladimir",ШАТАЛОВ Владимир Александрович,male,1927,U.S.S.R/Russia,military
+93,35,14,"Volynov, Boris",ВОЛЫНОВ Борис Валентинович,male,1934,U.S.S.R/Russia,military
+94,35,14,"Volynov, Boris",ВОЛЫНОВ Борис Валентинович,male,1934,U.S.S.R/Russia,military
+95,36,15,"Yeliseyev, Aleksei",ЕЛИСЕЕВ Алексей Станиславович,male,1934,U.S.S.R/Russia,civilian
+96,36,15,"Yeliseyev, Aleksei",ЕЛИСЕЕВ Алексей Станиславович,male,1934,U.S.S.R/Russia,civilian
+97,36,15,"Yeliseyev, Aleksei",ЕЛИСЕЕВ Алексей Станиславович,male,1934,U.S.S.R/Russia,civilian
+98,37,16,"Khrunov, Yevgeny",ХРУНОВ Евгений Викторович,male,1933,U.S.S.R/Russia,military
+99,38,22,"Schweickart, Russell L.","Schweickart, Russell L.",male,1935,U.S.,civilian
+100,39,17,"Shonin, Georgi",ШОНИН Георгий Степанович,male,1935,U.S.S.R/Russia,military
+101,40,18,"Kubasov, Valeri",КУБАСОВ Валерий Николаевич,male,1935,U.S.S.R/Russia,military
+102,40,18,"Kubasov, Valeri",КУБАСОВ Валерий Николаевич,male,1935,U.S.S.R/Russia,military
+103,40,18,"Kubasov, Valeri",КУБАСОВ Валерий Николаевич,male,1935,U.S.S.R/Russia,military
+104,41,19,"Filipchenko, Anatoly",ФИЛИПЧЕНКО Анатолий Васильевич,male,1928,U.S.S.R/Russia,military
+105,41,19,"Filipchenko, Anatoly",ФИЛИПЧЕНКО Анатолий Васильевич,male,1928,U.S.S.R/Russia,military
+106,42,20,"Volkov, Vladislav",Владислав Николаевич Волков,male,1935,U.S.S.R/Russia,military
+107,42,20,"Volkov, Vladislav",Владислав Николаевич Волков,male,1935,U.S.S.R/Russia,military
+108,43,21,"Gorbatko, Viktor",Виктор Васильевич Горбатко,male,1934,U.S.S.R/Russia,military
+109,43,21,"Gorbatko, Viktor",Виктор Васильевич Горбатко,male,1934,U.S.S.R/Russia,military
+110,43,21,"Gorbatko, Viktor",Виктор Васильевич Горбатко,male,1934,U.S.S.R/Russia,military
+111,44,23,"Bean, Alan Lavern","Bean, Alan Lavern",male,1932,U.S.,military
+112,44,23,"Bean, Alan Lavern","Bean, Alan Lavern",male,1932,U.S.,military
+113,45,24,"Swigert, John L., Jr.","Swigert, John L., Jr.",male,1931,U.S.,civilian
+114,46,25,"Haise, Fred W., Jr.","Haise, Fred W., Jr.",male,1933,U.S.,civilian
+115,47,22,"Sevastyanov, Vitali",Виталий Иванович Севастьянов,male,1935,U.S.S.R/Russia,civilian
+116,47,22,"Sevastyanov, Vitali",Виталий Иванович Севастьянов,male,1935,U.S.S.R/Russia,civilian
+117,48,26,"Shepard, Alan B., Jr.","Shepard, Alan B., Jr.",male,1923,U.S.,military
+118,49,27,"Roosa, Stuart A.","Roosa, Stuart A.",male,1933,U.S.,military
+119,50,28,"Mitchell, Edgar D.","Mitchell, Edgar D.",male,1930,U.S.,military
+120,51,23,"Rukavishnikov, Nikolai",Николай Николаевич Рукавишников,male,1932,U.S.S.R/Russia,military
+121,51,23,"Rukavishnikov, Nikolai",Николай Николаевич Рукавишников,male,1932,U.S.S.R/Russia,military
+122,51,23,"Rukavishnikov, Nikolai",Николай Николаевич Рукавишников,male,1932,U.S.S.R/Russia,military
+123,52,24,"Dobrovolski, Georgi",Георгий Тимофеевич Добровольский,male,1928,U.S.S.R/Russia,military
+124,53,25,"Patsayev, Viktor",Виктор Иванович Пацаев,male,1933,U.S.S.R/Russia,civilian
+125,54,29,"Worden, Alfred M.","Worden, Alfred M.",male,1932,U.S.,military
+126,55,30,"Irwin, James B.","Irwin, James B.",male,1930,U.S.,military
+127,56,31,"Mattingly, Thomas K., II","Mattingly, Thomas K., II",male,1936,U.S.,military
+128,56,31,"Mattingly, Thomas K., II","Mattingly, Thomas K., II",male,1936,U.S.,military
+129,56,31,"Mattingly, Thomas K., II","Mattingly, Thomas K., II",male,1936,U.S.,military
+130,57,32,"Duke, Jr. Charles Moss","Duke, Jr. Charles Moss",male,1935,U.S.,military
+131,58,33,"Evans, Ronald E.","Evans, Ronald E.",male,1933,U.S.,military
+132,59,34,"Schmitt, Harrison H.","Schmitt, Harrison H.",male,1935,U.S.,civilian
+133,60,35,"Weitz, Paul J.","Weitz, Paul J.",male,1932,U.S.,military
+134,60,35,"Weitz, Paul J.","Weitz, Paul J.",male,1932,U.S.,military
+135,61,36,"Kerwin, Joseph P.","Kerwin, Joseph P.",male,1932,U.S.,military
+136,62,37,"Lousma, Jack R.","Lousma, Jack R.",male,1936,U.S.,military
+137,62,37,"Lousma, Jack R.","Lousma, Jack R.",male,1936,U.S.,military
+138,63,38,"Garriott, Owen K.","Garriott, Owen K.",male,1930,U.S.,civilian
+139,63,38,"Garriott, Owen K.","Garriott, Owen K.",male,1930,U.S.,civilian
+140,64,26,"Lazarev, Vasili",Василий Григорьевич Лазарев,male,1928,U.S.S.R/Russia,military
+141,65,27,"Makarov, Oleg",Олег Григорьевич Макаров,male,1933,U.S.S.R/Russia,civilian
+142,65,27,"Makarov, Oleg",Олег Григорьевич Макаров,male,1933,U.S.S.R/Russia,civilian
+143,65,27,"Makarov, Oleg",Олег Григорьевич Макаров,male,1933,U.S.S.R/Russia,civilian
+144,66,39,"Carr, Gerald P.","Carr, Gerald P.",male,1932,U.S.,military
+145,67,40,"Pogue, William R.","Pogue, William R.",male,1930,U.S.,military
+146,68,41,"Gibson, Edward G.","Gibson, Edward G.",male,1936,U.S.,civilian
+147,69,28,"Klimuk, Pyotr",Петр Ильич Климук,male,1942,U.S.S.R/Russia,military
+148,69,28,"Klimuk, Pyotr",Петр Ильич Климук,male,1942,U.S.S.R/Russia,military
+149,69,28,"Klimuk, Pyotr",Петр Ильич Климук,male,1942,U.S.S.R/Russia,military
+150,70,29,"Lebedev, Valentin",Валентин Витальевич Лебедев,male,1942,U.S.S.R/Russia,civilian
+151,70,29,"Lebedev, Valentin",Валентин Витальевич Лебедев,male,1942,U.S.S.R/Russia,civilian
+152,71,30,"Artyukhin, Yuri",Юрий Петрович Артюхин,male,1930,U.S.S.R/Russia,military
+153,72,31,"Sarafanov, Gennadi",Геннадий Васильевич Сарафанов,male,1942,U.S.S.R/Russia,military
+154,73,32,"Dyomin, Lev",Лев Степанович Дёмин,male,1926,U.S.S.R/Russia,military
+155,74,33,"Gubarev, Aleksei",Алексей Александрович Губарев,male,1931,U.S.S.R/Russia,military
+156,74,33,"Gubarev, Aleksei",Алексей Александрович Губарев,male,1931,U.S.S.R/Russia,military
+157,75,34,"Grechko, Georgi",Георгий Михайлович Гречко,male,1931,U.S.S.R/Russia,civilian
+158,75,34,"Grechko, Georgi",Георгий Михайлович Гречко,male,1931,U.S.S.R/Russia,civilian
+159,75,34,"Grechko, Georgi",Георгий Михайлович Гречко,male,1931,U.S.S.R/Russia,civilian
+160,76,42,"Brand, Vance D.","Brand, Vance D.",male,1931,U.S.,civilian
+161,76,42,"Brand, Vance D.","Brand, Vance D.",male,1931,U.S.,civilian
+162,76,42,"Brand, Vance D.","Brand, Vance D.",male,1931,U.S.,civilian
+163,76,42,"Brand, Vance D.","Brand, Vance D.",male,1931,U.S.,civilian
+164,77,43,"Slayton, Donald K.","Slayton, Donald K.",male,1924,U.S.,civilian
+165,78,35,"Zholobov, Vitali",Виталий Михайлович Жолобов,male,1937,U.S.S.R/Russia,military
+166,79,36,"Aksyonov, Vladimir",Владимир Викторович Аксёнов,male,1935,U.S.S.R/Russia,military
+167,79,36,"Aksyonov, Vladimir",Владимир Викторович Аксёнов,male,1935,U.S.S.R/Russia,military
+168,80,37,"Zudov, Vyacheslav",Вячеслав Дмитриевич Зудов,male,1942,U.S.S.R/Russia,military
+169,81,38,"Rozhdestvensky, Valery",Валерий Ильич Рождественский,male,1939,U.S.S.R/Russia,military
+170,82,39,"Glazkov, Yuri",Юрий Николаевич Глазков,male,1939,U.S.S.R/Russia,military
+171,83,40,"Kovalyonok, Vladimir",Владимир Васильевич Ковалёнок,male,1942,U.S.S.R/Russia,military
+172,83,40,"Kovalyonok, Vladimir",Владимир Васильевич Ковалёнок,male,1942,U.S.S.R/Russia,military
+173,83,40,"Kovalyonok, Vladimir",Владимир Васильевич Ковалёнок,male,1942,U.S.S.R/Russia,military
+174,84,41,"Ryumin, Valery",Валерий Викторович Рюмин,male,1939,U.S.S.R/Russia,civilian
+175,84,41,"Ryumin, Valery",Валерий Викторович Рюмин,male,1939,U.S.S.R/Russia,civilian
+176,84,41,"Ryumin, Valery",Валерий Викторович Рюмин,male,1939,U.S.S.R/Russia,civilian
+177,84,41,"Ryumin, Valery",Валерий Викторович Рюмин,male,1939,U.S.S.R/Russia,civilian
+178,85,42,"Romanenko, Yuri",Юрий Викторович Романенко,male,1944,U.S.S.R/Russia,military
+179,85,42,"Romanenko, Yuri",Юрий Викторович Романенко,male,1944,U.S.S.R/Russia,military
+180,85,42,"Romanenko, Yuri",Юрий Викторович Романенко,male,1944,U.S.S.R/Russia,military
+181,86,43,"Dzhanibekov, Vladimir",Владимир Александрович Джанибеков,male,1942,U.S.S.R/Russia,military
+182,86,43,"Dzhanibekov, Vladimir",Владимир Александрович Джанибеков,male,1942,U.S.S.R/Russia,military
+183,86,43,"Dzhanibekov, Vladimir",Владимир Александрович Джанибеков,male,1942,U.S.S.R/Russia,military
+184,86,43,"Dzhanibekov, Vladimir",Владимир Александрович Джанибеков,male,1942,U.S.S.R/Russia,military
+185,86,43,"Dzhanibekov, Vladimir",Владимир Александрович Джанибеков,male,1942,U.S.S.R/Russia,military
+186,87,1,Vladimir Remek,,male,1948,Czechoslovakia,military
+187,88,44,"Ivanchenkov, Aleksandr",Александр Сергеевич Иванченков,male,1940,U.S.S.R/Russia,military
+188,88,44,"Ivanchenkov, Aleksandr",Александр Сергеевич Иванченков,male,1940,U.S.S.R/Russia,military
+189,89,1,Miroslaw Hermaszewske,Miroslaw Hermaszewske,male,1941,Poland,military
+190,90,1,"Jahn, Sigmund","Jahn, Sigmund",male,1937,Germany,military
+191,91,45,"Lyakhov, Vladimir",Владимир Афанасьевич Ляхов,male,1941,U.S.S.R/Russia,military
+192,91,45,"Lyakhov, Vladimir",Владимир Афанасьевич Ляхов,male,1941,U.S.S.R/Russia,military
+193,91,45,"Lyakhov, Vladimir",Владимир Афанасьевич Ляхов,male,1941,U.S.S.R/Russia,military
+194,92,1,Georgi Ivanov,Георги Иванов Иванов,male,1940,Bulgaria,military
+195,93,46,"Popov, Leonid",Леонид Иванович Попов,male,1945,U.S.S.R/Russia,military
+196,93,46,"Popov, Leonid",Леонид Иванович Попов,male,1945,U.S.S.R/Russia,military
+197,93,46,"Popov, Leonid",Леонид Иванович Попов,male,1945,U.S.S.R/Russia,military
+198,94,1,Bertalan Farkas,Farkas Bertalan,male,1949,Hungry,civilian
+199,95,47,"Malyshev, Yuri",Юрий Васильевич Малышев,male,1941,U.S.S.R/Russia,military
+200,95,47,"Malyshev, Yuri",Юрий Васильевич Малышев,male,1941,U.S.S.R/Russia,military
+201,96,1,Pham Tuan,Phạm Tuân,male,1947,Vietnam,military
+202,97,1,Arnaldo Tamayo Mendez,Arnaldo Tamayo Méndez,male,1942,Cuba,military
+203,98,48,"Kizim, Leonid",Леонид Денисович Кизим,male,1941,U.S.S.R/Russia,military
+204,98,48,"Kizim, Leonid",Леонид Денисович Кизим,male,1941,U.S.S.R/Russia,military
+205,98,48,"Kizim, Leonid",Леонид Денисович Кизим,male,1941,U.S.S.R/Russia,military
+206,99,49,"Strekalov, Gennadi",Геннадий Михайлович Стрекалов,male,1940,U.S.S.R/Russia,civilian
+207,99,49,"Strekalov, Gennadi",Геннадий Михайлович Стрекалов,male,1940,U.S.S.R/Russia,civilian
+208,99,49,"Strekalov, Gennadi",Геннадий Михайлович Стрекалов,male,1940,U.S.S.R/Russia,civilian
+209,99,49,"Strekalov, Gennadi",Геннадий Михайлович Стрекалов,male,1940,U.S.S.R/Russia,civilian
+210,99,49,"Strekalov, Gennadi",Геннадий Михайлович Стрекалов,male,1940,U.S.S.R/Russia,civilian
+211,100,50,"Savinykh, Viktor",Виктор Петрович Савиных,male,1940,U.S.S.R/Russia,civilian
+212,110,52,"Serebrov, Aleksandr",Александр Александрович Серебров,male,1944,U.S.S.R/Russia,civilian
+213,110,52,"Serebrov, Aleksandr",Александр Александрович Серебров,male,1944,U.S.S.R/Russia,civilian
+214,110,52,"Serebrov, Aleksandr",Александр Александрович Серебров,male,1944,U.S.S.R/Russia,civilian
+215,111,53,"Savitskaya, Svetlana",Светлана Евгеньевна Савицкая,female,1948,U.S.S.R/Russia,civilian
+216,111,53,"Savitskaya, Svetlana",Светлана Евгеньевна Савицкая,female,1948,U.S.S.R/Russia,civilian
+217,112,49,"Overmyer, Robert F.","Overmyer, Robert F.",male,1936,U.S.,military
+218,112,49,"Overmyer, Robert F.","Overmyer, Robert F.",male,1936,U.S.,military
+219,113,50,"Allen, Joseph P.","Allen, Joseph P.",male,1937,U.S.,civilian
+220,113,50,"Allen, Joseph P.","Allen, Joseph P.",male,1937,U.S.,civilian
+221,114,51,"Lenoir, William B.","Lenoir, William B.",male,1939,U.S.,civilian
+222,115,52,"Bobko, Karol J.","Bobko, Karol J.",male,1937,U.S.,military
+223,115,52,"Bobko, Karol J.","Bobko, Karol J.",male,1937,U.S.,military
+224,115,52,"Bobko, Karol J.","Bobko, Karol J.",male,1937,U.S.,military
+225,116,53,"Peterson, Donald H.","Peterson, Donald H.",male,1933,U.S.,military
+226,117,54,"Musgrave, Franklin Story","Musgrave, Franklin Story",male,1935,U.S.,civilian
+227,117,54,"Musgrave, Franklin Story","Musgrave, Franklin Story",male,1935,U.S.,civilian
+228,117,54,"Musgrave, Franklin Story","Musgrave, Franklin Story",male,1935,U.S.,civilian
+229,117,54,"Musgrave, Franklin Story","Musgrave, Franklin Story",male,1935,U.S.,civilian
+230,117,54,"Musgrave, Franklin Story","Musgrave, Franklin Story",male,1935,U.S.,civilian
+231,117,54,"Musgrave, Franklin Story","Musgrave, Franklin Story",male,1935,U.S.,civilian
+232,118,54,"Titov, Vladimir",Владимир Георгиевич Титов,male,1947,U.S.S.R/Russia,military
+233,118,54,"Titov, Vladimir",Владимир Георгиевич Титов,male,1947,U.S.S.R/Russia,military
+234,118,54,"Titov, Vladimir",Владимир Георгиевич Титов,male,1947,U.S.S.R/Russia,military
+235,118,54,"Titov, Vladimir",Владимир Георгиевич Титов,male,1947,U.S.S.R/Russia,military
+236,119,55,"Hauck, Frederick H.","Hauck, Frederick H.",male,1941,U.S.,military
+237,119,55,"Hauck, Frederick H.","Hauck, Frederick H.",male,1941,U.S.,military
+238,119,55,"Hauck, Frederick H.","Hauck, Frederick H.",male,1941,U.S.,military
+239,120,56,"Fabian, John M.","Fabian, John M.",male,1939,U.S.,military
+240,120,56,"Fabian, John M.","Fabian, John M.",male,1939,U.S.,military
+241,121,57,"Ride, Sally K.","Ride, Sally K.",female,1951,U.S.,civilian
+242,121,57,"Ride, Sally K.","Ride, Sally K.",female,1951,U.S.,civilian
+243,122,58,"Thagard, Norman E.","Thagard, Norman E.",male,1943,U.S.,civilian
+244,122,58,"Thagard, Norman E.","Thagard, Norman E.",male,1943,U.S.,civilian
+245,122,58,"Thagard, Norman E.","Thagard, Norman E.",male,1943,U.S.,civilian
+246,122,58,"Thagard, Norman E.","Thagard, Norman E.",male,1943,U.S.,civilian
+247,122,58,"Thagard, Norman E.","Thagard, Norman E.",male,1943,U.S.,civilian
+248,123,55,"Aleksandrov, Aleksandr",Александр Павлович Александров,male,1943,U.S.S.R/Russia,civilian
+249,123,55,"Aleksandrov, Aleksandr",Александр Павлович Александров,male,1943,U.S.S.R/Russia,civilian
+250,124,59,"Brandenstein, Daniel C.","Brandenstein, Daniel C.",male,1943,U.S.,military
+251,124,59,"Brandenstein, Daniel C.","Brandenstein, Daniel C.",male,1943,U.S.,military
+252,124,59,"Brandenstein, Daniel C.","Brandenstein, Daniel C.",male,1943,U.S.,military
+253,124,59,"Brandenstein, Daniel C.","Brandenstein, Daniel C.",male,1943,U.S.,military
+254,125,60,"Bluford, Guion S., Jr.","Bluford, Guion S., Jr.",male,1942,U.S.,military
+255,125,60,"Bluford, Guion S., Jr.","Bluford, Guion S., Jr.",male,1942,U.S.,military
+256,125,60,"Bluford, Guion S., Jr.","Bluford, Guion S., Jr.",male,1942,U.S.,military
+257,125,60,"Bluford, Guion S., Jr.","Bluford, Guion S., Jr.",male,1942,U.S.,military
+258,126,61,"Gardner, Dale A.","Gardner, Dale A.",male,1948,U.S.,military
+259,126,61,"Gardner, Dale A.","Gardner, Dale A.",male,1948,U.S.,military
+260,127,62,"Thornton, William E.","Thornton, William E.",male,1929,U.S.,civilian
+261,127,62,"Thornton, William E.","Thornton, William E.",male,1929,U.S.,civilian
+262,128,63,"Shaw, Brewster H., Jr.","Shaw, Brewster H., Jr.",male,1945,U.S.,military
+263,128,63,"Shaw, Brewster H., Jr.","Shaw, Brewster H., Jr.",male,1945,U.S.,military
+264,128,63,"Shaw, Brewster H., Jr.","Shaw, Brewster H., Jr.",male,1945,U.S.,military
+265,129,64,"Parker, Robert A. R.","Parker, Robert A. R.",male,1936,U.S.,civilian
+266,129,64,"Parker, Robert A. R.","Parker, Robert A. R.",male,1936,U.S.,civilian
+267,130,65,"Lichtenberg, Byron Kurt","Lichtenberg, Byron Kurt",male,1948,U.S.,military
+268,130,65,"Lichtenberg, Byron Kurt","Lichtenberg, Byron Kurt",male,1948,U.S.,military
+269,131,1,"Merbold, Ulf","Merbold, Ulf",male,1941,Germany,civilian
+270,131,1,"Merbold, Ulf","Merbold, Ulf",male,1941,Germany,civilian
+271,131,1,"Merbold, Ulf","Merbold, Ulf",male,1941,Germany,civilian
+272,132,66,"Gibson, Robert L.","Gibson, Robert L.",male,1946,U.S.,military
+273,132,66,"Gibson, Robert L.","Gibson, Robert L.",male,1946,U.S.,military
+274,132,66,"Gibson, Robert L.","Gibson, Robert L.",male,1946,U.S.,military
+275,132,66,"Gibson, Robert L.","Gibson, Robert L.",male,1946,U.S.,military
+276,132,66,"Gibson, Robert L.","Gibson, Robert L.",male,1946,U.S.,military
+277,133,67,"McNair, Ronald E.","McNair, Ronald E.",male,1950,U.S.,civilian
+278,133,67,"McNair, Ronald E.","McNair, Ronald E.",male,1950,U.S.,civilian
+279,134,68,"Stewart, Robert L.","Stewart, Robert L.",male,1942,U.S.,military
+280,134,68,"Stewart, Robert L.","Stewart, Robert L.",male,1942,U.S.,military
+281,135,69,"McCandless, Bruce, II","McCandless, Bruce, II",male,1937,U.S.,military
+282,135,69,"McCandless, Bruce, II","McCandless, Bruce, II",male,1937,U.S.,military
+283,136,56,"Solovyov, Vladimir",Владимир Алексеевич Соловьёв,male,1946,U.S.S.R/Russia,civilian
+284,136,56,"Solovyov, Vladimir",Владимир Алексеевич Соловьёв,male,1946,U.S.S.R/Russia,civilian
+285,137,57,"Atkov, Oleg",Олег Юрьевич Атьков,male,1949,U.S.S.R/Russia,civilian
+286,138,1,Rakesh Sharma,राकेश शर्मा,male,1949,India,military
+287,139,70,"Scobee, Francis R.","Scobee, Francis R.",male,1939,U.S.,military
+288,139,70,"Scobee, Francis R.","Scobee, Francis R.",male,1939,U.S.,military
+289,140,71,"Hart, Terry J.","Hart, Terry J.",male,1946,U.S.,civilian
+290,141,72,"Van Hoften, James D. A.","Van Hoften, James D. A.",male,1944,U.S.,civilian
+291,141,72,"Van Hoften, James D. A.","Van Hoften, James D. A.",male,1944,U.S.,civilian
+292,142,73,"Nelson, George D.","Nelson, George D.",male,1950,U.S.,civilian
+293,142,73,"Nelson, George D.","Nelson, George D.",male,1950,U.S.,civilian
+294,142,73,"Nelson, George D.","Nelson, George D.",male,1950,U.S.,civilian
+295,143,58,"Volk, Igor",Игорь Петрович Волк,male,1937,U.S.S.R/Russia,military
+296,144,74,"Coats, Michael L.","Coats, Michael L.",male,1952,U.S.,military
+297,144,74,"Coats, Michael L.","Coats, Michael L.",male,1952,U.S.,military
+298,144,74,"Coats, Michael L.","Coats, Michael L.",male,1952,U.S.,military
+299,145,75,"Mullane, Richard M.","Mullane, Richard M.",male,1945,U.S.,military
+300,145,75,"Mullane, Richard M.","Mullane, Richard M.",male,1945,U.S.,military
+301,145,75,"Mullane, Richard M.","Mullane, Richard M.",male,1945,U.S.,military
+302,146,76,"Hawley, Steven A.","Hawley, Steven A.",male,1951,U.S.,civilian
+303,146,76,"Hawley, Steven A.","Hawley, Steven A.",male,1951,U.S.,civilian
+304,146,76,"Hawley, Steven A.","Hawley, Steven A.",male,1951,U.S.,civilian
+305,146,76,"Hawley, Steven A.","Hawley, Steven A.",male,1951,U.S.,civilian
+306,146,76,"Hawley, Steven A.","Hawley, Steven A.",male,1951,U.S.,civilian
+307,147,77,"Resnik, Judith A.","Resnik, Judith A.",female,1949,U.S.,civilian
+308,147,77,"Resnik, Judith A.","Resnik, Judith A.",female,1949,U.S.,civilian
+309,148,78,"Walker, Charles David","Walker, Charles David",male,1948,U.S.,civilian
+310,148,78,"Walker, Charles David","Walker, Charles David",male,1948,U.S.,civilian
+311,148,78,"Walker, Charles David","Walker, Charles David",male,1948,U.S.,civilian
+312,149,79,"McBride, Jon A.","McBride, Jon A.",male,1943,U.S.,military
+313,150,80,"Sullivan, Kathryn D.","Sullivan, Kathryn D.",female,1951,U.S.,civilian
+314,150,80,"Sullivan, Kathryn D.","Sullivan, Kathryn D.",female,1951,U.S.,civilian
+315,150,80,"Sullivan, Kathryn D.","Sullivan, Kathryn D.",female,1951,U.S.,civilian
+316,151,81,"Leestma, David C.","Leestma, David C.",male,1949,U.S.,military
+317,151,81,"Leestma, David C.","Leestma, David C.",male,1949,U.S.,military
+318,151,81,"Leestma, David C.","Leestma, David C.",male,1949,U.S.,military
+319,152,82,"Scully-Power, Paul Desmond","Scully-Power, Paul Desmond",male,1944,U.S.,civilian
+320,153,1,"Garneau, Marc Joseph Jean-Pierre","Garneau, Marc Joseph Jean-Pierre",male,1949,Canada,military
+321,153,1,"Garneau, Marc Joseph Jean-Pierre","Garneau, Marc Joseph Jean-Pierre",male,1949,Canada,military
+322,153,1,"Garneau, Marc Joseph Jean-Pierre","Garneau, Marc Joseph Jean-Pierre",male,1949,Canada,military
+323,154,83,"Walker, David Mathieson","Walker, David Mathieson",male,1944,U.S.,military
+324,154,83,"Walker, David Mathieson","Walker, David Mathieson",male,1944,U.S.,military
+325,154,83,"Walker, David Mathieson","Walker, David Mathieson",male,1944,U.S.,military
+326,154,83,"Walker, David Mathieson","Walker, David Mathieson",male,1944,U.S.,military
+327,155,84,"Fisher, Anna L.","Fisher, Anna L.",female,1949,U.S.,civilian
+328,156,85,"Shriver, Loren J.","Shriver, Loren J.",male,1944,U.S.,military
+329,156,85,"Shriver, Loren J.","Shriver, Loren J.",male,1944,U.S.,military
+330,156,85,"Shriver, Loren J.","Shriver, Loren J.",male,1944,U.S.,military
+331,157,86,"Onizuka, Ellison S.","Onizuka, Ellison S.",male,1946,U.S.,military
+332,157,86,"Onizuka, Ellison S.","Onizuka, Ellison S.",male,1946,U.S.,military
+333,158,87,"Buchli, James F.","Buchli, James F.",male,1945,U.S.,military
+334,158,87,"Buchli, James F.","Buchli, James F.",male,1945,U.S.,military
+335,158,87,"Buchli, James F.","Buchli, James F.",male,1945,U.S.,military
+336,158,87,"Buchli, James F.","Buchli, James F.",male,1945,U.S.,military
+337,159,88,"Payton, Gary Eugene","Payton, Gary Eugene",male,1948,U.S.,military
+338,160,89,"Williams, Donald E.","Williams, Donald E.",male,1942,U.S.,military
+339,160,89,"Williams, Donald E.","Williams, Donald E.",male,1942,U.S.,military
+340,161,90,"Seddon, Margaret Rhea","Seddon, Margaret Rhea",female,1947,U.S.,civilian
+341,161,90,"Seddon, Margaret Rhea","Seddon, Margaret Rhea",female,1947,U.S.,civilian
+342,161,90,"Seddon, Margaret Rhea","Seddon, Margaret Rhea",female,1947,U.S.,civilian
+343,162,91,"Griggs, S. David","Griggs, S. David",male,1947,U.S.,civilian
+344,163,92,"Hoffman, Jeffrey A.","Hoffman, Jeffrey A.",male,1944,U.S.,civilian
+345,163,92,"Hoffman, Jeffrey A.","Hoffman, Jeffrey A.",male,1944,U.S.,civilian
+346,163,92,"Hoffman, Jeffrey A.","Hoffman, Jeffrey A.",male,1944,U.S.,civilian
+347,163,92,"Hoffman, Jeffrey A.","Hoffman, Jeffrey A.",male,1944,U.S.,civilian
+348,163,92,"Hoffman, Jeffrey A.","Hoffman, Jeffrey A.",male,1944,U.S.,civilian
+349,164,93,"Garn, Edwin Jacob","Garn, Edwin Jacob",male,1932,U.S.,military
+350,165,94,"Gregory, Frederick D.","Gregory, Frederick D.",male,1941,U.S.,military
+351,165,94,"Gregory, Frederick D.","Gregory, Frederick D.",male,1941,U.S.,military
+352,165,94,"Gregory, Frederick D.","Gregory, Frederick D.",male,1941,U.S.,military
+353,166,95,"Lind, Don L.","Lind, Don L.",male,1930,U.S.,military
+354,167,96,"Lodewijk, van der Berg","Lodewijk, van der Berg",male,1932,U.S.,civilian
+355,168,97,"Wang, Taylor Gun-Jin",王赣骏,male,1940,U.S.,civilian
+356,169,98,"Creighton, John O.","Creighton, John O.",male,1943,U.S.,military
+357,169,98,"Creighton, John O.","Creighton, John O.",male,1943,U.S.,military
+358,169,98,"Creighton, John O.","Creighton, John O.",male,1943,U.S.,military
+359,170,99,"Nagel, Steven R.","Nagel, Steven R.",male,1946,U.S.,military
+360,170,99,"Nagel, Steven R.","Nagel, Steven R.",male,1946,U.S.,military
+361,170,99,"Nagel, Steven R.","Nagel, Steven R.",male,1946,U.S.,military
+362,170,99,"Nagel, Steven R.","Nagel, Steven R.",male,1946,U.S.,military
+363,171,100,"Lucid, Shannon W.","Lucid, Shannon W.",female,1943,U.S.,civilian
+364,171,100,"Lucid, Shannon W.","Lucid, Shannon W.",female,1943,U.S.,civilian
+365,171,100,"Lucid, Shannon W.","Lucid, Shannon W.",female,1943,U.S.,civilian
+366,171,100,"Lucid, Shannon W.","Lucid, Shannon W.",female,1943,U.S.,civilian
+367,171,100,"Lucid, Shannon W.","Lucid, Shannon W.",female,1943,U.S.,civilian
+368,172,2,"Baudry, Patrick","Baudry, Patrick",male,1946,France,military
+369,173,1,"Al-saud, Sultan bin Salman",,male,1956,Saudi Arabia,civilian
+370,174,101,"Bridges, Roy D., Jr.","Bridges, Roy D., Jr.",male,1943,U.S.,military
+371,175,102,"Henize, Karl G.","Henize, Karl G.",male,1926,U.S.,civilian
+372,176,103,"England, Anthony W.","England, Anthony W.",male,1942,U.S.,civilian
+373,177,104,"Acton, Loren Wilbur","Acton, Loren Wilbur",male,1936,U.S.,civilian
+374,178,105,"Bartoe, John-David Francis","Bartoe, John-David Francis",male,1944,U.S.,civilian
+375,179,106,"Covey, Richard O.","Covey, Richard O.",male,1946,U.S.,military
+376,179,106,"Covey, Richard O.","Covey, Richard O.",male,1946,U.S.,military
+377,179,106,"Covey, Richard O.","Covey, Richard O.",male,1946,U.S.,military
+378,179,106,"Covey, Richard O.","Covey, Richard O.",male,1946,U.S.,military
+379,180,107,"Lounge, John M.","Lounge, John M.",male,1946,U.S.,civilian
+380,180,107,"Lounge, John M.","Lounge, John M.",male,1946,U.S.,civilian
+381,180,107,"Lounge, John M.","Lounge, John M.",male,1946,U.S.,civilian
+382,181,108,"Fisher, William F.","Fisher, William F.",male,1946,U.S.,civilian
+383,182,59,"Vasyutin, Vladimir",Владимир Владимирович Васютин,male,1952,U.S.S.R/Russia,military
+384,183,60,"Volkov, Alexander",Александр Александрович Волков,male,1948,U.S.S.R/Russia,military
+385,183,60,"Volkov, Alexander",Александр Александрович Волков,male,1948,U.S.S.R/Russia,military
+386,183,60,"Volkov, Alexander",Александр Александрович Волков,male,1948,U.S.S.R/Russia,military
+387,184,109,"Grabe, Ronald J.","Grabe, Ronald J.",male,1945,U.S.,military
+388,184,109,"Grabe, Ronald J.","Grabe, Ronald J.",male,1945,U.S.,military
+389,184,109,"Grabe, Ronald J.","Grabe, Ronald J.",male,1945,U.S.,military
+390,184,109,"Grabe, Ronald J.","Grabe, Ronald J.",male,1945,U.S.,military
+391,185,110,"Hilmers, David C.","Hilmers, David C.",male,1950,U.S.,military
+392,185,110,"Hilmers, David C.","Hilmers, David C.",male,1950,U.S.,military
+393,185,110,"Hilmers, David C.","Hilmers, David C.",male,1950,U.S.,military
+394,185,110,"Hilmers, David C.","Hilmers, David C.",male,1950,U.S.,military
+395,186,111,"Pailes, William Arthur","Pailes, William Arthur",male,1936,U.S.,military
+396,187,112,"Dunbar, Bonnie J.","Dunbar, Bonnie J.",female,1949,U.S.,civilian
+397,187,112,"Dunbar, Bonnie J.","Dunbar, Bonnie J.",female,1949,U.S.,civilian
+398,187,112,"Dunbar, Bonnie J.","Dunbar, Bonnie J.",female,1949,U.S.,civilian
+399,187,112,"Dunbar, Bonnie J.","Dunbar, Bonnie J.",female,1949,U.S.,civilian
+400,187,112,"Dunbar, Bonnie J.","Dunbar, Bonnie J.",female,1949,U.S.,civilian
+401,188,2,"Furrer, Reinhard Alfred","Furrer, Reinhard Alfred",male,1940,Germany,civilian
+402,189,3,"Messerschmid, Ernst Willi","Messerschmid, Ernst Willi",male,1945,Germany,military
+403,190,1,"Ockels, Wubbo Johannes","Ockels, Wubbo Johannes",male,1946,Netherland,civilian
+404,191,113,"O'Connor, Bryan D.","O'Connor, Bryan D.",male,1946,U.S.,military
+405,191,113,"O'Connor, Bryan D.","O'Connor, Bryan D.",male,1946,U.S.,military
+406,192,114,"Ross, Jerry L.","Ross, Jerry L.",male,1948,U.S.,military
+407,192,114,"Ross, Jerry L.","Ross, Jerry L.",male,1948,U.S.,military
+408,192,114,"Ross, Jerry L.","Ross, Jerry L.",male,1948,U.S.,military
+409,192,114,"Ross, Jerry L.","Ross, Jerry L.",male,1948,U.S.,military
+410,192,114,"Ross, Jerry L.","Ross, Jerry L.",male,1948,U.S.,military
+411,192,114,"Ross, Jerry L.","Ross, Jerry L.",male,1948,U.S.,military
+412,192,114,"Ross, Jerry L.","Ross, Jerry L.",male,1948,U.S.,military
+413,193,115,"Cleave, Mary L.","Cleave, Mary L.",female,1947,U.S.,civilian
+414,193,115,"Cleave, Mary L.","Cleave, Mary L.",female,1947,U.S.,civilian
+415,194,116,"Spring, Sherwood C.","Spring, Sherwood C.",male,1944,U.S.,military
+416,195,1,"Neri Vela, Rodolfl",,male,1952,Mexico,civilian
+417,196,117,"Bolden, Charles F., Jr.","Bolden, Charles F., Jr.",male,1946,U.S.,military
+418,196,117,"Bolden, Charles F., Jr.","Bolden, Charles F., Jr.",male,1946,U.S.,military
+419,196,117,"Bolden, Charles F., Jr.","Bolden, Charles F., Jr.",male,1946,U.S.,military
+420,196,117,"Bolden, Charles F., Jr.","Bolden, Charles F., Jr.",male,1946,U.S.,military
+421,197,118,"Chang-Diaz, Franklin R.","Chang-Diaz, Franklin R.",male,1950,U.S.,civilian
+422,197,118,"Chang-Diaz, Franklin R.","Chang-Diaz, Franklin R.",male,1950,U.S.,civilian
+423,197,118,"Chang-Diaz, Franklin R.","Chang-Diaz, Franklin R.",male,1950,U.S.,civilian
+424,197,118,"Chang-Diaz, Franklin R.","Chang-Diaz, Franklin R.",male,1950,U.S.,civilian
+425,197,118,"Chang-Diaz, Franklin R.","Chang-Diaz, Franklin R.",male,1950,U.S.,civilian
+426,197,118,"Chang-Diaz, Franklin R.","Chang-Diaz, Franklin R.",male,1950,U.S.,civilian
+427,197,118,"Chang-Diaz, Franklin R.","Chang-Diaz, Franklin R.",male,1950,U.S.,civilian
+428,198,119,"Cenker, Robert Joseph","Cenker, Robert Joseph",male,1948,U.S.,civilian
+429,199,120,"Nelson, William Clarence","Nelson, William Clarence",male,1942,U.S.,civilian
+430,200,121,"Smith, Michael John","Smith, Michael John",male,1945,U.S.,military
+431,201,122,"Jarvis, Gregory Bruce","Jarvis, Gregory Bruce",male,1944,U.S.,civilian
+432,202,123,"McAuliffe, Sharon Christa Corrigan","McAuliffe, Sharon Christa Corrigan",female,1948,U.S.,civilian
+433,203,61,"Laveykin, Aleksandr",Александр Иванович Лавейкин,male,1951,U.S.S.R/Russia,civilian
+434,204,62,"Viktorenko, Aleksandr",Александр Степанович Викторенко,male,1947,U.S.S.R/Russia,military
+435,204,62,"Viktorenko, Aleksandr",Александр Степанович Викторенко,male,1947,U.S.S.R/Russia,military
+436,204,62,"Viktorenko, Aleksandr",Александр Степанович Викторенко,male,1947,U.S.S.R/Russia,military
+437,204,62,"Viktorenko, Aleksandr",Александр Степанович Викторенко,male,1947,U.S.S.R/Russia,military
+438,205,1,"Faris, M. Achmed",,male,1951,Syria,military
+439,206,63,"Manarov, Musa",Муса Хираманович Манаров,male,1951,U.S.S.R/Russia,military
+440,206,63,"Manarov, Musa",Муса Хираманович Манаров,male,1951,U.S.S.R/Russia,military
+441,207,64,"Levchenko, Anatoli",Левченко Анатолий Семёнович,male,1941,U.S.S.R/Russia,military
+442,208,65,"Solovyev, Anatoly",Анатолий Яковлевич Соловьёв,male,1948,U.S.S.R/Russia,military
+443,208,65,"Solovyev, Anatoly",Анатолий Яковлевич Соловьёв,male,1948,U.S.S.R/Russia,military
+444,208,65,"Solovyev, Anatoly",Анатолий Яковлевич Соловьёв,male,1948,U.S.S.R/Russia,military
+445,208,65,"Solovyev, Anatoly",Анатолий Яковлевич Соловьёв,male,1948,U.S.S.R/Russia,military
+446,208,65,"Solovyev, Anatoly",Анатолий Яковлевич Соловьёв,male,1948,U.S.S.R/Russia,military
+447,209,2,"Aleksandrov, Aleksandr",Александър Панайотов Александров,male,1951,Bulgaria,military
+448,210,66,"Polyakov, Valeri",Валерий Владимирович Поляков,male,1942,U.S.S.R/Russia,civilian
+449,210,66,"Polyakov, Valeri",Валерий Владимирович Поляков,male,1942,U.S.S.R/Russia,civilian
+450,211,1,"Mohmand, Abdul Ahad",,male,1959,Afghanistan,military
+451,212,67,"Krikalev, Sergei",Сергей Константинович Крикалёв,male,1958,U.S.S.R/Russia,civilian
+452,212,67,"Krikalev, Sergei",Сергей Константинович Крикалёв,male,1958,U.S.S.R/Russia,civilian
+453,212,67,"Krikalev, Sergei",Сергей Константинович Крикалёв,male,1958,U.S.S.R/Russia,civilian
+454,212,67,"Krikalev, Sergei",Сергей Константинович Крикалёв,male,1958,U.S.S.R/Russia,civilian
+455,212,67,"Krikalev, Sergei",Сергей Константинович Крикалёв,male,1958,U.S.S.R/Russia,civilian
+456,212,67,"Krikalev, Sergei",Сергей Константинович Крикалёв,male,1958,U.S.S.R/Russia,civilian
+457,213,124,"Gardner, Guy S.","Gardner, Guy S.",male,1948,U.S.,military
+458,213,124,"Gardner, Guy S.","Gardner, Guy S.",male,1948,U.S.,military
+459,214,125,"Shepherd, William M.","Shepherd, William M.",male,1949,U.S.,military
+460,214,125,"Shepherd, William M.","Shepherd, William M.",male,1949,U.S.,military
+461,214,125,"Shepherd, William M.","Shepherd, William M.",male,1949,U.S.,military
+462,214,125,"Shepherd, William M.","Shepherd, William M.",male,1949,U.S.,military
+463,215,126,"Blaha, John E.","Blaha, John E.",male,1942,U.S.,military
+464,215,126,"Blaha, John E.","Blaha, John E.",male,1942,U.S.,military
+465,215,126,"Blaha, John E.","Blaha, John E.",male,1942,U.S.,military
+466,215,126,"Blaha, John E.","Blaha, John E.",male,1942,U.S.,military
+467,215,126,"Blaha, John E.","Blaha, John E.",male,1942,U.S.,military
+468,216,127,"Springer, Robert C.","Springer, Robert C.",male,1942,U.S.,military
+469,216,127,"Springer, Robert C.","Springer, Robert C.",male,1942,U.S.,military
+470,217,128,"Bagian, James P.","Bagian, James P.",male,1952,U.S.,civilian
+471,217,128,"Bagian, James P.","Bagian, James P.",male,1952,U.S.,civilian
+472,218,129,"Lee, Mark C.","Lee, Mark C.",male,1952,U.S.,military
+473,218,129,"Lee, Mark C.","Lee, Mark C.",male,1952,U.S.,military
+474,218,129,"Lee, Mark C.","Lee, Mark C.",male,1952,U.S.,military
+475,218,129,"Lee, Mark C.","Lee, Mark C.",male,1952,U.S.,military
+476,219,130,"Richards, Richard N.","Richards, Richard N.",male,1946,U.S.,military
+477,219,130,"Richards, Richard N.","Richards, Richard N.",male,1946,U.S.,military
+478,219,130,"Richards, Richard N.","Richards, Richard N.",male,1946,U.S.,military
+479,219,130,"Richards, Richard N.","Richards, Richard N.",male,1946,U.S.,military
+480,220,131,"Adamson, James C.","Adamson, James C.",male,1946,U.S.,military
+481,220,131,"Adamson, James C.","Adamson, James C.",male,1946,U.S.,military
+482,221,132,"Brown, Mark N.","Brown, Mark N.",male,1951,U.S.,military
+483,221,132,"Brown, Mark N.","Brown, Mark N.",male,1951,U.S.,military
+484,222,133,"McCulley, Michael J.","McCulley, Michael J.",male,1943,U.S.,military
+485,223,134,"Baker, Ellen S.","Baker, Ellen S.",female,1953,U.S.,civilian
+486,223,134,"Baker, Ellen S.","Baker, Ellen S.",female,1953,U.S.,civilian
+487,223,134,"Baker, Ellen S.","Baker, Ellen S.",female,1953,U.S.,civilian
+488,224,135,"Carter, Manley Lanier, Jr.","Carter, Manley Lanier, Jr.",male,1947,U.S.,military
+489,225,136,"Thornton, Kathryn C.","Thornton, Kathryn C.",female,1952,U.S.,civilian
+490,225,136,"Thornton, Kathryn C.","Thornton, Kathryn C.",female,1952,U.S.,civilian
+491,225,136,"Thornton, Kathryn C.","Thornton, Kathryn C.",female,1952,U.S.,civilian
+492,225,136,"Thornton, Kathryn C.","Thornton, Kathryn C.",female,1952,U.S.,civilian
+493,226,137,"Wetherbee, James D.","Wetherbee, James D.",male,1952,U.S.,military
+494,226,137,"Wetherbee, James D.","Wetherbee, James D.",male,1952,U.S.,military
+495,226,137,"Wetherbee, James D.","Wetherbee, James D.",male,1952,U.S.,military
+496,226,137,"Wetherbee, James D.","Wetherbee, James D.",male,1952,U.S.,military
+497,226,137,"Wetherbee, James D.","Wetherbee, James D.",male,1952,U.S.,military
+498,226,137,"Wetherbee, James D.","Wetherbee, James D.",male,1952,U.S.,military
+499,227,138,"Ivins, Marsha S.","Ivins, Marsha S.",female,1951,U.S.,civilian
+500,227,138,"Ivins, Marsha S.","Ivins, Marsha S.",female,1951,U.S.,civilian
+501,227,138,"Ivins, Marsha S.","Ivins, Marsha S.",female,1951,U.S.,civilian
+502,227,138,"Ivins, Marsha S.","Ivins, Marsha S.",female,1951,U.S.,civilian
+503,227,138,"Ivins, Marsha S.","Ivins, Marsha S.",female,1951,U.S.,civilian
+504,228,139,"Low, G. David","Low, G. David",male,1956,U.S.,civilian
+505,228,139,"Low, G. David","Low, G. David",male,1956,U.S.,civilian
+506,228,139,"Low, G. David","Low, G. David",male,1956,U.S.,civilian
+507,229,68,"Balandin, Aleksandr",Александр Николаевич Баландин,male,1953,U.S.S.R/Russia,civilian
+508,230,140,"Casper, John H.","Casper, John H.",male,1943,U.S.,military
+509,230,140,"Casper, John H.","Casper, John H.",male,1943,U.S.,military
+510,230,140,"Casper, John H.","Casper, John H.",male,1943,U.S.,military
+511,230,140,"Casper, John H.","Casper, John H.",male,1943,U.S.,military
+512,231,141,"Thuot, Pierre J.","Thuot, Pierre J.",male,1955,U.S.,military
+513,231,141,"Thuot, Pierre J.","Thuot, Pierre J.",male,1955,U.S.,military
+514,231,141,"Thuot, Pierre J.","Thuot, Pierre J.",male,1955,U.S.,military
+515,232,69,"Manakov, Gennadi",Геннадий Михайлович Манаков,male,1950,U.S.S.R/Russia,military
+516,232,69,"Manakov, Gennadi",Геннадий Михайлович Манаков,male,1950,U.S.S.R/Russia,military
+517,233,142,"Cabana, Robert D.","Cabana, Robert D.",male,1949,U.S.,military
+518,233,142,"Cabana, Robert D.","Cabana, Robert D.",male,1949,U.S.,military
+519,233,142,"Cabana, Robert D.","Cabana, Robert D.",male,1949,U.S.,military
+520,233,142,"Cabana, Robert D.","Cabana, Robert D.",male,1949,U.S.,military
+521,234,143,"Melnick, Bruce E.","Melnick, Bruce E.",male,1949,U.S.,military
+522,234,143,"Melnick, Bruce E.","Melnick, Bruce E.",male,1949,U.S.,military
+523,235,144,"Akers, Thomas D.","Akers, Thomas D.",male,1951,U.S.,military
+524,235,144,"Akers, Thomas D.","Akers, Thomas D.",male,1951,U.S.,military
+525,235,144,"Akers, Thomas D.","Akers, Thomas D.",male,1951,U.S.,military
+526,235,144,"Akers, Thomas D.","Akers, Thomas D.",male,1951,U.S.,military
+527,236,145,"Culbertson, Frank L., Jr.","Culbertson, Frank L., Jr.",male,1949,U.S.,military
+528,236,145,"Culbertson, Frank L., Jr.","Culbertson, Frank L., Jr.",male,1949,U.S.,military
+529,236,145,"Culbertson, Frank L., Jr.","Culbertson, Frank L., Jr.",male,1949,U.S.,military
+530,237,146,"Meade, Carl J.","Meade, Carl J.",male,1950,U.S.,military
+531,237,146,"Meade, Carl J.","Meade, Carl J.",male,1950,U.S.,military
+532,237,146,"Meade, Carl J.","Meade, Carl J.",male,1950,U.S.,military
+533,238,147,"Gemar, Charles D.","Gemar, Charles D.",male,1955,U.S.,military
+534,238,147,"Gemar, Charles D.","Gemar, Charles D.",male,1955,U.S.,military
+535,238,147,"Gemar, Charles D.","Gemar, Charles D.",male,1955,U.S.,military
+536,239,148,"Durrance, Samuel Thornton","Durrance, Samuel Thornton",male,1943,U.S.,civilian
+537,239,148,"Durrance, Samuel Thornton","Durrance, Samuel Thornton",male,1943,U.S.,civilian
+538,240,149,"Parise, Ronald Anthony","Parise, Ronald Anthony",male,1951,U.S.,civilian
+539,240,149,"Parise, Ronald Anthony","Parise, Ronald Anthony",male,1951,U.S.,civilian
+540,241,70,"Afanasyev, Viktor Mikhaylovich",Виктор Михайлович Афанасьев,male,1948,U.S.S.R/Russia,military
+541,241,70,"Afanasyev, Viktor Mikhaylovich",Виктор Михайлович Афанасьев,male,1948,U.S.S.R/Russia,military
+542,241,70,"Afanasyev, Viktor Mikhaylovich",Виктор Михайлович Афанасьев,male,1948,U.S.S.R/Russia,military
+543,241,70,"Afanasyev, Viktor Mikhaylovich",Виктор Михайлович Афанасьев,male,1948,U.S.S.R/Russia,military
+544,242,1,"Akiyama, Toyohiro",秋山豊寛,male,1942,Japan,civilian
+545,243,150,"Cameron, Kenneth D.","Cameron, Kenneth D.",male,1949,U.S.,military
+546,243,150,"Cameron, Kenneth D.","Cameron, Kenneth D.",male,1949,U.S.,military
+547,243,150,"Cameron, Kenneth D.","Cameron, Kenneth D.",male,1949,U.S.,military
+548,244,151,"Godwin, Linda M.","Godwin, Linda M.",female,1952,U.S.,civilian
+549,244,151,"Godwin, Linda M.","Godwin, Linda M.",female,1952,U.S.,civilian
+550,244,151,"Godwin, Linda M.","Godwin, Linda M.",female,1952,U.S.,civilian
+551,244,151,"Godwin, Linda M.","Godwin, Linda M.",female,1952,U.S.,civilian
+552,245,152,"Apt, Jerome","Apt, Jerome",male,1949,U.S.,civilian
+553,245,152,"Apt, Jerome","Apt, Jerome",male,1949,U.S.,civilian
+554,245,152,"Apt, Jerome","Apt, Jerome",male,1949,U.S.,civilian
+555,245,152,"Apt, Jerome","Apt, Jerome",male,1949,U.S.,civilian
+556,246,153,"Hammond, L. Blaine, Jr.","Hammond, L. Blaine, Jr.",male,1952,U.S.,military
+557,246,153,"Hammond, L. Blaine, Jr.","Hammond, L. Blaine, Jr.",male,1952,U.S.,military
+558,247,154,"Harbaugh, Gregory J.","Harbaugh, Gregory J.",male,1956,U.S.,civilian
+559,247,154,"Harbaugh, Gregory J.","Harbaugh, Gregory J.",male,1956,U.S.,civilian
+560,247,154,"Harbaugh, Gregory J.","Harbaugh, Gregory J.",male,1956,U.S.,civilian
+561,247,154,"Harbaugh, Gregory J.","Harbaugh, Gregory J.",male,1956,U.S.,civilian
+562,248,155,"McMonagle, Donald R.","McMonagle, Donald R.",male,1952,U.S.,military
+563,248,155,"McMonagle, Donald R.","McMonagle, Donald R.",male,1952,U.S.,military
+564,248,155,"McMonagle, Donald R.","McMonagle, Donald R.",male,1952,U.S.,military
+565,249,155,"Veach, Charles Lacy","Veach, Charles Lacy",male,1944,U.S.,civilian
+566,249,155,"Veach, Charles Lacy","Veach, Charles Lacy",male,1944,U.S.,civilian
+567,250,157,"Hieb, Richard J.","Hieb, Richard J.",male,1955,U.S.,civilian
+568,250,157,"Hieb, Richard J.","Hieb, Richard J.",male,1955,U.S.,civilian
+569,250,157,"Hieb, Richard J.","Hieb, Richard J.",male,1955,U.S.,civilian
+570,251,71,"Artsebarsky, Anatoly",Анатолий Павлович Арцебарский,male,1956,U.S.S.R/Russia,military
+571,252,1,Helen Sharman,Helen Sharman,female,1963,U.K.,civilian
+572,253,158,"Gutierrez, Sidney M.","Gutierrez, Sidney M.",male,1951,U.S.,military
+573,253,158,"Gutierrez, Sidney M.","Gutierrez, Sidney M.",male,1951,U.S.,military
+574,254,159,"Jernigan, Tamara E.","Jernigan, Tamara E.",female,1959,U.S.,civilian
+575,254,159,"Jernigan, Tamara E.","Jernigan, Tamara E.",female,1959,U.S.,civilian
+576,254,159,"Jernigan, Tamara E.","Jernigan, Tamara E.",female,1959,U.S.,civilian
+577,254,159,"Jernigan, Tamara E.","Jernigan, Tamara E.",female,1959,U.S.,civilian
+578,254,159,"Jernigan, Tamara E.","Jernigan, Tamara E.",female,1959,U.S.,civilian
+579,255,160,"Gaffney, Andrew","Gaffney, Andrew",male,1946,U.S.,civilian
+580,256,161,"Hughes-Fulford, Millie Elizabeth","Hughes-Fulford, Millie Elizabeth",female,1945,U.S.,civilian
+581,257,162,"Baker, Michael A.","Baker, Michael A.",male,1953,U.S.,military
+582,257,162,"Baker, Michael A.","Baker, Michael A.",male,1953,U.S.,military
+583,257,162,"Baker, Michael A.","Baker, Michael A.",male,1953,U.S.,military
+584,257,162,"Baker, Michael A.","Baker, Michael A.",male,1953,U.S.,military
+585,258,163,"Reightler, Kenneth S., Jr.","Reightler, Kenneth S., Jr.",male,1951,U.S.,military
+586,258,163,"Reightler, Kenneth S., Jr.","Reightler, Kenneth S., Jr.",male,1951,U.S.,military
+587,259,72,"Aubakirov, Toktar",Тоқтар Оңғарбайұлы Әубәкіров,male,1946,U.S.S.R/Russia,military
+588,260,1,"Viehbock, Franz","Viehbock, Franz",male,1960,Austria,civilian
+589,261,164,"Henricks, Terence T.","Henricks, Terence T.",male,1952,U.S.,military
+590,261,164,"Henricks, Terence T.","Henricks, Terence T.",male,1952,U.S.,military
+591,261,164,"Henricks, Terence T.","Henricks, Terence T.",male,1952,U.S.,military
+592,261,164,"Henricks, Terence T.","Henricks, Terence T.",male,1952,U.S.,military
+593,262,165,"Voss, James S.","Voss, James S.",male,1949,U.S.,military
+594,262,165,"Voss, James S.","Voss, James S.",male,1949,U.S.,military
+595,262,165,"Voss, James S.","Voss, James S.",male,1949,U.S.,military
+596,262,165,"Voss, James S.","Voss, James S.",male,1949,U.S.,military
+597,262,165,"Voss, James S.","Voss, James S.",male,1949,U.S.,military
+598,263,166,"Runco, Mario, Jr.","Runco, Mario, Jr.",male,1952,U.S.,military
+599,263,166,"Runco, Mario, Jr.","Runco, Mario, Jr.",male,1952,U.S.,military
+600,263,166,"Runco, Mario, Jr.","Runco, Mario, Jr.",male,1952,U.S.,military
+601,264,167,"Hennen, Thomas John","Hennen, Thomas John",male,1952,U.S.,military
+602,265,168,"Oswald, Stephen S.","Oswald, Stephen S.",male,1951,U.S.,military
+603,265,168,"Oswald, Stephen S.","Oswald, Stephen S.",male,1951,U.S.,military
+604,265,168,"Oswald, Stephen S.","Oswald, Stephen S.",male,1951,U.S.,military
+605,266,169,"Readdy, William F.","Readdy, William F.",male,1952,U.S.,civilian
+606,266,169,"Readdy, William F.","Readdy, William F.",male,1952,U.S.,civilian
+607,266,169,"Readdy, William F.","Readdy, William F.",male,1952,U.S.,civilian
+608,267,2,"Bondar, Roberta Lynn","Bondar, Roberta Lynn",female,1945,Canada,civilian
+609,268,73,"Kaleri, Aleksandr",Александр Юрьевич Калери,male,1956,U.S.S.R/Russia,civilian
+610,268,73,"Kaleri, Aleksandr",Александр Юрьевич Калери,male,1956,U.S.S.R/Russia,civilian
+611,268,73,"Kaleri, Aleksandr",Александр Юрьевич Калери,male,1956,U.S.S.R/Russia,civilian
+612,268,73,"Kaleri, Aleksandr",Александр Юрьевич Калери,male,1956,U.S.S.R/Russia,civilian
+613,268,73,"Kaleri, Aleksandr",Александр Юрьевич Калери,male,1956,U.S.S.R/Russia,civilian
+614,269,4,"Flade, Klaus-Dietrich","Flade, Klaus-Dietrich",male,1952,Germany,military
+615,270,170,"Duffy, Brian","Duffy, Brian",male,1953,U.S.,military
+616,270,170,"Duffy, Brian","Duffy, Brian",male,1953,U.S.,military
+617,270,170,"Duffy, Brian","Duffy, Brian",male,1953,U.S.,military
+618,270,170,"Duffy, Brian","Duffy, Brian",male,1953,U.S.,military
+619,271,171,"Foale, C. Michael","Foale, C. Michael",male,1957,U.S.,civilian
+620,271,171,"Foale, C. Michael","Foale, C. Michael",male,1957,U.S.,civilian
+621,271,171,"Foale, C. Michael","Foale, C. Michael",male,1957,U.S.,civilian
+622,271,171,"Foale, C. Michael","Foale, C. Michael",male,1957,U.S.,civilian
+623,271,171,"Foale, C. Michael","Foale, C. Michael",male,1957,U.S.,civilian
+624,271,171,"Foale, C. Michael","Foale, C. Michael",male,1957,U.S.,civilian
+625,272,1,"Frimout, David","Frimout, Dirk Dries david",male,1941,Belgium,civilian
+626,273,172,"Chilton, Kevin P.","Chilton, Kevin P.",male,1954,U.S.,military
+627,273,172,"Chilton, Kevin P.","Chilton, Kevin P.",male,1954,U.S.,military
+628,273,172,"Chilton, Kevin P.","Chilton, Kevin P.",male,1954,U.S.,military
+629,274,173,"Bowersox, Kenneth D.","Bowersox, Kenneth D.",male,1956,U.S.,military
+630,274,173,"Bowersox, Kenneth D.","Bowersox, Kenneth D.",male,1956,U.S.,military
+631,274,173,"Bowersox, Kenneth D.","Bowersox, Kenneth D.",male,1956,U.S.,military
+632,274,173,"Bowersox, Kenneth D.","Bowersox, Kenneth D.",male,1956,U.S.,military
+633,274,173,"Bowersox, Kenneth D.","Bowersox, Kenneth D.",male,1956,U.S.,military
+634,275,174,"DeLucas, Lawrence James","DeLucas, Lawrence James",male,1950,U.S.,civilian
+635,276,175,"Trinh, Eugene Huu-Chau","Trinh, Eugene Huu-Chau",male,1950,U.S.,civilian
+636,277,74,"Avdeyev, Sergei",Сергей Васильевич Авдеев,male,1956,U.S.S.R/Russia,civilian
+637,277,74,"Avdeyev, Sergei",Сергей Васильевич Авдеев,male,1956,U.S.S.R/Russia,civilian
+638,277,74,"Avdeyev, Sergei",Сергей Васильевич Авдеев,male,1956,U.S.S.R/Russia,civilian
+639,278,3,"Tognini, Michel","Tognini, Michel",male,1949,France,military
+640,278,3,"Tognini, Michel","Tognini, Michel",male,1949,France,military
+641,279,176,"Allen, Andrew M.","Allen, Andrew M.",male,1955,U.S.,military
+642,279,176,"Allen, Andrew M.","Allen, Andrew M.",male,1955,U.S.,military
+643,279,176,"Allen, Andrew M.","Allen, Andrew M.",male,1955,U.S.,military
+644,280,1,"Nicollier, Claude","Nicollier, Claude",male,1944,Switzerland,civilian
+645,280,1,"Nicollier, Claude","Nicollier, Claude",male,1944,Switzerland,civilian
+646,280,1,"Nicollier, Claude","Nicollier, Claude",male,1944,Switzerland,civilian
+647,280,1,"Nicollier, Claude","Nicollier, Claude",male,1944,Switzerland,civilian
+648,281,1,Franco Malerba,Franco Malerba,male,1946,Italy,civilian
+649,282,177,"Brown, Curtis L., Jr.","Brown, Curtis L., Jr.",male,1956,U.S.,military
+650,282,177,"Brown, Curtis L., Jr.","Brown, Curtis L., Jr.",male,1956,U.S.,military
+651,282,177,"Brown, Curtis L., Jr.","Brown, Curtis L., Jr.",male,1956,U.S.,military
+652,282,177,"Brown, Curtis L., Jr.","Brown, Curtis L., Jr.",male,1956,U.S.,military
+653,282,177,"Brown, Curtis L., Jr.","Brown, Curtis L., Jr.",male,1956,U.S.,military
+654,282,177,"Brown, Curtis L., Jr.","Brown, Curtis L., Jr.",male,1956,U.S.,military
+655,283,178,"Davis, Nancy Jan","Davis, Nancy Jan",female,1953,U.S.,civilian
+656,283,178,"Davis, Nancy Jan","Davis, Nancy Jan",female,1953,U.S.,civilian
+657,283,178,"Davis, Nancy Jan","Davis, Nancy Jan",female,1953,U.S.,civilian
+658,284,179,"Jemison, Mae C.","Jemison, Mae C.",female,1956,U.S.,civilian
+659,285,2,"Mohri, Mamoru",毛利衛,male,1948,Japan,civilian
+660,285,2,"Mohri, Mamoru",毛利衛,male,1948,Japan,civilian
+661,286,3,Steven MacLean,Steven MacLean,male,1954,Canada,military
+662,286,3,Steven MacLean,Steven MacLean,male,1954,Canada,military
+663,287,180,"Clifford, Michael R.","Clifford, Michael R.",male,1952,U.S.,military
+664,287,180,"Clifford, Michael R.","Clifford, Michael R.",male,1952,U.S.,military
+665,287,180,"Clifford, Michael R.","Clifford, Michael R.",male,1952,U.S.,military
+666,288,181,"Helms, Susan J.","Helms, Susan J.",female,1958,U.S.,military
+667,288,181,"Helms, Susan J.","Helms, Susan J.",female,1958,U.S.,military
+668,288,181,"Helms, Susan J.","Helms, Susan J.",female,1958,U.S.,military
+669,288,181,"Helms, Susan J.","Helms, Susan J.",female,1958,U.S.,military
+670,288,181,"Helms, Susan J.","Helms, Susan J.",female,1958,U.S.,military
+671,289,75,"Poleshchuk, Aleksandr",Александр Федорович Полещук,male,1953,U.S.S.R/Russia,military
+672,290,182,"Cockrell, Kenneth D.","Cockrell, Kenneth D.",male,1950,U.S.,civilian
+673,290,182,"Cockrell, Kenneth D.","Cockrell, Kenneth D.",male,1950,U.S.,civilian
+674,290,182,"Cockrell, Kenneth D.","Cockrell, Kenneth D.",male,1950,U.S.,civilian
+675,290,182,"Cockrell, Kenneth D.","Cockrell, Kenneth D.",male,1950,U.S.,civilian
+676,290,182,"Cockrell, Kenneth D.","Cockrell, Kenneth D.",male,1950,U.S.,civilian
+677,291,183,"Ochoa, Ellen","Ochoa, Ellen",female,1958,U.S.,civilian
+678,291,183,"Ochoa, Ellen","Ochoa, Ellen",female,1958,U.S.,civilian
+679,291,183,"Ochoa, Ellen","Ochoa, Ellen",female,1958,U.S.,civilian
+680,291,183,"Ochoa, Ellen","Ochoa, Ellen",female,1958,U.S.,civilian
+681,292,184,"Precourt, Charles J., Jr.","Precourt, Charles J., Jr.",male,1955,U.S.,military
+682,292,184,"Precourt, Charles J., Jr.","Precourt, Charles J., Jr.",male,1955,U.S.,military
+683,292,184,"Precourt, Charles J., Jr.","Precourt, Charles J., Jr.",male,1955,U.S.,military
+684,292,184,"Precourt, Charles J., Jr.","Precourt, Charles J., Jr.",male,1955,U.S.,military
+685,293,185,"Harris, Bernard A., Jr.","Harris, Bernard A., Jr.",male,1956,U.S.,civilian
+686,293,185,"Harris, Bernard A., Jr.","Harris, Bernard A., Jr.",male,1956,U.S.,civilian
+687,294,5,"Walter, Ulrich","Walter, Ulrich",male,1954,Germany,civilian
+688,295,6,"Schlegel, Hans","Schlegel, Hans",male,1951,Germany,civilian
+689,295,6,"Schlegel, Hans","Schlegel, Hans",male,1951,Germany,civilian
+690,296,186,"Currie, Nancy J.","Currie, Nancy J.",female,1958,U.S.,military
+691,296,186,"Currie, Nancy J.","Currie, Nancy J.",female,1958,U.S.,military
+692,296,186,"Currie, Nancy J.","Currie, Nancy J.",female,1958,U.S.,military
+693,296,186,"Currie, Nancy J.","Currie, Nancy J.",female,1958,U.S.,military
+694,297,187,"Wisoff, Peter J. K.","Wisoff, Peter J. K.",male,1958,U.S.,civilian
+695,297,187,"Wisoff, Peter J. K.","Wisoff, Peter J. K.",male,1958,U.S.,civilian
+696,297,187,"Wisoff, Peter J. K.","Wisoff, Peter J. K.",male,1958,U.S.,civilian
+697,297,187,"Wisoff, Peter J. K.","Wisoff, Peter J. K.",male,1958,U.S.,civilian
+698,298,188,"Voss, Janice E.","Voss, Janice E.",female,1956,U.S.,civilian
+699,298,188,"Voss, Janice E.","Voss, Janice E.",female,1956,U.S.,civilian
+700,298,188,"Voss, Janice E.","Voss, Janice E.",female,1956,U.S.,civilian
+701,298,188,"Voss, Janice E.","Voss, Janice E.",female,1956,U.S.,civilian
+702,298,188,"Voss, Janice E.","Voss, Janice E.",female,1956,U.S.,civilian
+703,299,76,"Tsibliyev, Vasili",Василий Васильевич Циблиев,male,1954,U.S.S.R/Russia,military
+704,299,76,"Tsibliyev, Vasili",Василий Васильевич Циблиев,male,1954,U.S.S.R/Russia,military
+705,300,4,"Haigneré, Jean-Pierre","Haigneré, Jean-Pierre",male,1948,France,military
+706,300,4,"Haigneré, Jean-Pierre","Haigneré, Jean-Pierre",male,1948,France,military
+707,301,189,"Newman, James H.","Newman, James H.",male,1956,U.S.,civilian
+708,301,189,"Newman, James H.","Newman, James H.",male,1956,U.S.,civilian
+709,301,189,"Newman, James H.","Newman, James H.",male,1956,U.S.,civilian
+710,301,189,"Newman, James H.","Newman, James H.",male,1956,U.S.,civilian
+711,302,190,"Bursch, Daniel W.","Bursch, Daniel W.",male,1957,U.S.,military
+712,302,190,"Bursch, Daniel W.","Bursch, Daniel W.",male,1957,U.S.,military
+713,302,190,"Bursch, Daniel W.","Bursch, Daniel W.",male,1957,U.S.,military
+714,302,190,"Bursch, Daniel W.","Bursch, Daniel W.",male,1957,U.S.,military
+715,303,191,"Walz, Carl E.","Walz, Carl E.",male,1955,U.S.,military
+716,303,191,"Walz, Carl E.","Walz, Carl E.",male,1955,U.S.,military
+717,303,191,"Walz, Carl E.","Walz, Carl E.",male,1955,U.S.,military
+718,303,191,"Walz, Carl E.","Walz, Carl E.",male,1955,U.S.,military
+719,304,192,"Searfoss, Richard A.","Searfoss, Richard A.",male,1956,U.S.,military
+720,304,192,"Searfoss, Richard A.","Searfoss, Richard A.",male,1956,U.S.,military
+721,304,192,"Searfoss, Richard A.","Searfoss, Richard A.",male,1956,U.S.,military
+722,305,193,"McArthur, William S., Jr.","McArthur, William S., Jr.",male,1951,U.S.,military
+723,305,193,"McArthur, William S., Jr.","McArthur, William S., Jr.",male,1951,U.S.,military
+724,305,193,"McArthur, William S., Jr.","McArthur, William S., Jr.",male,1951,U.S.,military
+725,305,193,"McArthur, William S., Jr.","McArthur, William S., Jr.",male,1951,U.S.,military
+726,306,194,"Wolf, David A.","Wolf, David A.",male,1956,U.S.,civilian
+727,306,194,"Wolf, David A.","Wolf, David A.",male,1956,U.S.,civilian
+728,306,194,"Wolf, David A.","Wolf, David A.",male,1956,U.S.,civilian
+729,306,194,"Wolf, David A.","Wolf, David A.",male,1956,U.S.,civilian
+730,307,195,"Fettman, Martin Joseph","Fettman, Martin Joseph",male,1956,U.S.,civilian
+731,308,77,Yuri Vladimirovich Usachyov,Юрий Владимирович Усачёв,male,1957,U.S.S.R/Russia,military
+732,308,77,Yuri Vladimirovich Usachyov,Юрий Владимирович Усачёв,male,1957,U.S.S.R/Russia,military
+733,308,77,Yuri Vladimirovich Usachyov,Юрий Владимирович Усачёв,male,1957,U.S.S.R/Russia,military
+734,308,77,Yuri Vladimirovich Usachyov,Юрий Владимирович Усачёв,male,1957,U.S.S.R/Russia,military
+735,309,196,"Sega, Ronald M.","Sega, Ronald M.",male,1952,U.S.,civilian
+736,309,196,"Sega, Ronald M.","Sega, Ronald M.",male,1952,U.S.,civilian
+737,310,197,"Jones, Thomas D.","Jones, Thomas D.",male,1955,U.S.,civilian
+738,310,197,"Jones, Thomas D.","Jones, Thomas D.",male,1955,U.S.,civilian
+739,310,197,"Jones, Thomas D.","Jones, Thomas D.",male,1955,U.S.,civilian
+740,310,197,"Jones, Thomas D.","Jones, Thomas D.",male,1955,U.S.,civilian
+741,311,78,"Malenchenko, Yuri",Юрий Иванович Маленченко,male,1961,U.S.S.R/Russia,military
+742,311,78,"Malenchenko, Yuri",Юрий Иванович Маленченко,male,1961,U.S.S.R/Russia,military
+743,311,78,"Malenchenko, Yuri",Юрий Иванович Маленченко,male,1961,U.S.S.R/Russia,military
+744,311,78,"Malenchenko, Yuri",Юрий Иванович Маленченко,male,1961,U.S.S.R/Russia,military
+745,311,78,"Malenchenko, Yuri",Юрий Иванович Маленченко,male,1961,U.S.S.R/Russia,military
+746,311,78,"Malenchenko, Yuri",Юрий Иванович Маленченко,male,1961,U.S.S.R/Russia,military
+747,312,79,"Musabayev, Talgat",Талғат Аманкелдіұлы Мұсабаев,male,1951,U.S.S.R/Russia,military
+748,312,79,"Musabayev, Talgat",Талғат Аманкелдіұлы Мұсабаев,male,1951,U.S.S.R/Russia,military
+749,312,79,"Musabayev, Talgat",Талғат Аманкелдіұлы Мұсабаев,male,1951,U.S.S.R/Russia,military
+750,313,198,"Halsell, James D., Jr.","Halsell, James D., Jr.",male,1956,U.S.,military
+751,313,198,"Halsell, James D., Jr.","Halsell, James D., Jr.",male,1956,U.S.,military
+752,313,198,"Halsell, James D., Jr.","Halsell, James D., Jr.",male,1956,U.S.,military
+753,313,198,"Halsell, James D., Jr.","Halsell, James D., Jr.",male,1956,U.S.,military
+754,313,198,"Halsell, James D., Jr.","Halsell, James D., Jr.",male,1956,U.S.,military
+755,314,199,"Chiao, Leroy","Chiao, Leroy",male,1960,U.S.,civilian
+756,314,199,"Chiao, Leroy","Chiao, Leroy",male,1960,U.S.,civilian
+757,314,199,"Chiao, Leroy","Chiao, Leroy",male,1960,U.S.,civilian
+758,314,199,"Chiao, Leroy","Chiao, Leroy",male,1960,U.S.,civilian
+759,315,200,"Thomas, Donald A.","Thomas, Donald A.",male,1955,U.S.,civilian
+760,315,200,"Thomas, Donald A.","Thomas, Donald A.",male,1955,U.S.,civilian
+761,315,200,"Thomas, Donald A.","Thomas, Donald A.",male,1955,U.S.,civilian
+762,315,200,"Thomas, Donald A.","Thomas, Donald A.",male,1955,U.S.,civilian
+763,316,3,"Mukai, Chiaki",向井千秋,female,1952,Japan,civilian
+764,316,3,"Mukai, Chiaki",向井千秋,female,1952,Japan,civilian
+765,317,210,"Linenger, Jerry M.","Linenger, Jerry M.",male,1955,U.S.,military
+766,317,210,"Linenger, Jerry M.","Linenger, Jerry M.",male,1955,U.S.,military
+767,318,202,"Wilcutt, Terrence W.","Wilcutt, Terrence W.",male,1949,U.S.,military
+768,318,202,"Wilcutt, Terrence W.","Wilcutt, Terrence W.",male,1949,U.S.,military
+769,318,202,"Wilcutt, Terrence W.","Wilcutt, Terrence W.",male,1949,U.S.,military
+770,318,202,"Wilcutt, Terrence W.","Wilcutt, Terrence W.",male,1949,U.S.,military
+771,319,203,"Smith, Steven L.","Smith, Steven L.",male,1958,U.S.,civilian
+772,319,203,"Smith, Steven L.","Smith, Steven L.",male,1958,U.S.,civilian
+773,319,203,"Smith, Steven L.","Smith, Steven L.",male,1958,U.S.,civilian
+774,319,203,"Smith, Steven L.","Smith, Steven L.",male,1958,U.S.,civilian
+775,320,80,"Kondakova, Yelena V.",Елена Владимировна Кондакова,female,1957,U.S.S.R/Russia,civilian
+776,320,80,"Kondakova, Yelena V.",Елена Владимировна Кондакова,female,1957,U.S.S.R/Russia,civilian
+777,321,204,"Tanner, Joseph R.","Tanner, Joseph R.",male,1950,U.S.,civilian
+778,321,204,"Tanner, Joseph R.","Tanner, Joseph R.",male,1950,U.S.,civilian
+779,321,204,"Tanner, Joseph R.","Tanner, Joseph R.",male,1950,U.S.,civilian
+780,321,204,"Tanner, Joseph R.","Tanner, Joseph R.",male,1950,U.S.,civilian
+781,322,5,"Clervoy, Jean-François","Clervoy, Jean-François",male,1958,France,military
+782,322,5,"Clervoy, Jean-François","Clervoy, Jean-François",male,1958,France,military
+783,322,5,"Clervoy, Jean-François","Clervoy, Jean-François",male,1958,France,military
+784,323,205,"Parazynski, Scott E.","Parazynski, Scott E.",male,1961,U.S.,civilian
+785,323,205,"Parazynski, Scott E.","Parazynski, Scott E.",male,1961,U.S.,civilian
+786,323,205,"Parazynski, Scott E.","Parazynski, Scott E.",male,1961,U.S.,civilian
+787,323,205,"Parazynski, Scott E.","Parazynski, Scott E.",male,1961,U.S.,civilian
+788,323,205,"Parazynski, Scott E.","Parazynski, Scott E.",male,1961,U.S.,civilian
+789,324,206,"Collins, Eileen M.","Collins, Eileen M.",female,1956,U.S.,military
+790,324,206,"Collins, Eileen M.","Collins, Eileen M.",female,1956,U.S.,military
+791,324,206,"Collins, Eileen M.","Collins, Eileen M.",female,1956,U.S.,military
+792,324,206,"Collins, Eileen M.","Collins, Eileen M.",female,1956,U.S.,military
+793,325,207,"Gregory, William G.","Gregory, William G.",male,1957,U.S.,military
+794,326,208,"Grunsfeld, John M.","Grunsfeld, John M.",male,1958,U.S.,civilian
+795,326,208,"Grunsfeld, John M.","Grunsfeld, John M.",male,1958,U.S.,civilian
+796,326,208,"Grunsfeld, John M.","Grunsfeld, John M.",male,1958,U.S.,civilian
+797,326,208,"Grunsfeld, John M.","Grunsfeld, John M.",male,1958,U.S.,civilian
+798,326,208,"Grunsfeld, John M.","Grunsfeld, John M.",male,1958,U.S.,civilian
+799,327,209,"Lawrence, Wendy B.","Lawrence, Wendy B.",female,1959,U.S.,military
+800,327,209,"Lawrence, Wendy B.","Lawrence, Wendy B.",female,1959,U.S.,military
+801,327,209,"Lawrence, Wendy B.","Lawrence, Wendy B.",female,1959,U.S.,military
+802,327,209,"Lawrence, Wendy B.","Lawrence, Wendy B.",female,1959,U.S.,military
+803,328,81,"Dezhurov, Vladimir N.",Владимир Николаевич Дежуров,male,1962,U.S.S.R/Russia,military
+804,328,81,"Dezhurov, Vladimir N.",Владимир Николаевич Дежуров,male,1962,U.S.S.R/Russia,military
+805,329,82,"Budarin, Nikolai",Николай Михайлович Бударин,male,1953,U.S.S.R/Russia,civilian
+806,329,82,"Budarin, Nikolai",Николай Михайлович Бударин,male,1953,U.S.S.R/Russia,civilian
+807,329,82,"Budarin, Nikolai",Николай Михайлович Бударин,male,1953,U.S.S.R/Russia,civilian
+808,330,210,Kregel Kevin R.,Kregel Kevin R.,male,1956,U.S.,civilian
+809,330,210,Kregel Kevin R.,Kregel Kevin R.,male,1956,U.S.,civilian
+810,330,210,Kregel Kevin R.,Kregel Kevin R.,male,1956,U.S.,civilian
+811,330,210,Kregel Kevin R.,Kregel Kevin R.,male,1956,U.S.,civilian
+812,331,211,"Weber, Mary E.","Weber, Mary E.",female,1962,U.S.,civilian
+813,331,211,"Weber, Mary E.","Weber, Mary E.",female,1962,U.S.,civilian
+814,332,83,"Gidzenko, Yuri",Юрий Павлович Гидзенко,male,1962,U.S.S.R/Russia,military
+815,332,83,"Gidzenko, Yuri",Юрий Павлович Гидзенко,male,1962,U.S.S.R/Russia,military
+816,332,83,"Gidzenko, Yuri",Юрий Павлович Гидзенко,male,1962,U.S.S.R/Russia,military
+817,333,7,"Reiter, Thomas","Reiter, Thomas",male,1958,Germany,military
+818,333,7,"Reiter, Thomas","Reiter, Thomas",male,1958,Germany,military
+819,334,212,"Gernhardt, Michael L.","Gernhardt, Michael L.",male,1956,U.S.,civilian
+820,334,212,"Gernhardt, Michael L.","Gernhardt, Michael L.",male,1956,U.S.,civilian
+821,334,212,"Gernhardt, Michael L.","Gernhardt, Michael L.",male,1956,U.S.,civilian
+822,334,212,"Gernhardt, Michael L.","Gernhardt, Michael L.",male,1956,U.S.,civilian
+823,335,213,"Rominger, Kent V.","Rominger, Kent V.",male,1956,U.S.,military
+824,335,213,"Rominger, Kent V.","Rominger, Kent V.",male,1956,U.S.,military
+825,335,213,"Rominger, Kent V.","Rominger, Kent V.",male,1956,U.S.,military
+826,335,213,"Rominger, Kent V.","Rominger, Kent V.",male,1956,U.S.,military
+827,335,213,"Rominger, Kent V.","Rominger, Kent V.",male,1956,U.S.,military
+828,336,214,"Coleman, Catherine G.","Coleman, Catherine G.",female,1960,U.S.,military
+829,336,214,"Coleman, Catherine G.","Coleman, Catherine G.",female,1960,U.S.,military
+830,336,214,"Coleman, Catherine G.","Coleman, Catherine G.",female,1960,U.S.,military
+831,337,215,"Lopez-Alegria, Michael E.","Lopez-Alegria, Michael E.",male,1958,U.S.,military
+832,337,215,"Lopez-Alegria, Michael E.","Lopez-Alegria, Michael E.",male,1958,U.S.,military
+833,337,215,"Lopez-Alegria, Michael E.","Lopez-Alegria, Michael E.",male,1958,U.S.,military
+834,337,215,"Lopez-Alegria, Michael E.","Lopez-Alegria, Michael E.",male,1958,U.S.,military
+835,338,216,"Leslie, Fred Weldon","Leslie, Fred Weldon",male,1951,U.S.,civilian
+836,339,217,"Sacco, Albert Jr.","Sacco, Albert Jr.",male,1949,U.S.,civilian
+837,340,4,Chris Hadfield,Chris Hadfield,male,1959,Canada,military
+838,340,4,Chris Hadfield,Chris Hadfield,male,1959,Canada,military
+839,340,4,Chris Hadfield,Chris Hadfield,male,1959,Canada,military
+840,341,218,"Jett, Brent W.","Jett, Brent W.",male,1958,U.S.,military
+841,341,218,"Jett, Brent W.","Jett, Brent W.",male,1958,U.S.,military
+842,341,218,"Jett, Brent W.","Jett, Brent W.",male,1958,U.S.,military
+843,341,218,"Jett, Brent W.","Jett, Brent W.",male,1958,U.S.,military
+844,342,219,"Scott, Winston E.","Scott, Winston E.",male,1950,U.S.,military
+845,342,219,"Scott, Winston E.","Scott, Winston E.",male,1950,U.S.,military
+846,343,4,"Wakata, Koichi",若田光一,male,1963,Japan,civilian
+847,343,4,"Wakata, Koichi",若田光一,male,1963,Japan,civilian
+848,343,4,"Wakata, Koichi",若田光一,male,1963,Japan,civilian
+849,343,4,"Wakata, Koichi",若田光一,male,1963,Japan,civilian
+850,344,220,"Barry, Daniel T.","Barry, Daniel T.",male,1953,U.S.,civilian
+851,344,220,"Barry, Daniel T.","Barry, Daniel T.",male,1953,U.S.,civilian
+852,344,220,"Barry, Daniel T.","Barry, Daniel T.",male,1953,U.S.,civilian
+853,345,84,"Onufrienko, Yuri",Юрий Иванович Онуфриенко,male,1961,U.S.S.R/Russia,military
+854,345,84,"Onufrienko, Yuri",Юрий Иванович Онуфриенко,male,1961,U.S.S.R/Russia,military
+855,346,221,"Horowitz, Scott J.","Horowitz, Scott J.",male,1957,U.S.,military
+856,346,221,"Horowitz, Scott J.","Horowitz, Scott J.",male,1957,U.S.,military
+857,346,221,"Horowitz, Scott J.","Horowitz, Scott J.",male,1957,U.S.,military
+858,346,221,"Horowitz, Scott J.","Horowitz, Scott J.",male,1957,U.S.,military
+859,347,2,"Cheli, Maurizio","Cheli, Maurizio",male,1959,Italy,military
+860,348,3,"Guidoni, Umberto","Guidoni, Umberto",male,1954,Italy,civilian
+861,348,3,"Guidoni, Umberto","Guidoni, Umberto",male,1954,Italy,civilian
+862,349,222,"Thomas, Andrew S. W.","Thomas, Andrew S. W.",male,1951,Australia,civilian
+863,349,222,"Thomas, Andrew S. W.","Thomas, Andrew S. W.",male,1951,Australia,civilian
+864,349,222,"Thomas, Andrew S. W.","Thomas, Andrew S. W.",male,1951,Australia,civilian
+865,349,222,"Thomas, Andrew S. W.","Thomas, Andrew S. W.",male,1951,Australia,civilian
+866,350,223,"Linnehan, Richard M.","Linnehan, Richard M.",male,1957,U.S.,civilian
+867,350,223,"Linnehan, Richard M.","Linnehan, Richard M.",male,1957,U.S.,civilian
+868,350,223,"Linnehan, Richard M.","Linnehan, Richard M.",male,1957,U.S.,civilian
+869,350,223,"Linnehan, Richard M.","Linnehan, Richard M.",male,1957,U.S.,civilian
+870,351,224,"Brady, Charles E., Jr.","Brady, Charles E., Jr.",male,1951,U.S.,military
+871,352,6,"Favier, Jean-Jacques","Favier, Jean-Jacques",male,1949,France,civilian
+872,353,5,Robert Thirsk,Robert Thirsk,male,1953,Canada,civilian
+873,353,5,Robert Thirsk,Robert Thirsk,male,1953,Canada,civilian
+874,354,85,"Korzun, Valery",Валерий Григорьевич Корзун,male,1953,U.S.S.R/Russia,military
+875,354,85,"Korzun, Valery",Валерий Григорьевич Корзун,male,1953,U.S.S.R/Russia,military
+876,355,7,"André-Deshays, Claudie (Haigneré)","André-Deshays, Claudie (Haigneré)",female,1957,France,civilian
+877,355,7,"André-Deshays, Claudie (Haigneré)","André-Deshays, Claudie (Haigneré)",female,1957,France,civilian
+878,356,86,"Lazutkin, Aleksandr",Александр Иванович Лазуткин,male,1957,U.S.S.R/Russia,civilian
+879,357,8,"Ewald, Reinhold","Ewald, Reinhold",male,1956,Germany,civilian
+880,358,225,"Kilrain-Still, Susan L.","Kilrain-Still, Susan L.",female,1961,U.S.,military
+881,358,225,"Kilrain-Still, Susan L.","Kilrain-Still, Susan L.",female,1961,U.S.,military
+882,359,226,"Crouch, Roger Keith","Crouch, Roger Keith",male,1940,U.S.,civilian
+883,359,226,"Crouch, Roger Keith","Crouch, Roger Keith",male,1940,U.S.,civilian
+884,360,227,"Linteris, Gregory Thomas","Linteris, Gregory Thomas",male,1957,U.S.,civilian
+885,360,227,"Linteris, Gregory Thomas","Linteris, Gregory Thomas",male,1957,U.S.,civilian
+886,361,228,"Noriega, Carlos I.","Noriega, Carlos I.",male,1959,U.S.,military
+887,361,228,"Noriega, Carlos I.","Noriega, Carlos I.",male,1959,U.S.,military
+888,362,229,"Lu, Edward T.","Lu, Edward T.",male,1963,U.S.,civilian
+889,362,229,"Lu, Edward T.","Lu, Edward T.",male,1963,U.S.,civilian
+890,362,229,"Lu, Edward T.","Lu, Edward T.",male,1963,U.S.,civilian
+891,363,87,"Vinogradov, Pavel",Павел Владимирович Виноградов,male,1953,U.S.S.R/Russia,civilian
+892,363,87,"Vinogradov, Pavel",Павел Владимирович Виноградов,male,1953,U.S.S.R/Russia,civilian
+893,363,87,"Vinogradov, Pavel",Павел Владимирович Виноградов,male,1953,U.S.S.R/Russia,civilian
+894,364,230,"Curbeam, Robert L., Jr.","Curbeam, Robert L., Jr.",male,1962,U.S.,military
+895,364,230,"Curbeam, Robert L., Jr.","Curbeam, Robert L., Jr.",male,1962,U.S.,military
+896,364,230,"Curbeam, Robert L., Jr.","Curbeam, Robert L., Jr.",male,1962,U.S.,military
+897,365,231,"Robinson, Stephen K.","Robinson, Stephen K.",male,1955,U.S.,civilian
+898,365,231,"Robinson, Stephen K.","Robinson, Stephen K.",male,1955,U.S.,civilian
+899,365,231,"Robinson, Stephen K.","Robinson, Stephen K.",male,1955,U.S.,civilian
+900,365,231,"Robinson, Stephen K.","Robinson, Stephen K.",male,1955,U.S.,civilian
+901,366,6,Bjarni Tryggvason,Bjarni Tryggvason,male,1945,Canada,civilian
+902,367,232,"Bloomfield, Michael J.","Bloomfield, Michael J.",male,1959,U.S.,military
+903,367,232,"Bloomfield, Michael J.","Bloomfield, Michael J.",male,1959,U.S.,military
+904,367,232,"Bloomfield, Michael J.","Bloomfield, Michael J.",male,1959,U.S.,military
+905,368,233,"Lindsey, Steven W.","Lindsey, Steven W.",male,1960,U.S.,military
+906,368,233,"Lindsey, Steven W.","Lindsey, Steven W.",male,1960,U.S.,military
+907,368,233,"Lindsey, Steven W.","Lindsey, Steven W.",male,1960,U.S.,military
+908,368,233,"Lindsey, Steven W.","Lindsey, Steven W.",male,1960,U.S.,military
+909,368,233,"Lindsey, Steven W.","Lindsey, Steven W.",male,1960,U.S.,military
+910,369,234,"Chawla, Kalpana","Chawla, Kalpana",female,1962,U.S.,civilian
+911,369,234,"Chawla, Kalpana","Chawla, Kalpana",female,1962,U.S.,civilian
+912,370,5,"Doi, Takao",土井隆雄,male,1954,Japan,civilian
+913,370,5,"Doi, Takao",土井隆雄,male,1954,Japan,civilian
+914,371,1,"Kadenyuk, Leonid",Леонід Костянтинович Каденюк,male,1951,U.S.S.R/Ukraine,civilian
+915,372,235,"Edwards, Joe F., Jr.","Edwards, Joe F., Jr.",male,1958,U.S.,military
+916,373,236,"Reilly, James F.","Reilly, James F.",male,1954,U.S.,civilian
+917,373,236,"Reilly, James F.","Reilly, James F.",male,1954,U.S.,civilian
+918,373,236,"Reilly, James F.","Reilly, James F.",male,1954,U.S.,civilian
+919,374,237,"Anderson, Michael P.","Anderson, Michael P.",male,1959,U.S.,military
+920,374,237,"Anderson, Michael P.","Anderson, Michael P.",male,1959,U.S.,military
+921,375,88,"Sharipov, Salizhan",Салижан Шакирович Шарипов,male,1964,U.S.S.R/Russia,military
+922,375,88,"Sharipov, Salizhan",Салижан Шакирович Шарипов,male,1964,U.S.S.R/Russia,military
+923,376,8,"Eyharts, Léopold","Eyharts, Léopold",male,1957,France,military
+924,376,8,"Eyharts, Léopold","Eyharts, Léopold",male,1957,France,military
+925,377,238,"Altman, Scott D.","Altman, Scott D.",male,1959,U.S.,military
+926,377,238,"Altman, Scott D.","Altman, Scott D.",male,1959,U.S.,military
+927,377,238,"Altman, Scott D.","Altman, Scott D.",male,1959,U.S.,military
+928,377,238,"Altman, Scott D.","Altman, Scott D.",male,1959,U.S.,military
+929,378,239,"Hire, Kathryn P.","Hire, Kathryn P.",female,1959,U.S.,military
+930,378,239,"Hire, Kathryn P.","Hire, Kathryn P.",female,1959,U.S.,military
+931,379,7,"Williams, Dafydd Rhys","Williams, Dafydd Rhys",male,1954,Canada,civilian
+932,379,7,"Williams, Dafydd Rhys","Williams, Dafydd Rhys",male,1954,Canada,civilian
+933,380,240,"Buckey, Jay Clark Jr.","Buckey, Jay Clark Jr.",male,1956,U.S.,civilian
+934,381,241,"Pawelczyk, James Anthony","Pawelczyk, James Anthony",male,1960,U.S.,civilian
+935,382,242,"Gorie, Dominic L.","Gorie, Dominic L.",male,1957,U.S.,military
+936,382,242,"Gorie, Dominic L.","Gorie, Dominic L.",male,1957,U.S.,military
+937,382,242,"Gorie, Dominic L.","Gorie, Dominic L.",male,1957,U.S.,military
+938,382,242,"Gorie, Dominic L.","Gorie, Dominic L.",male,1957,U.S.,military
+939,383,243,"Kavandi, Janet L.","Kavandi, Janet L.",female,1957,U.S.,civilian
+940,383,243,"Kavandi, Janet L.","Kavandi, Janet L.",female,1957,U.S.,civilian
+941,383,243,"Kavandi, Janet L.","Kavandi, Janet L.",female,1957,U.S.,civilian
+942,384,89,"Padalka, Gennady",Геннадий Иванович Падалка,male,1958,U.S.S.R/Russia,military
+943,384,89,"Padalka, Gennady",Геннадий Иванович Падалка,male,1958,U.S.S.R/Russia,military
+944,384,89,"Padalka, Gennady",Геннадий Иванович Падалка,male,1958,U.S.S.R/Russia,military
+945,384,89,"Padalka, Gennady",Геннадий Иванович Падалка,male,1958,U.S.S.R/Russia,military
+946,384,89,"Padalka, Gennady",Геннадий Иванович Падалка,male,1958,U.S.S.R/Russia,military
+947,385,90,"Baturin, Yuri",Юрий Михайлович Батурин,male,1949,U.S.S.R/Russia,civilian
+948,385,90,"Duque, Pedro","Duque, Pedro Francisco",male,1963,Spain,civilian
+949,385,90,"Baturin, Yuri",Юрий Михайлович Батурин,male,1949,U.S.S.R/Russia,civilian
+950,385,90,"Duque, Pedro","Duque, Pedro Francisco",male,1963,Spain,civilian
+951,387,244,"Sturckow, Frederick W.","Sturckow, Frederick W.",male,1961,U.S.,military
+952,387,244,"Sturckow, Frederick W.","Sturckow, Frederick W.",male,1961,U.S.,military
+953,387,244,"Sturckow, Frederick W.","Sturckow, Frederick W.",male,1961,U.S.,military
+954,387,244,"Sturckow, Frederick W.","Sturckow, Frederick W.",male,1961,U.S.,military
+955,388,1,"Bella, Ivan","Bella, Ivan",male,1964,Slovakia,military
+956,389,245,"Husband, Rick D.","Husband, Rick D.",male,1957,U.S.,military
+957,389,245,"Husband, Rick D.","Husband, Rick D.",male,1957,U.S.,military
+958,390,8,"Payette, Julie","Payette, Julie",female,1963,Canada,civilian
+959,390,8,"Payette, Julie","Payette, Julie",female,1963,Canada,civilian
+960,391,91,"Tokarev, Valeri",Валерий Иванович Токарев,male,1952,U.S.S.R/Russia,military
+961,391,91,"Tokarev, Valeri",Валерий Иванович Токарев,male,1952,U.S.S.R/Russia,military
+962,392,246,"Ashby, Jeffrey S.","Ashby, Jeffrey S.",male,1954,U.S.,military
+963,392,246,"Ashby, Jeffrey S.","Ashby, Jeffrey S.",male,1954,U.S.,military
+964,392,246,"Ashby, Jeffrey S.","Ashby, Jeffrey S.",male,1954,U.S.,military
+965,393,247,"Kelly, Scott J.","Kelly, Scott J.",male,1964,U.S.,military
+966,393,247,"Kelly, Scott J.","Kelly, Scott J.",male,1964,U.S.,military
+967,393,247,"Kelly, Scott J.","Kelly, Scott J.",male,1964,U.S.,military
+968,393,247,"Kelly, Scott J.","Kelly, Scott J.",male,1964,U.S.,military
+969,394,9,"Thiele, Gerhard","Thiele, Gerhard",male,1953,Germany,civilian
+970,395,92,"Zalyotin, Sergei",Сергей Викторович Залётин,male,1962,U.S.S.R/Russia,military
+971,395,92,"Zalyotin, Sergei",Сергей Викторович Залётин,male,1962,U.S.S.R/Russia,military
+972,396,248,"Williams, Jeffrey N.","Williams, Jeffrey N.",male,1958,U.S.,military
+973,396,248,"Williams, Jeffrey N.","Williams, Jeffrey N.",male,1958,U.S.,military
+974,396,248,"Williams, Jeffrey N.","Williams, Jeffrey N.",male,1958,U.S.,military
+975,396,248,"Williams, Jeffrey N.","Williams, Jeffrey N.",male,1958,U.S.,military
+976,397,249,"Mastracchio, Richard A.","Mastracchio, Richard A.",male,1960,U.S.,civilian
+977,397,249,"Mastracchio, Richard A.","Mastracchio, Richard A.",male,1960,U.S.,civilian
+978,397,249,"Mastracchio, Richard A.","Mastracchio, Richard A.",male,1960,U.S.,civilian
+979,397,249,"Mastracchio, Richard A.","Mastracchio, Richard A.",male,1960,U.S.,civilian
+980,398,250,"Burbank, Daniel C.","Burbank, Daniel C.",male,1961,U.S.,military
+981,398,250,"Burbank, Daniel C.","Burbank, Daniel C.",male,1961,U.S.,military
+982,398,250,"Burbank, Daniel C.","Burbank, Daniel C.",male,1961,U.S.,military
+983,399,93,"Morukov, Boris",Борис Владимирович Моруков,male,1950,U.S.S.R/Russia,civilian
+984,400,251,"Melroy, Pamela A.","Melroy, Pamela A.",female,1961,U.S.,military
+985,400,251,"Melroy, Pamela A.","Melroy, Pamela A.",female,1961,U.S.,military
+986,400,251,"Melroy, Pamela A.","Melroy, Pamela A.",female,1961,U.S.,military
+987,401,252,"Polansky, Mark L.","Polansky, Mark L.",male,1956,U.S.,civilian
+988,401,252,"Polansky, Mark L.","Polansky, Mark L.",male,1956,U.S.,civilian
+989,401,252,"Polansky, Mark L.","Polansky, Mark L.",male,1956,U.S.,civilian
+990,402,253,"Kelly, James M.","Kelly, James M.",male,1959,U.S.,military
+991,402,253,"Kelly, James M.","Kelly, James M.",male,1959,U.S.,military
+992,403,254,"Richards, Paul W.","Richards, Paul W.",male,1964,U.S.,civilian
+993,404,255,"Phillips, John L.","Phillips, John L.",male,1951,U.S.,civilian
+994,404,255,"Phillips, John L.","Phillips, John L.",male,1951,U.S.,civilian
+995,404,255,"Phillips, John L.","Phillips, John L.",male,1951,U.S.,civilian
+996,405,94,"Lonchakov, Yuri",Юрий Валентинович Лончаков,male,1965,U.S.S.R/Russia,military
+997,405,94,"Lonchakov, Yuri",Юрий Валентинович Лончаков,male,1965,U.S.S.R/Russia,military
+998,405,94,"Lonchakov, Yuri",Юрий Валентинович Лончаков,male,1965,U.S.S.R/Russia,military
+999,406,256,"Tito, Dennis Anthony","Tito, Dennis Anthony",male,1940,U.S.,civilian
+1000,407,257,"Hobaugh, Charles O.","Hobaugh, Charles O.",male,1961,U.S.,military
+1001,407,257,"Hobaugh, Charles O.","Hobaugh, Charles O.",male,1961,U.S.,military
+1002,407,257,"Hobaugh, Charles O.","Hobaugh, Charles O.",male,1961,U.S.,military
+1003,408,258,"Forrester, Patrick G.","Forrester, Patrick G.",male,1957,U.S.,military
+1004,408,258,"Forrester, Patrick G.","Forrester, Patrick G.",male,1957,U.S.,military
+1005,408,258,"Forrester, Patrick G.","Forrester, Patrick G.",male,1957,U.S.,military
+1006,409,95,"Tyurin, Mikhail",Михаил Владиславович Тюрин,male,1960,U.S.S.R/Russia,military
+1007,409,95,"Tyurin, Mikhail",Михаил Владиславович Тюрин,male,1960,U.S.S.R/Russia,military
+1008,409,95,"Tyurin, Mikhail",Михаил Владиславович Тюрин,male,1960,U.S.S.R/Russia,military
+1009,410,96,"Kozeyev, Konstantin",Константин Мирович Козеев,male,1967,U.S.S.R/Russia,civilian
+1010,411,259,"Kelly, Mark E.","Kelly, Mark E.",male,1964,U.S.,military
+1011,411,259,"Kelly, Mark E.","Kelly, Mark E.",male,1964,U.S.,military
+1012,411,259,"Kelly, Mark E.","Kelly, Mark E.",male,1964,U.S.,military
+1013,411,259,"Kelly, Mark E.","Kelly, Mark E.",male,1964,U.S.,military
+1014,412,260,"Tani, Daniel M.","Tani, Daniel M.",male,1961,U.S.,civilian
+1015,412,260,"Tani, Daniel M.","Tani, Daniel M.",male,1961,U.S.,civilian
+1016,413,261,"Carey, Duane G.","Carey, Duane G.",male,1957,U.S.,military
+1017,414,262,"Massimino, Michael J.","Massimino, Michael J.",male,1962,U.S.,civilian
+1018,414,262,"Massimino, Michael J.","Massimino, Michael J.",male,1962,U.S.,civilian
+1019,415,263,"Frick, Stephen N.","Frick, Stephen N.",male,1964,U.S.,military
+1020,415,263,"Frick, Stephen N.","Frick, Stephen N.",male,1964,U.S.,military
+1021,416,264,"Walheim, Rex J.","Walheim, Rex J.",male,1962,U.S.,military
+1022,416,264,"Walheim, Rex J.","Walheim, Rex J.",male,1962,U.S.,military
+1023,416,264,"Walheim, Rex J.","Walheim, Rex J.",male,1962,U.S.,military
+1024,417,265,"Morin, Lee M.","Morin, Lee M.",male,1952,U.S.,military
+1025,418,4,"Vittori, Roverto","Vittori, Roverto",male,1964,Italy,military
+1026,418,4,"Vittori, Roverto","Vittori, Roverto",male,1964,Italy,military
+1027,418,4,"Vittori, Roverto","Vittori, Roverto",male,1964,Italy,military
+1028,419,1,"Shuttleworth, M. Richard","Shuttleworth, M. Richard",male,1973,Republic of South Africa,civilian
+1029,420,266,"Lockhart, Paul S.","Lockhart, Paul S.",male,1956,U.S.,military
+1030,420,266,"Lockhart, Paul S.","Lockhart, Paul S.",male,1956,U.S.,military
+1031,421,9,"Perrin, Philippe","Perrin, Philippe",male,1963,France,military
+1032,422,267,"Whitson, Peggy A.","Whitson, Peggy A.",female,1960,U.S.,civilian
+1033,422,267,"Whitson, Peggy A.","Whitson, Peggy A.",female,1960,U.S.,civilian
+1034,422,267,"Whitson, Peggy A.","Whitson, Peggy A.",female,1960,U.S.,civilian
+1035,423,97,"Treshchov, Sergei",Сергей Евгеньевич Трещёв,male,1958,U.S.S.R/Russia,civilian
+1036,424,268,"Magnus, Sandra H.","Magnus, Sandra H.",female,1964,U.S.,civilian
+1037,424,268,"Magnus, Sandra H.","Magnus, Sandra H.",female,1964,U.S.,civilian
+1038,424,268,"Magnus, Sandra H.","Magnus, Sandra H.",female,1964,U.S.,civilian
+1039,425,269,"Sellers, Piers J.","Sellers, Piers J.",male,1955,U.K./U.S.,civilian
+1040,425,269,"Sellers, Piers J.","Sellers, Piers J.",male,1955,U.K./U.S.,civilian
+1041,425,269,"Sellers, Piers J.","Sellers, Piers J.",male,1955,U.K./U.S.,civilian
+1042,426,98,"Yurchikhin, Fyodor",Фёдор Николаевич Юрчихин,male,1959,U.S.S.R/Russia,civilian
+1043,426,98,"Yurchikhin, Fyodor",Фёдор Николаевич Юрчихин,male,1959,U.S.S.R/Russia,civilian
+1044,426,98,"Yurchikhin, Fyodor",Фёдор Николаевич Юрчихин,male,1959,U.S.S.R/Russia,civilian
+1045,426,98,"Yurchikhin, Fyodor",Фёдор Николаевич Юрчихин,male,1959,U.S.S.R/Russia,civilian
+1046,426,98,"Yurchikhin, Fyodor",Фёдор Николаевич Юрчихин,male,1959,U.S.S.R/Russia,civilian
+1047,427,2,"De Winne, Frank","De Winne, Frank",male,1961,Belgium,military
+1048,427,2,"De Winne, Frank","De Winne, Frank",male,1961,Belgium,military
+1049,428,270,"Herrington, John B.","Herrington, John B.",male,1958,U.S.,military
+1050,429,271,"Pettit, Donald R.","Pettit, Donald R.",male,1955,U.S.,civilian
+1051,429,271,"Pettit, Donald R.","Pettit, Donald R.",male,1955,U.S.,civilian
+1052,429,271,"Pettit, Donald R.","Pettit, Donald R.",male,1955,U.S.,civilian
+1053,430,272,"McCool, William C.","McCool, William C.",male,1961,U.S.,military
+1054,431,273,"Brown, David M.","Brown, David M.",male,1956,U.S.,military
+1055,432,274,"Clark, Laurel B.","Clark, Laurel B.",female,1961,U.S.,military
+1056,433,1,"Ramon, Ilan",אילן רמון,male,1954,Israel,military
+1057,434,1,"Yang, Liwei",杨利伟,male,1965,China,military
+1058,435,275,"Fincke, E. Michael","Fincke, E. Michael",male,1967,U.S.,military
+1059,435,275,"Fincke, E. Michael","Fincke, E. Michael",male,1967,U.S.,military
+1060,435,275,"Fincke, E. Michael","Fincke, E. Michael",male,1967,U.S.,military
+1061,436,2,"Kuipers, Andre","Kuipers, Andre",male,1958,Netherland,civilian
+1062,436,2,"Kuipers, Andre","Kuipers, Andre",male,1958,Netherland,civilian
+1063,437,99,"Shargin, Yuri",Юрий Георгиевич Шаргин,male,1960,U.S.S.R/Russia,military
+1064,438,6,"Noguchi, Soichi",野口聡一,male,1965,Japan,civilian
+1065,438,6,"Noguchi, Soichi",野口聡一,male,1965,Japan,civilian
+1066,439,276,"Camarda, Charles J.","Camarda, Charles J.",male,1952,U.S.,civilian
+1067,440,277,"Olsen, Gregory Hammond","Olsen, Gregory Hammond",male,1945,U.S.,civilian
+1068,441,2,"Fei, Junlong",费俊龙,male,1966,China,military
+1069,442,3,Nie Haisheng,聂海胜,male,1964,China,military
+1070,442,3,Nie Haisheng,聂海胜,male,1964,China,military
+1071,443,1,"Pontes, Marcos Cesar","Pontes, Marcos Cesar",male,1963,Brazil,military
+1072,444,278,"Fossum, Michael E.","Fossum, Michael E.",male,1957,U.S.,civilian
+1073,444,278,"Fossum, Michael E.","Fossum, Michael E.",male,1957,U.S.,civilian
+1074,444,278,"Fossum, Michael E.","Fossum, Michael E.",male,1957,U.S.,civilian
+1075,445,279,"Nowak, Lisa M.","Nowak, Lisa M.",female,1963,U.S.,military
+1076,446,280,"Wilson, Stephanie D.","Wilson, Stephanie D.",female,1966,U.S.,civilian
+1077,446,280,"Wilson, Stephanie D.","Wilson, Stephanie D.",female,1966,U.S.,civilian
+1078,446,280,"Wilson, Stephanie D.","Wilson, Stephanie D.",female,1966,U.S.,civilian
+1079,447,281,"Ferguson, Christopher J.","Ferguson, Christopher J.",male,1961,U.S.,military
+1080,447,281,"Ferguson, Christopher J.","Ferguson, Christopher J.",male,1961,U.S.,military
+1081,447,281,"Ferguson, Christopher J.","Ferguson, Christopher J.",male,1961,U.S.,military
+1082,448,282,"Stefanyshyn-Piper, Heidemarie M.","Stefanyshyn-Piper, Heidemarie M.",female,1963,U.S.,military
+1083,448,282,"Stefanyshyn-Piper, Heidemarie M.","Stefanyshyn-Piper, Heidemarie M.",female,1963,U.S.,military
+1084,449,283,"Ansari, Anousheh",انوشه انصاری,female,1966,U.S.,civilian
+1085,450,284,"Oefelein, William A.","Oefelein, William A.",male,1965,U.S.,military
+1086,451,285,"Patrick, Nicholas J. M.","Patrick, Nicholas J. M.",male,1964,U.K./U.S.,civilian
+1087,451,285,"Patrick, Nicholas J. M.","Patrick, Nicholas J. M.",male,1964,U.K./U.S.,civilian
+1088,452,1,Christer Fuglesang,Christer Fuglesang,male,1957,Sweden,civilian
+1089,452,1,Christer Fuglesang,Christer Fuglesang,male,1957,Sweden,civilian
+1090,453,286,"Higginbotham, Joan E.","Higginbotham, Joan E.",female,1964,U.S.,civilian
+1091,454,287,"Williams, Sunita L.","Williams, Sunita L.",female,1965,U.S.,military
+1092,454,287,"Williams, Sunita L.","Williams, Sunita L.",female,1965,U.S.,military
+1093,455,100,"Kotov, Oleg",Олег Валериевич Котов,male,1965,U.S.S.R/Russia,military
+1094,455,100,"Kotov, Oleg",Олег Валериевич Котов,male,1965,U.S.S.R/Russia,military
+1095,455,100,"Kotov, Oleg",Олег Валериевич Котов,male,1965,U.S.S.R/Russia,military
+1096,456,288,"Simonyi, Charles (Karoly)","Simonyi, Charles (Karoly)",male,1948,U.S.,civilian
+1097,456,288,"Simonyi, Charles (Karoly)","Simonyi, Charles (Karoly)",male,1948,U.S.,civilian
+1098,457,289,"Archambault, Lee J.","Archambault, Lee J.",male,1960,U.S.,military
+1099,457,289,"Archambault, Lee J.","Archambault, Lee J.",male,1960,U.S.,military
+1100,458,290,"Swanson, Steven R.","Swanson, Steven R.",male,1960,U.S.,civilian
+1101,458,290,"Swanson, Steven R.","Swanson, Steven R.",male,1960,U.S.,civilian
+1102,458,290,"Swanson, Steven R.","Swanson, Steven R.",male,1960,U.S.,civilian
+1103,459,291,"Olivas, John D.","Olivas, John D.",male,1965,U.S.,civilian
+1104,459,291,"Olivas, John D.","Olivas, John D.",male,1965,U.S.,civilian
+1105,460,292,"Anderson, Clayton C.","Anderson, Clayton C.",male,1959,U.S.,civilian
+1106,460,292,"Anderson, Clayton C.","Anderson, Clayton C.",male,1959,U.S.,civilian
+1107,461,293,"Caldwell, Tracy E.","Caldwell, Tracy E.",female,1969,U.S.,civilian
+1108,461,293,"Caldwell, Tracy E.","Caldwell, Tracy E.",female,1969,U.S.,civilian
+1109,462,294,"Drew, Alvin Benjamin","Drew, Alvin B.",male,1962,U.S.,military
+1110,462,294,"Drew, Alvin Benjamin","Drew, Alvin B.",male,1962,U.S.,military
+1111,463,295,"Morgan, Barbara R.","Morgan, Barbara R.",female,1951,U.S.,civilian
+1112,464,1,"Shukor, Sheikh Muszaphar","Shukor, Sheikh Muszaphar",male,1972,Malysia,civilian
+1113,465,296,"Zamka, George D.","Zamka, George D.",male,1962,U.S.,military
+1114,465,296,"Zamka, George D.","Zamka, George D.",male,1962,U.S.,military
+1115,466,297,"Wheelock, Douglas H.","Wheelock, Douglas H.",male,1960,U.S.,military
+1116,466,297,"Wheelock, Douglas H.","Wheelock, Douglas H.",male,1960,U.S.,military
+1117,467,5,"Nespoli, Paolo A.","Nespoli, Paolo A.",male,1957,Italy,military
+1118,467,5,"Nespoli, Paolo A.","Nespoli, Paolo A.",male,1957,Italy,military
+1119,467,5,"Nespoli, Paolo A.","Nespoli, Paolo A.",male,1957,Italy,military
+1120,468,298,"Poindexter, Alan G.","Poindexter, Alan G.",male,1961,U.S.,military
+1121,468,298,"Poindexter, Alan G.","Poindexter, Alan G.",male,1961,U.S.,military
+1122,469,299,"Melvin, Leland D.","Melvin, Leland D.",male,1964,U.S.,civilian
+1123,469,299,"Melvin, Leland D.","Melvin, Leland D.",male,1964,U.S.,civilian
+1124,470,300,"Love, Stanley G.","Love, Stanley G.",male,1965,U.S.,civilian
+1125,471,301,"Johnson, Gregory H.","Johnson, Gregory H.",male,1962,U.S.,military
+1126,471,301,"Johnson, Gregory H.","Johnson, Gregory H.",male,1962,U.S.,military
+1127,472,302,"Behnken, Robert L.","Behnken, Robert L.",male,1970,U.S.,military
+1128,472,302,"Behnken, Robert L.","Behnken, Robert L.",male,1970,U.S.,military
+1129,473,303,"Foreman, Michael J.","Foreman, Michael J.",male,1957,U.S.,military
+1130,473,303,"Foreman, Michael J.","Foreman, Michael J.",male,1957,U.S.,military
+1131,474,304,"Reisman, Garrett E.","Reisman, Garrett E.",male,1968,U.S.,civilian
+1132,474,304,"Reisman, Garrett E.","Reisman, Garrett E.",male,1968,U.S.,civilian
+1133,475,101,"Volkov, Sergei",Сергей Александрович Волков,male,1973,U.S.S.R/Russia,military
+1134,475,101,"Volkov, Sergei",Сергей Александрович Волков,male,1973,U.S.S.R/Russia,military
+1135,475,101,"Volkov, Sergei",Сергей Александрович Волков,male,1973,U.S.S.R/Russia,military
+1136,476,102,"Kononenko, Oleg D.",Олег Дмитриевич Кононенко,male,1964,U.S.S.R/Russia,military
+1137,476,102,"Kononenko, Oleg D.",Олег Дмитриевич Кононенко,male,1964,U.S.S.R/Russia,military
+1138,476,102,"Kononenko, Oleg D.",Олег Дмитриевич Кононенко,male,1964,U.S.S.R/Russia,military
+1139,476,102,"Kononenko, Oleg D.",Олег Дмитриевич Кононенко,male,1964,U.S.S.R/Russia,military
+1140,477,1,"Yi, Soyeon (Lee So-hyun)",이소연,female,1978,Korea,civilian
+1141,478,305,"Ham, Kenneth T.","Ham, Kenneth T.",male,1964,U.S.,military
+1142,478,305,"Ham, Kenneth T.","Ham, Kenneth T.",male,1964,U.S.,military
+1143,479,306,"Nyberg, Karen L.","Nyberg, Karen L.",female,1969,U.S.,civilian
+1144,479,306,"Nyberg, Karen L.","Nyberg, Karen L.",female,1969,U.S.,civilian
+1145,480,307,"Garan, Ronald J., Jr.","Garan, Ronald J., Jr.",male,1961,U.S.,military
+1146,480,307,"Garan, Ronald J., Jr.","Garan, Ronald J., Jr.",male,1961,U.S.,military
+1147,481,7,"Hoshide, Akihiko",星出彰彦,male,1968,Japan,civilian
+1148,481,7,"Hoshide, Akihiko",星出彰彦,male,1968,Japan,civilian
+1149,482,308,"Chamitoff, Gregory","Chamitoff, Gregory",male,1962,U.S.,civilian
+1150,482,308,"Chamitoff, Gregory","Chamitoff, Gregory",male,1962,U.S.,civilian
+1151,483,4,"Zhai, Zhigang",翟志刚,male,1966,China,military
+1152,484,5,"Liu, Boming",刘伯明,male,1966,China,military
+1153,485,6,"Jing, Haipeng",景海鹏,male,1966,China,military
+1154,485,6,"Jing, Haipeng",景海鹏,male,1966,China,military
+1155,485,6,"Jing, Haipeng",景海鹏,male,1966,China,military
+1156,486,309,"Garriott, Richard Allen","Garriott, Richard Allen",male,1961,U.K./U.S.,civilian
+1157,487,310,"Boe, Eric A.","Boe, Eric A.",male,1964,U.S.,military
+1158,487,310,"Boe, Eric A.","Boe, Eric A.",male,1964,U.S.,military
+1159,488,311,"Bowen, Stephen G.","Bowen, Stephen G.",male,1964,U.S.,military
+1160,488,311,"Bowen, Stephen G.","Bowen, Stephen G.",male,1964,U.S.,military
+1161,488,311,"Bowen, Stephen G.","Bowen, Stephen G.",male,1964,U.S.,military
+1162,489,312,"Kimbrough, Robert S.","Kimbrough, Robert S.",male,1967,U.S.,military
+1163,489,312,"Kimbrough, Robert S.","Kimbrough, Robert S.",male,1967,U.S.,military
+1164,490,313,"Antonelli, Dominic A.","Antonelli, Dominic A.",male,1967,U.S.,military
+1165,490,313,"Antonelli, Dominic A.","Antonelli, Dominic A.",male,1967,U.S.,military
+1166,491,314,"Acaba, Joseph M.","Acaba, Joseph M.",male,1967,U.S.,civilian
+1167,491,314,"Acaba, Joseph M.","Acaba, Joseph M.",male,1967,U.S.,civilian
+1168,491,314,"Acaba, Joseph M.","Acaba, Joseph M.",male,1967,U.S.,civilian
+1169,492,315,"Arnold, Richard R., II","Arnold, Richard R., II",male,1963,U.S.,civilian
+1170,492,315,"Arnold, Richard R., II","Arnold, Richard R., II",male,1963,U.S.,civilian
+1171,493,316,"Barratt, Michael R.","Barratt, Michael R.",male,1959,U.S.,civilian
+1172,493,316,"Barratt, Michael R.","Barratt, Michael R.",male,1959,U.S.,civilian
+1173,494,317,"Johnson, Gregory C.","Johnson, Gregory C.",male,1954,U.S.,civilian
+1174,495,318,"Good, Michael T.","Good, Michael T.",male,1962,U.S.,military
+1175,495,318,"Good, Michael T.","Good, Michael T.",male,1962,U.S.,military
+1176,496,319,"McArthur, K. Megan","McArthur, K. Megan",female,1971,U.S.,civilian
+1177,497,320,"Feustel, Andrew J.","Feustel, Andrew J.",male,1965,U.S.,civilian
+1178,497,320,"Feustel, Andrew J.","Feustel, Andrew J.",male,1965,U.S.,civilian
+1179,497,320,"Feustel, Andrew J.","Feustel, Andrew J.",male,1965,U.S.,civilian
+1180,498,103,"Romanenko, Roman",Роман Юрьевич Романенко,male,1971,U.S.S.R/Russia,military
+1181,498,103,"Romanenko, Roman",Роман Юрьевич Романенко,male,1971,U.S.S.R/Russia,military
+1182,499,321,"Hurley, Douglas G.","Hurley, Douglas G.",male,1966,U.S.,military
+1183,499,321,"Hurley, Douglas G.","Hurley, Douglas G.",male,1966,U.S.,military
+1184,500,322,"Cassidy, Christopher J.","Cassidy, Christopher J.",male,1970,U.S.,military
+1185,500,322,"Cassidy, Christopher J.","Cassidy, Christopher J.",male,1970,U.S.,military
+1186,501,323,"Marshburn, Thomas H.","Marshburn, Thomas H.",male,1960,U.S.,military
+1187,501,323,"Marshburn, Thomas H.","Marshburn, Thomas H.",male,1960,U.S.,military
+1188,502,324,"Kopra, Timothy L.","Kopra, Timothy L.",male,1963,U.S.,military
+1189,502,324,"Kopra, Timothy L.","Kopra, Timothy L.",male,1963,U.S.,military
+1190,503,324,"Ford, Kevin A.","Ford, Kevin A.",male,1960,U.S.,military
+1191,503,324,"Ford, Kevin A.","Ford, Kevin A.",male,1960,U.S.,military
+1192,504,326,"Hernandez, Jose M.","Hernandez, Jose M.",male,1962,U.S.,civilian
+1193,505,327,"Stott, Nicole P.","Stott, Nicole P.",female,1962,U.S.,civilian
+1194,505,327,"Stott, Nicole P.","Stott, Nicole P.",female,1962,U.S.,civilian
+1195,506,104,"Surayev, Maksim",Максим Викторович Сураев,male,1972,U.S.S.R/Russia,military
+1196,506,104,"Surayev, Maksim",Максим Викторович Сураев,male,1972,U.S.S.R/Russia,military
+1197,507,9,Guy Laliberte,Guy Laliberte,male,1959,Canada,civilian
+1198,508,328,"Wilmore, Barry E.","Wilmore, Barry E.",male,1962,U.S.,military
+1199,508,328,"Wilmore, Barry E.","Wilmore, Barry E.",male,1962,U.S.,military
+1200,509,329,"Bresnik, Randolph J.","Bresnik, Randolph J.",male,1967,U.S.,military
+1201,509,329,"Bresnik, Randolph J.","Bresnik, Randolph J.",male,1967,U.S.,military
+1202,510,330,"Satcher, Robert L.","Satcher, Robert L.",male,1965,U.S.,civilian
+1203,511,331,"Creamer, Timothy J.","Creamer, Timothy J.",male,1959,U.S.,military
+1204,512,332,"Virts, Terry W., Jr.","Virts, Terry W., Jr.",male,1967,U.S.,military
+1205,512,332,"Virts, Terry W., Jr.","Virts, Terry W., Jr.",male,1967,U.S.,military
+1206,513,105,"Skvortsov, Aleksandr Jr.",Александр Александрович Скворцов,male,1966,U.S.S.R/Russia,military
+1207,513,105,"Skvortsov, Aleksandr Jr.",Александр Александрович Скворцов,male,1966,U.S.S.R/Russia,military
+1208,513,105,"Skvortsov, Aleksandr Jr.",Александр Александрович Скворцов,male,1966,U.S.S.R/Russia,military
+1209,514,106,"Korniyenko, Mikhail",Михаил Борисович Корниенко,male,1960,U.S.S.R/Russia,civilian
+1210,514,106,"Korniyenko, Mikhail",Михаил Борисович Корниенко,male,1960,U.S.S.R/Russia,civilian
+1211,515,333,"Dutton, James P.","Dutton, James P.",male,1968,U.S.,military
+1212,516,334,"Metcalf-Lindenburger, Dorothy M.","Metcalf-Lindenburger, Dorothy M.",female,1975,U.S.,civilian
+1213,517,8,"Yamazaki, Naoko",山崎直子,female,1970,Japan,civilian
+1214,518,335,"Walker, Shannon","Walker, Shannon",female,1965,U.S.,civilian
+1215,519,107,"Skripochka, Oleg",Олег Иванович Скрипочка,male,1969,U.S.S.R/Russia,civilian
+1216,519,107,"Skripochka, Oleg",Олег Иванович Скрипочка,male,1969,U.S.S.R/Russia,civilian
+1217,519,107,"Skripochka, Oleg",Олег Иванович Скрипочка,male,1969,U.S.S.R/Russia,civilian
+1218,520,108,"Kondratyev, Dmitri",Дмитрий Юрьевич Кондратьев,male,1969,U.S.S.R/Russia,military
+1219,521,109,"Samokutyayev, Aleksandr",Александр Михайлович Самокутяев,male,1970,U.S.S.R/Russia,military
+1220,521,109,"Samokutyayev, Aleksandr",Александр Михайлович Самокутяев,male,1970,U.S.S.R/Russia,military
+1221,522,110,"Borisenko, Andrei",Андрей Иванович Борисенко,male,1964,U.S.S.R/Russia,military
+1222,522,110,"Borisenko, Andrei",Андрей Иванович Борисенко,male,1964,U.S.S.R/Russia,military
+1223,523,9,"Furukawa, Satoshi",古川聡,male,1964,Japan,civilian
+1224,524,111,"Shkaplerov, Anton",Антон Николаевич Шкаплеров,male,1972,U.S.S.R/Russia,military
+1225,524,111,"Shkaplerov, Anton",Антон Николаевич Шкаплеров,male,1972,U.S.S.R/Russia,military
+1226,524,111,"Shkaplerov, Anton",Антон Николаевич Шкаплеров,male,1972,U.S.S.R/Russia,military
+1227,525,112,"Ivanishin, Anatoli",Анатолий Алексеевич Иванишин,male,1969,U.S.S.R/Russia,military
+1228,525,112,"Ivanishin, Anatoli",Анатолий Алексеевич Иванишин,male,1969,U.S.S.R/Russia,military
+1229,526,113,"Revin, Sergei",Сергей Николаевич Ревин,male,1966,U.S.S.R/Russia,civilian
+1230,527,7,"Liu, Wang",刘旺,male,1969,China,military
+1231,528,8,"Liu, Yang",刘洋,female,1978,China,military
+1232,529,114,"Novitski, Oleg",Олег Викторович Новицкий,male,1971,U.S.S.R/Russia,military
+1233,529,114,"Novitski, Oleg",Олег Викторович Новицкий,male,1971,U.S.S.R/Russia,military
+1234,530,115,"Tarelkin, Yevgeni",Евгений Игоревич Тарелкин,male,1974,U.S.S.R/Russia,military
+1235,531,116,"Misurkin, Aleksandr",Александр Александрович Мисуркин,male,1977,U.S.S.R/Russia,military
+1236,531,116,"Misurkin, Aleksandr",Александр Александрович Мисуркин,male,1977,U.S.S.R/Russia,military
+1237,532,6,"Parmitano, Luca","Parmitano, Luca",male,1976,Italy,military
+1238,532,6,"Parmitano, Luca","Parmitano, Luca",male,1976,Italy,military
+1239,533,9,"Zhang, Xiaoguang",张晓光,male,1968,China,military
+1240,534,10,"Wang, Yapi",王亚平,male,1980,China,military
+1241,535,117,"Ryazanski, Sergei",Сергей Николаевич Рязанский,male,1974,U.S.S.R/Russia,civilian
+1242,535,117,"Ryazanski, Sergei",Сергей Николаевич Рязанский,male,1974,U.S.S.R/Russia,civilian
+1243,536,336,"Hopkins, Michael Scott","Hopkins, Michael Scott",male,1968,U.S.,military
+1244,537,118,"Artemyev, Oleg",Олег Германович Артемьев,male,1970,U.S.S.R/Russia,military
+1245,537,118,"Artemyev, Oleg",Олег Германович Артемьев,male,1970,U.S.S.R/Russia,military
+1246,538,337,"Wiseman, Gregory Reid","Wiseman, Gregory Reid",male,1975,U.S.,military
+1247,539,11,"Gerst, Alexander","Gerst, Alexander",male,1976,Germany,civilian
+1248,539,11,"Gerst, Alexander","Gerst, Alexander",male,1976,Germany,civilian
+1249,540,119,"Serova, Yelena",Елена Олеговна Серова,female,1976,U.S.S.R/Russia,civilian
+1250,541,7,"Cristofretti, Samantha","Cristofretti, Samantha",female,1977,Italy,military
+1251,542,10,"Yui, Kimiya",油井亀美也,male,1970,Japan,military
+1252,543,338,"Lindgren, Kjell Norwood","Lindgren, Kjell Norwood",male,1973,U.S.,military
+1253,544,1,"Mogensen, Andreas","Mogensen, Andreas",male,1976,Denmark,civilian
+1254,545,1,Aidyn (Aydyn) Akanovich Aimbetov,Айдын Ақанұлы Айымбетов,male,1972,Kazakhstan,military
+1255,546,2,"Peake, Timothy Nigel","Peake, Timothy Nigel",male,1972,U.K.,military
+1256,547,120,"Ovchinin, Aleksey",Алексей Николаевич Овчинин,male,1971,U.S.S.R/Russia,military
+1257,547,120,"Ovchinin, Aleksey",Алексей Николаевич Овчинин,male,1971,U.S.S.R/Russia,military
+1258,547,120,"Ovchinin, Aleksey",Алексей Николаевич Овчинин,male,1971,U.S.S.R/Russia,military
+1259,548,11,"Onishi, Takuya",大西卓哉,male,1975,Japan,civilian
+1260,549,339,"Rubins, Kathleen","Rubins, Kathleen",female,1978,U.S.,civilian
+1261,550,11,"Chen, Dong",陈冬,male,1978,China,military
+1262,551,121,"Ryzhikov, Sergey",Сергей Николаевич Рыжиков,male,1974,U.S.S.R/Russia,military
+1263,552,121,"Pesquet, Thomas","Pesquet, Thomas",male,1978,France,civilian
+1264,553,340,"Fischer, Jack","Fischer, Jack",male,1974,U.S.,military
+1265,554,341,"Vande Hei, Mark","Vande Hei, Mark",male,1966,U.S.,military
+1266,555,342,"Tingle, Scott","Tingle, Scott",male,1965,U.S.,military
+1267,556,12,"Kanai, Norishige",金井宣茂,male,1976,Japan,civilian
+1268,557,122,"Prokopyev, Sergei",Сергей Валерьевич Прокопьев,male,1975,U.S.S.R/Russia,military
+1269,558,343,"Auñón-Chancellor, Serena","Auñón-Chancellor, Serena",female,1976,U.S.,civilian
+1270,559,344,"Hague, Tyler","Hague, Tyler",male,1975,U.S.,military
+1271,559,433,"Hague, Tyler","Hague, Tyler",male,1975,U.S.,military
+1272,560,10,"Saint-Jaques, David","Saint-Jaques, David",male,1970,Canada,civilian
+1273,561,345,"McClain, Anne Charlotte","McClain, Anne Charlotte",female,1979,U.S.,military
+1274,562,346,"Koch, Christina","Koch, Christina",female,1979,U.S.,civilian
+1275,563,347,"Morgan, Andrew","Morgan, Andrew",male,1976,U.S.,military
+1276,564,348,"Meir, Jessica","Meir, Jessica",female,1977,U.S.,civilian
+1277,565,1,"Al Mansoori, Hazzaa",هَزَّاع ٱلْمَنْصُوْرِي,male,1983,UAE,military
