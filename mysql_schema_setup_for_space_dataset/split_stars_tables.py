@@ -2,6 +2,7 @@ import mysql.connector
 
 def create_database(cursor, db_name):
     try:
+        cursor.execute(f"DROP DATABASE IF EXISTS {db_name}")
         cursor.execute(f"CREATE DATABASE IF NOT EXISTS {db_name}")
         print(f"Database '{db_name}' created (or already exists).")
     except mysql.connector.Error as err:
@@ -33,7 +34,7 @@ def main():
     db_name = 'stars_db'
     config = {
         'user': 'root',
-        'password': 'Helloworld@2025',
+        'password': 'root',
         'host': 'localhost',
         'raise_on_warnings': True
     }

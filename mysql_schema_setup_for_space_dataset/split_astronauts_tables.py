@@ -65,7 +65,7 @@ def main():
     db_name = 'astronauts_db'
     config = {
         'user': 'root',
-        'password': 'Helloworld@2025',
+        'password': 'root',
         'host': 'localhost',
         'raise_on_warnings': True
     }

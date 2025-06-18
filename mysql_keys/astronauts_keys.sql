@@ -1,0 +1,10 @@
+use astronauts_db;
+#show tables;
+#select * from mission_info;
+#select * from mission_performance;
+#select * from personal_info;
+alter table mission_info add primary key(id);
+alter table mission_performance add primary key(id);
+alter table personal_info add primary key(id);
+alter table mission_info add foreign key(id) references mission_performance(id);
+alter table mission_info add foreign key(id) references personal_info(id);

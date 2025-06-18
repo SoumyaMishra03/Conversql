@@ -1,8 +1,8 @@
 import mysql.connector
-import pandas as pd
 
 def create_database(cursor, db_name):
     try:
+        cursor.execute(f"DROP DATABASE IF EXISTS {db_name}")
         cursor.execute(f"CREATE DATABASE {db_name}")
         print(f"Database '{db_name}' created.")
     except mysql.connector.Error as err:
@@ -81,7 +81,7 @@ def main():
     db_name = 'asteroids'
     config = {
         'user': 'root',
-        'password': 'Helloworld@2025',
+        'password': 'root',
         'host': 'localhost',
         'raise_on_warnings': True
     }

@@ -14,6 +14,7 @@ def create_tables(cursor):
 
     TABLES['news_articles_table'] = (
         "CREATE TABLE IF NOT EXISTS news_articles_table ("
+        "  id INT AUTO_INCREMENT PRIMARY KEY, "
         "  title TEXT, "
         "  url TEXT, "
         "  content LONGTEXT, "
@@ -23,6 +24,7 @@ def create_tables(cursor):
 
     TABLES['publishing_info'] = (
         "CREATE TABLE IF NOT EXISTS publishing_info ("
+        "  id INT AUTO_INCREMENT PRIMARY KEY, "
         "  title TEXT, "
         "  author VARCHAR(100), "
         "  date VARCHAR(50)"
@@ -41,7 +43,7 @@ def main():
     db_name = 'spacenews_db'
     config = {
         'user': 'root',
-        'password': 'Helloworld@2025',
+        'password': 'root',
         'host': 'localhost',
         'raise_on_warnings': True
     }

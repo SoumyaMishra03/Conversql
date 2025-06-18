@@ -1,0 +1,47 @@
+Satellite ID(Fake),"Name of Satellite, Alternate Names",Current Official Name of Satellite,Country/Org of UN Registry,Country of Operator/Owner,Operator/Owner,Users,Purpose,Detailed Purpose
+1,CartoSat 1 (IRS P5),CartoSat 1,India,India,Indian Space Research Organization (ISRO),Government,Earth Observation,Optical Imaging
+2,"CartoSat 2 (IRS P7, CartoSat 2AT)",CartoSat 2,India,India,Indian Space Research Organization (ISRO),Government,Earth Observation,Optical Imaging
+3,CartoSat 2A,CartoSat 2A,India,India,Indian Space Research Organization (ISRO),Military,Earth Observation,Optical Imaging
+4,CartoSat 2B,CartoSat 2B,India,India,Indian Space Research Organization (ISRO),Government,Earth Observation,Optical Imaging
+5,CartoSat 2C,CartoSat 2C,India,India,Indian Space Research Organization (ISRO),Government,Earth Observation,Optical Imaging
+6,CartoSat 2D,CartoSat 2D,India,India,Indian Space Research Organization (ISRO),Government,Earth Observation,Optical Imaging
+7,CartoSat 2E,CartoSat 2E,India,India,Indian Space Research Organization (ISRO),Government,Earth Observation,Optical Imaging
+8,CartoSat 2F,CartoSat 2F,India,India,Indian Space Research Organization (ISRO),Government,Earth Observation,Optical Imaging
+9,CartoSat 3,CartoSat 3,India,India,Indian Space Research Organization (ISRO),Government,Earth Observation,Optical Imaging
+10,CMS-1 (GSAT 12R),CMS-1,NR (12/20),India,Indian Space Research Organization (ISRO),Government,Communications,
+11,GSAT-10,GSAT-10,India,India,Indian Space Research Organization (ISRO),Government,Communications,
+12,GSAT-11,GSAT-11,India,India,Indian Space Research Organization (ISRO),Government,Communications,
+13,GSAT-12,GSAT-12,India,India,Indian Space Research Organization (ISRO),Government,Communications,
+14,GSAT-14,GSAT-14,India,India,Indian Space Research Organization (ISRO),Government,Communications,
+15,GSAT-15,GSAT-15,India,India,Indian Space Research Organization (ISRO),Government,Communications,
+16,GSAT-16,GSAT-16,Inda,India,Indian Space Research Organization (ISRO),Government,Communications,
+17,GSAT-17,GSAT-17,India,India,Indian Space Research Organization (ISRO),Government,Communications,
+18,GSAT-18,GSAT-18,India,India,Indian Space Research Organization (ISRO),Government,Communications,
+19,GSAT-19E,GSAT-19E,India,India,Indian Space Research Organization (ISRO),Government,Communications,
+20,GSAT-29,GSAT-29,India,India,Indian Space Research Organization (ISRO),Government,Communications,
+21,GSAT-30,GSAT-30,India,India,Indian Space Research Organization (ISRO),Government,Communications,
+22,GSAT-31,GSAT-31,India,India,Indian Space Research Organization (ISRO),Government,Communications,
+23,GSAT-6 (Insat 4-E),GSAT-6,NR,India,Indian Space Research Organization (ISRO),Government/Commercial,Communications,
+24,GSAT-8,GSAT-8,India,India,Indian Space Research Organization (ISRO),Government,Communications/Navigation,
+25,HySIS (Hyperspectral Imaging Satellite),HySIS,India,India,Indian Space Research Organization (ISRO),Government,Earth Observation,Hyperspectral Imaging
+26,INS-1A (ISRO Nano Satellite),INS-1A,India,India,Indian Space Research Organization (ISRO),Government,Earth Observation,Optical Imaging
+27,INS-1B (ISRO Nano Satellite),INS-1B,India,India,Indian Space Research Organization (ISRO),Government,Earth Observation,Optical Imaging
+28,INS-1C (ISRO Nano Satellite),INS-1C,NR,India,Indian Space Research Organization (ISRO),Government,Technology Development,
+29,INSAT 3D (Indian National Satellite),INSAT 3D,India,India,Indian Space Research Organization (ISRO),Government,Earth Observation,Meteorology
+30,INSAT 3DR (Indian National Satellite),INSAT 3DR,NR,India,Indian Space Research Organization (ISRO),Government,Earth Observation,Meteorology
+31,INSAT 4B (Indian National Satellite),INSAT 4B,India,India,Indian Space Research Organization (ISRO),Government,Communications,
+32,INSAT 4CR (Indian National Satellite),INSAT 4CR,India,India,Indian Space Research Organization (ISRO),Government,Communications,
+33,IRNSS-1A (Indian Regional Navigation Satellite System),IRNSS-1A,India,India,Indian Space Research Organization (ISRO),Government,Navigation/Regional Positioning,
+34,IRNSS-1B (Indian Regional Navigation Satellite System),IRNSS-1B,India,India,Indian Space Research Organization (ISRO),Government,Navigation/Regional Positioning,
+35,IRNSS-1C (Indian Regional Navigation Satellite System),IRNSS-1C,NR,India,Indian Space Research Organization (ISRO),Government,Navigation/Regional Positioning,
+36,IRNSS-1D (Indian Regional Navigation Satellite System),IRNSS-1D,NR,India,Indian Space Research Organization (ISRO),Government,Navigation/Regional Positioning,
+37,IRNSS-1E (Indian Regional Navigation Satellite System),IRNSS-1E,NR,India,Indian Space Research Organization (ISRO),Government,Navigation/Regional Positioning,
+38,IRNSS-1F (Indian Regional Navigation Satellite System),IRNSS-1F,India,India,Indian Space Research Organization (ISRO),Government,Navigation/Regional Positioning,
+39,IRNSS-1G (Indian Regional Navigation Satellite System),IRNSS-1G,India,India,Indian Space Research Organization (ISRO),Government,Navigation/Regional Positioning,
+40,IRNSS-1I (Indian Regional Navigation Satellite System),IRNSS-1I,India,India,Indian Space Research Organization (ISRO),Government,Navigation/Regional Positioning,
+41,IRS-P6 (Resourcesat-1) ,IRS-P6,India,India,Indian Space Research Organization (ISRO),Government,Earth Observation,Optical Imaging
+42,Microsat-TD,Microsat-TD,India,India,Indian Space Research Organization (ISRO),Government,Earth Observation,Optical Imaging
+43,PISAT ,PISAT,India,India,Indian Space Research Organization (ISRO),Government,Technology Development,Optical Imaging
+44,Resourcesat 2A,Resourcesat 2A,India,India,Indian Space Research Organization (ISRO),Government,Earth Observation,Optical Imaging
+45,ScatSat-1,ScatSat-1,India,India,Indian Space Research Organization (ISRO),Government,Earth Observation,Meteorology/Earth Science
+46,Youthsat,Youthsat,India,India,Indian Space Research Organization (ISRO),Government,Space Science,
