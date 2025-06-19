@@ -1,57 +1,52 @@
-import mysql.connector
+import re
 
-def create_database(cursor, db_name):
-    try:
-        cursor.execute(f"DROP DATABASE IF EXISTS {db_name}")
-        cursor.execute(f"CREATE DATABASE IF NOT EXISTS {db_name}")
-        print(f"Database '{db_name}' created (or already exists).")
-    except mysql.connector.Error as err:
-        print(f"Failed creating database: {err}")
-        exit(1)
+schema_phrases = [
+    "star name",
+    "distance",
+    "mass",
+    "radius",
+    "luminosity",
+    "stars"  
+]
 
-def create_tables(cursor):
-    TABLES = {}
+def base_tokenize(text):
+    text = text.lower()
+    tokens = re.findall(r'\b\w+\b', text)
+    return tokens
 
-    TABLES['stars'] = (
-        "CREATE TABLE IF NOT EXISTS stars ("
-        "  `Star_name` VARCHAR(100),"
-        "  `Distance` FLOAT,"
-        "  `Mass` FLOAT,"
-        "  `Radius` FLOAT,"
-        "  `Luminosity` FLOAT"
-        ")"
-    )
+def combine_schema_tokens(tokens):
+    combined_tokens = []
+    i = 0
+    max_phrase_length = 3
+    while i < len(tokens):
+        match_found = False
+        for j in range(max_phrase_length, 0, -1):
+            if i + j <= len(tokens):
+                phrase = " ".join(tokens[i:i+j])
+                if phrase in schema_phrases:
+                    combined_tokens.append(phrase)
+                    i += j
+                    match_found = True
+                    break
+        if not match_found:
+            combined_tokens.append(tokens[i])
+            i += 1
+    return combined_tokens
 
-    for table_name, ddl in TABLES.items():
-        try:
-            print(f"Creating table {table_name}: ", end="")
-            cursor.execute(ddl)
-            print("OK")
-        except mysql.connector.Error as err:
-            print(f"Error creating table {table_name}: {err.msg}")
+def tokenize(text):
+    tokens = base_tokenize(text)
+    tokens = combine_schema_tokens(tokens)
+    return tokens
 
-def main():
-    db_name = 'stars_db'
-    config = {
-        'user': 'root',
-        'password': 'root',
-        'host': 'localhost',
-        'raise_on_warnings': True
-    }
+if __name__ == '__main__':
+    queries = [
+        "Find details for star name Betelgeuse including mass and luminosity.",
+        "Show all stars with radius above 2 and distance below 50.",
+        "Give me the radius and star name for the brightest stars."
+    ]
     
-    try:
-        cnx = mysql.connector.connect(**config)
-        cursor = cnx.cursor()
-        create_database(cursor, db_name)
-        cursor.execute(f"USE {db_name}")
-        create_tables(cursor)
-        cnx.commit()
-        cursor.close()
-        cnx.close()
-        print("Stars table created successfully in the database.")
-    except mysql.connector.Error as err:
-        print(f"Error: {err}")
-        exit(1)
-
-if __name__ == "__main__":
-    main()
+    for query in queries:
+        tokens = tokenize(query)
+        print("Query:", query)
+        print("Tokens:", tokens)
+        print("-" * 60)
