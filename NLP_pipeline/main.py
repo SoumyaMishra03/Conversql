@@ -1,125 +1,165 @@
-import re
+#!/usr/bin/env python3
+"""
+main.py
 
+Demo pipeline with:
+ • Spell-correction via LanguageTool
+ • Date & unit normalization
+ • Tokenize, intent, schema/operator/value recognition
+"""
+
+import re
+from spell_corrector import correct_query
 from tokenizer_stanza import tokenize, SCHEMA_PHRASES
 from schema_entity_recognizer import schema_entity_recognizer
 from comparison_operator_recognizer import comparison_operator_recognizer
 from value_entity_recognizer import value_entity_recognizer
 from normalize_units import normalize_units
 from normalize_dates import normalize_dates
-
 from intent_recognizer import IntentRecognizer
 
 YEAR_PATTERN = re.compile(r"^\d{4}$")
-
 intent_recognizer = IntentRecognizer()
 
+# A broader set of typo-rich queries to validate spell correction
 queries = [
-    "How many asteroids have an absolute magnitude less than 5?",
-    "Show me asteroid names and est dia in km(max) for those larger than 2 km.",
-    "What is the average orbital period of asteroids in days?",
+    # Asteroids
+    "How many astroids have an absolute magnitude less then 5?",
+    "Show me astroid names and est dia in km(max) for those larger than 2 km.",
 
-    "What is the average mass of stars in stars_db?",
-    "List the top 5 most luminous stars.",
-    "List star names within 100 light years of Earth.",
+    # Stars
+    "What is teh average mass of stars in stars_db?",
+    "List the topfive most luminous stars.",
 
-    "Give me the count of astronauts selected in 2005.",
-    "Show mission_title and hours_mission for astronaut number 42.",
-    "Show astronauts who have more than 10 total_eva_hrs.",
+    # Astronauts
+    "Give me the count of astronots selected in 2005.",
+    "Show mission_title and hours_mission for astronot number 42.",
 
-    "Describe table basic_info in isro_satellites_db.",
-    "What was the launch date of the Chandrayaan-2 satellite?",
-    "Count satellites with perigee less than 500 km.",
+    # ISRO Satellites
+    "Descrbe table basic_info in isro_satellites_db.",
+    "What was the launch date of the Chandrayaan2 sattelite?",
 
-    "Display all natural satellites with radius greater than 1000 km.",
-    "What is the minimum gm value among natural satellites?",
+    # Natural Satellites
+    "Display all natural satellits with radius > 1000 km.",
+    "What is the minimun gm value among natural satellites?",
 
-    "Find rockets with Payload_GTO above 2 tons.",
-    "List rocket names with liftoff thrust above 5000 kN.",
-    "Describe schema of rocket_technical_specs.",
+    # Rockets
+    "Find rockets with payload_GTO above two tons.",
+    "List rocket names with liftoff thrst above 5000 kN.",
 
-    "List news headlines published after January 1, 2020.",
-    "Count the number of news articles related to Mars.",
+    # Space News
+    "List news headlines publshed after Jan 1 2020.",
+    "Count the number of news articels related to Marss.",
 
-    "Which space missions cost more than 100 million dollars?",
-    "List organizations in space_missions_db.",
-    "Tell me which missions have been completed by SpaceX.",
-    "Find missions launched between 2015 and 2020.",
+    # Space Missions
+    "Which space missions cost more than 100 millon dollars?",
+    "List organisations in space_missins_db.",
 
-    # Mixed / edge cases
+    # Mixed
+    "Whats the sum of total_hrs_sum for NASA astronuts?",
     "Show me data for rockets_db and astronauts_db in one query.",
-    "Display the schema of stars and space_news tables.",
-    "What's the sum of total_hrs_sum for NASA astronauts?",
+    "Describe the schema of stars and space_news tables please.",
+    "Find missions launchd between 2015 and twenty twenty.",
+
+    "Count asteroids discovered aftr 2015.",
+    "Show nead earth obects with miss_dist.(kilometers) less than 0.05.",
+    "List asteroids with orbiting bodi equal Mars.",
+    "Find all near earth object entres where hazardous is true.",
+    "How many astroids have a perihelion dist less then 1 AU?",
+    "Display est dia in miles(max) for asteroids_db.",
+    "List the brightest stras within 50 light years.",
+    "What is the callibrated lumiosity of Vega?",
+    "Count stars in stars_db with mass under 2 solar mass.",
+    "How many astronots over the age of fifty are in personal_info?",
+    "Show me persnol_info for astronaut number seven.",
+    "Give me the average year_of_selection for astronots.",
+    "List satelites operators in isro_satellites_db.",
+    "Count isro satellits launched befor 2000.",
+    "What is the mean motion of natural satellits_db entries?",
+    "Display radiuss of all moons of Saturn in natural_satellites_db.",
+    "Slect rocket_general_info from rockets_db where stages > 2.",
+    "List ricket names with strap_ons count greater then 3.",
+    "Find rockets with fairing_diameter_m above five.",
+    "Get me lastest news atlesst from 2021 in space_news_db.",
+    "Count the news articels releated to Mars in spacenews_db.",
+    "Which space misssions cost under 50 million dollars?",
+    "List missons launced between 2010 and 2020 by SpaceX.",
+    "Find missions out of space_missions_db with mission_status = completed.",
+    "Show me data for stars_db and rockets_db in sinlge query.",
+    "Descrbe both stars and astronuts tables.",
+    "Whats the averge orbit period of asteroids_db?",
+    "How many orbit_data entres have eccentricity > 0.1?",
+    "List neo_reference enrties with hazardous flagged as true.",
+    "Show news about SpeceX launches in 2020.",
+    "List Chandrayaan-3 launch detials.",
+    "Find information on Neel Armstrong's missions.",
+    "Count articles mentioning Barack Obma in news_articles_table.",
+    "Display data on Chang'e 5 sattelite in isro_satellites_db.",
+    "Show me data for NASA and ISRO collaborations.",
+    "Mention articles about the Persevarance rover landing.",
+    "List asteroids discovered by Jpl.",
+    "Give me details of the James Webb Space Teliscope mission.",
+    "How many observations of Betelgeuse evidences in stars_db?",
+    "List exoplanets discovered by Nasa in 2021.",
+    "Find entries where orbital mechanics professor Neil deGrasse Tyson is mentioned.",
+    "Show me articles by Marie Curie in space_news_db.",
+    "List missions funded by European Space Agency.",
+    "Display all entries for the International Space Station.",
+    "Fetch data about the Hubble Space Telescop imaging results.",
+    "Count articles on Curiosity rover in space_news_db.",
+    "List all rovers Curiosity, Perseverance, and Spirit.",
+    "Give me info on Space Shuttle Challenger accident.",
+    "Show me data about Apollo 11 mission crew.",
+    "Find articles about the Sputnik 1 mission.",
+    "Slect all entries where country of operator = Russia.",
+    "List rusian satellite launches in the 1960s.",
+    "Count comets in close_approach with miss_dist.(astronomical) < 0.1.",
+    "Display news about the Persephone probe (if it existed).",
 ]
-
-for query in queries:
+for q in queries:
     print("=" * 80)
-    print("Original Query:")
-    print(" ", query)
+    print("Original Query:\n ", q)
 
-    text_dates, date_conversions = normalize_dates(query)
-    if date_conversions:
-        print("\nAfter date normalization:")
-        print(" ", text_dates)
-        print("  Date conversions:")
-        for c in date_conversions:
-            print(f"    • '{c['raw']}' → {c['normalized']} [{c['start']}–{c['end']}]")
+    # 0) Spell-correction
+    corrected = correct_query(q)
+    if corrected != q:
+        print("\nAfter spell-correction:\n ", corrected)
     else:
-        text_dates = query
+        corrected = q
 
-    text_units, unit_conversions = normalize_units(text_dates)
-    if unit_conversions:
-        print("\nAfter unit normalization:")
-        print(" ", text_units)
-        print("  Unit conversions:")
-        for c in unit_conversions:
-            unit = c.get('unit', 'm')
-            print(f"    • '{c['raw']}' → {c['norm']:.3f} {unit} [{c['start']}–{c['end']}]")
-    else:
-        text_units = text_dates
+    # 1) Date normalization
+    t1, dates = normalize_dates(corrected)
+    if dates:
+        print("\nAfter date normalization:\n ", t1)
 
-    tok = tokenize(text_units)
+    # 2) Unit normalization
+    t2, units = normalize_units(t1)
+    if units:
+        print("\nAfter unit normalization:\n ", t2)
+
+    # 3) Tokenize
+    tok = tokenize(t2)
     final_tokens = tok["Final Tokens"]
-    print("\nFinal Tokens:")
-    print(" ", final_tokens)
+    print("\nFinal Tokens:\n ", final_tokens)
 
+    # 4) Intent recognition
     intent = intent_recognizer.predict_from_tokens(final_tokens)
-    print("\nIntent:")
-    print(" ", intent)
+    print("\nIntent:\n ", intent)
 
-    schema_entities = schema_entity_recognizer(final_tokens, SCHEMA_PHRASES)
-    print("\nSchema Entities:")
-    if schema_entities:
-        for ent in schema_entities:
-            print(f"   • {ent}")
-    else:
-        print("   None found")
+    # 5) Schema entity recognition
+    ents = schema_entity_recognizer(final_tokens, SCHEMA_PHRASES)
+    print("\nSchema Entities:\n ", ents or "None")
 
-    raw_ops = comparison_operator_recognizer(text_units)
-    print("\nComparison Operators:")
-    if raw_ops:
-        for op, raw, lo, hi in raw_ops:
-            print(f"   • {{'operator': '{op}', 'raw': '{raw}', 'span': ({lo},{hi})}}")
-    else:
-        print("   None found")
+    # 6) Operator recognition
+    ops = comparison_operator_recognizer(t2)
+    print("\nComparison Operators:\n ", ops or "None")
 
-    raw_vals = value_entity_recognizer(text_units)
-    val_entities = []
+    # 7) Value recognition
+    raw_vals = value_entity_recognizer(t2)
+    vals = []
     for typ, val, lo, hi in raw_vals:
-        if typ == "STRING":
-            continue
+        if typ == "STRING": continue
         if typ == "INTEGER" and YEAR_PATTERN.match(val):
             typ = "DATE"
-        val_entities.append({
-            "type": typ,
-            "value": val,
-            "span": (lo, hi)
-        })
-
-    print("\nValue Entities:")
-    if val_entities:
-        for v in val_entities:
-            print(f"   • {v}")
-    else:
-        print("   None found")
-
-    print("\n")
+        vals.append({"type": typ, "value": val, "span": (lo, hi)})
+    print("\nValue Entities:\n ", vals or "None\n")
