@@ -1,869 +1,1096 @@
 def schema_entity_recognizer(tokens, schema_terms, synonym_map=None):
     if synonym_map is None:
         synonym_map = {
-    "asteroid":                       "asteroids",
-    "asteroids":                      "asteroids",
-    "asteroiddb":                     "asteroids",
-    "asteroidsdb":                    "asteroids",
-
-    # columns
-    "id":                             "id",
-    "asteroidid":                     "id",
-    "name":                           "name",
-    "asteroidname":                   "name",
-    "absolutemagnitude":              "absolute magnitude",
-    "absolutemag":                    "absolute magnitude",
-    "mag":                            "absolute magnitude",
-    "abs_magnitude":                  "absolute magnitude",
-
-    # estimated diameter (km, min/max)
-    "estdiainkmmin":                  "est dia in km(min)",
-    "estimatediameterinkmmin":        "est dia in km(min)",
-    "mindiameterkm":                  "est dia in km(min)",
-
-    "estdiainkmmax":                  "est dia in km(max)",
-    "estimatediameterinkmmax":        "est dia in km(max)",
-    "maxdiameterkm":                  "est dia in km(max)",
-
-    # estimated diameter (m, min/max)
-    "estdiainmmin":                   "est dia in m(min)",
-    "estimatediameterinmmin":         "est dia in m(min)",
-    "mindiameterm":                   "est dia in m(min)",
-
-    "estdiainmmax":                   "est dia in m(max)",
-    "estimatediameterinmmax":         "est dia in m(max)",
-    "maxdiameterm":                   "est dia in m(max)",
-
-    # estimated diameter (miles, min/max)
-    "estdiainmilesmin":               "est dia in miles(min)",
-    "estimatediameterinmilesmin":     "est dia in miles(min)",
-    "mindiametermiles":               "est dia in miles(min)",
-
-    "estdiainmilesmax":               "est dia in miles(max)",
-    "estimatediameterinmilesmax":     "est dia in miles(max)",
-    "maxdiametermiles":               "est dia in miles(max)",
-
-    # estimated diameter (feet, min/max)
-    "estdiainfeetmin":                "est dia in feet(min)",
-    "estimatediameterinfeetmin":      "est dia in feet(min)",
-    "mindiameterfeet":                "est dia in feet(min)",
-
-    "estdiainfeetmax":                "est dia in feet(max)",
-    "estimatediameterinfeetmax":      "est dia in feet(max)",
-    "maxdiameterfeet":                "est dia in feet(max)",
-
-    "hazardous":                      "hazardous",
-    "hazardousflag":                  "hazardous",
-    "ishazardous":                    "hazardous",
-
-    # --- close_approach table ---
-    "closeapproach":                  "close_approach",
-    "closeapproachdate":              "close approach date",
-    "close_approach_date":            "close approach date",
-    "approachdate":                   "close approach date",
-    "dateofcloseapproach":            "close approach date",
-
-    "epochdatecloseapproach":         "epoch date close approach",
-    "epoch_date_close_approach":      "epoch date close approach",
-
-    "relativevelocitykmpersec":       "relative velocity km per sec",
-    "velocitykmps":                   "relative velocity km per sec",
-    "speedkmps":                      "relative velocity km per sec",
-
-    "relativevelocitykmperhr":        "relative velocity km per hr",
-    "velocitykmph":                   "relative velocity km per hr",
-    "speedkmph":                      "relative velocity km per hr",
-
-    "milesperhour":                   "miles per hour",
-    "mph":                            "miles per hour",
-
-    "missdistastronomical":           "miss dist.(astronomical)",
-    "missdistastronomical":           "miss dist.(astronomical)",
-    "astronomicalmissdistance":       "miss dist.(astronomical)",
-
-    "missdistlunar":                  "miss dist.(lunar)",
-    "lunarmissdistance":              "miss dist.(lunar)",
-
-    "missdistkilometers":             "miss dist.(kilometers)",
-    "missdistancekilometers":         "miss dist.(kilometers)",
-
-    "missdistmiles":                  "miss dist.(miles)",
-    "missdistancesmiles":             "miss dist.(miles)",
-
-    "orbitingbody":                   "orbiting body",
-    "orbiting":                       "orbiting body",
-
-    # --- orbit_data table ---
-    "orbitdata":                      "orbit_data",
-    "orbitid":                        "orbit id",
-    "orbit_id":                       "orbit id",
-    "orbitid":                        "orbit id",
-
-    "orbitdeterminationdate":         "orbit determination date",
-    "orbit_determination_date":       "orbit determination date",
-    "dateoforbitdetermination":       "orbit determination date",
-
-    "orbituncertainity":              "orbit uncertainity",
-    "uncertainity":                   "orbit uncertainity",
-
-    "minimumorbitintersection":       "minimum orbit intersection",
-    "minorbitintersection":           "minimum orbit intersection",
-
-    "jupitertisserandinvariant":      "jupiter tisserand invariant",
-    "tisserandinvariant":             "jupiter tisserand invariant",
-
-    "epochosculation":                "epoch osculation",
-
-    "eccentricity":                   "eccentricity",
-
-    "semimajoraxis":                  "semi major axis",
-    "semimajoraxis":                  "semi major axis",
-
-    "inclination":                    "inclination",
-
-    "ascnodelongitude":               "asc node longitude",
-    "asc_node_longitude":             "asc node longitude",
-
-    "orbitalperiod":                  "orbital period",
-    "orbital_period":                 "orbital period",
-
-    "periheliondistance":             "perihelion distance",
-    "perihelionarg":                  "perihelion arg",
-    "apheliondist":                   "aphelion dist",
-    "periheliontime":                 "perihelion time",
-
-    "meananomaly":                    "mean anomaly",
-    "meanmotion":                     "mean motion",
-
-    "equinox":                        "equinox",
-
-    # --- table ---
-    "astronaut":                   "astronauts_db",
-    "astronauts":                  "astronauts_db",
-    "astronautdb":                 "astronauts_db",
-    "astronautsdb":                "astronauts_db",
-    "crew":                        "astronauts_db",
-    "crewdb":                      "astronauts_db",
-    "astronautrecord":             "astronauts_db",
-
-    # --- id ---
-    "id":                          "id",
-    "astronautid":                 "id",
-    "crewid":                      "id",
-
-    # --- number ---
-    "number":                      "number",
-    "astronautnumber":             "number",
-    "num":                         "number",
-    "no":                          "number",
-
-    # --- nationwide_number ---
-    "nationwidenumber":            "nationwide_number",
-    "nationwide":                  "nationwide_number",
-    "natwidenumber":               "nationwide_number",
-
-    # --- original_name ---
-    "originalname":                "original_name",
-    "name":                        "original_name",
-    "fullname":                    "original_name",
-    "astronautname":               "original_name",
-
-    # --- sex ---
-    "sex":                         "sex",
-    "gender":                      "sex",
-
-    # --- year_of_birth ---
-    "yearofbirth":                 "year_of_birth",
-    "birthyear":                   "year_of_birth",
-    "birth":                       "year_of_birth",
-    "born":                        "year_of_birth",
-
-    # --- nationality ---
-    "nationality":                 "nationality",
-    "citizenship":                 "nationality",
-    "country":                     "nationality",
-
-    # --- military_civilian ---
-    "militarycivilian":            "military_civilian",
-    "status":                      "military_civilian",
-    "militaryorcivilian":          "military_civilian",
-
-    # --- selection ---
-    "selection":                   "selection",
-    "selectionyear":               "selection",
-    "astronautselection":          "selection",
-
-    # --- year_of_selection ---
-    "yearofselection":             "year_of_selection",
-    "selectionyear":               "year_of_selection",
-
-    # --- mission_number ---
-    "missionnumber":               "mission_number",
-    "missionnum":                  "mission_number",
-    "astronautmissionnumber":      "mission_number",
-
-    # --- total_number_of_missions ---
-    "totalnumberofmissions":       "total_number_of_missions",
-    "totalmissions":               "total_number_of_missions",
-    "nummissions":                 "total_number_of_missions",
-
-    # --- occupation ---
-    "occupation":                  "occupation",
-    "job":                         "occupation",
-    "role":                        "occupation",
-
-    # --- year_of_mission ---
-    "yearofmission":               "year_of_mission",
-    "missionyear":                 "year_of_mission",
-
-    # --- mission_title ---
-    "missiontitle":                "mission_title",
-    "missionname":                 "mission_title",
-
-    # --- ascend_shuttle ---
-    "ascendshuttle":               "ascend_shuttle",
-    "launchshuttle":               "ascend_shuttle",
-    "ascend":                      "ascend_shuttle",
-
-    # --- in_orbit ---
-    "inorbit":                     "in_orbit",
-    "orbiting":                    "in_orbit",
-
-    # --- descend_shuttle ---
-    "descendshuttle":              "descend_shuttle",
-    "landing":                     "descend_shuttle",
-    "descend":                     "descend_shuttle",
-
-    # --- hours_mission ---
-    "hoursmission":                "hours_mission",
-    "missionhours":                "hours_mission",
-    "hoursonmission":              "hours_mission",
-
-    # --- total_hrs_sum ---
-    "totalhrssum":                 "total_hrs_sum",
-    "totalhours":                  "total_hrs_sum",
-    "totalhourssum":               "total_hrs_sum",
-
-    # --- field21 ---
-    "field21":                     "field21",
-
-    # --- eva_hrs_mission ---
-    "evahrsmission":               "eva_hrs_mission",
-    "evahours":                    "eva_hrs_mission",
-    "evahour":                     "eva_hrs_mission",
-    "evamissionhours":             "eva_hrs_mission",
-
-    # --- total_eva_hrs ---
-    "totalevahrs":                 "total_eva_hrs",
-    "totalevahours":               "total_eva_hrs",
-    "totaleva":                    "total_eva_hrs",
-
-
-    # --- Tables ---
-    "neo_reference":                   "neo_reference",
-    "neoreference":                    "neo_reference",
-    "neo":                             "neo_reference",
-    "neo_reference_db":                "neo_reference",
-
-    "close_approach":                  "close_approach",
-    "closeapproach":                   "close_approach",
-    "close":                           "close_approach",
-
-    "orbit_data":                      "orbit_data",
-    "orbitdata":                       "orbit_data",
-    "orbit":                           "orbit_data",
-
-    # --- neo_reference columns ---
-    "neoreferenceid":                  "Neo Reference ID",
-    "neorefid":                        "Neo Reference ID",
-    "neo id":                          "Neo Reference ID",
-
-    "name":                            "Name",
-    "neo name":                        "Name",
-
-    "absolutemagnitude":               "Absolute Magnitude",
-    "absmag":                          "Absolute Magnitude",
-    "magnitude":                       "Absolute Magnitude",
-
-    "estdiainkmmin":                   "Est Dia in KM(min)",
-    "estimatediameterinkmmin":         "Est Dia in KM(min)",
-    "mindiainkm":                      "Est Dia in KM(min)",
-    "estdiaminkmmin":                  "Est Dia in KM(min)",
-
-    "estdiainkmmax":                   "Est Dia in KM(max)",
-    "maxdiainkm":                      "Est Dia in KM(max)",
-    "estdiaminkmmax":                  "Est Dia in KM(max)",
-
-    "estdiainmmin":                    "Est Dia in M(min)",
-    "mindiaminm":                      "Est Dia in M(min)",
-    "estdiamminm":                     "Est Dia in M(min)",
-
-    "estdiainmmax":                    "Est Dia in M(max)",
-    "maxdiainm":                       "Est Dia in M(max)",
-    "estdiainmmax":                    "Est Dia in M(max)",
-
-    "estdiainmilesmin":                "Est Dia in Miles(min)",
-    "mindiaminmiles":                  "Est Dia in Miles(min)",
-    "estdiamilesmin":                  "Est Dia in Miles(min)",
-
-    "estdiainmilesmax":                "Est Dia in Miles(max)",
-    "maxdiamiles":                     "Est Dia in Miles(max)",
-    "estdiamilesmax":                  "Est Dia in Miles(max)",
-
-    "estdiainfeetmin":                 "Est Dia in Feet(min)",
-    "mindiafeet":                      "Est Dia in Feet(min)",
-    "estdiafeetmin":                   "Est Dia in Feet(min)",
-
-    "estdiainfeetmax":                 "Est Dia in Feet(max)",
-    "maxdiafeet":                      "Est Dia in Feet(max)",
-    "estdiafeetmax":                   "Est Dia in Feet(max)",
-
-    # --- close_approach columns ---
-    "neoreferenceid":                  "Neo Reference ID",
-    "closeapproachdate":               "Close Approach Date",
-    "close date":                      "Close Approach Date",
-    "approachdate":                    "Close Approach Date",
-
-    "epochdatecloseapproach":          "Epoch Date Close Approach",
-    "epochapproach":                   "Epoch Date Close Approach",
-
-    "relativevelocitykmpersec":        "Relative Velocity km per sec",
-    "velocitykmps":                    "Relative Velocity km per sec",
-    "kmpersec":                        "Relative Velocity km per sec",
-
-    "relativevelocitykmperhr":         "Relative Velocity km per hr",
-    "velocitykmph":                    "Relative Velocity km per hr",
-    "kmperhr":                         "Relative Velocity km per hr",
-
-    "milesperhour":                    "Miles per hour",
-    "mph":                             "Miles per hour",
-
-    "missdistastronomical":            "Miss Dist.(Astronomical)",
-    "astronomicalmiss":                "Miss Dist.(Astronomical)",
-
-    "missdistlunar":                   "Miss Dist.(lunar)",
-    "lunarmiss":                       "Miss Dist.(lunar)",
-
-    "missdistkilometers":              "Miss Dist.(kilometers)",
-    "kmmissdist":                      "Miss Dist.(kilometers)",
-
-    "missdistmiles":                   "Miss Dist.(miles)",
-    "milesmiss":                       "Miss Dist.(miles)",
-
-    # --- orbit_data columns ---
-    "neoreferenceid":                  "Neo Reference ID",
-    "orbitingbody":                    "Orbiting Body",
-    "orbitbody":                       "Orbiting Body",
-
-    "orbitid":                         "Orbit ID",
-    "orbit id":                        "Orbit ID",
-
-    "orbitdeterminationdate":          "Orbit Determination Date",
-    "determinationdate":               "Orbit Determination Date",
-
-    "orbituncertainty":                "Orbit Uncertainity",
-    "orbituncertainity":               "Orbit Uncertainity",
-
-    "minimumorbitintersection":        "Minimum Orbit Intersection",
-    "minorbitint":                     "Minimum Orbit Intersection",
-
-    "jupitertisserandinvariant":       "Jupiter Tisserand Invariant",
-    "tisserandinvariant":              "Jupiter Tisserand Invariant",
-
-    "epochosculation":                 "Epoch Osculation",
-
-    "eccentricity":                    "Eccentricity",
-
-    "semimajoraxis":                   "Semi Major Axis",
-    "semimajor":                       "Semi Major Axis",
-
-    "inclination":                     "Inclination",
-
-    "ascnodelongitude":                "Asc Node Longitude",
-    "nodelongitude":                   "Asc Node Longitude",
-
-    "orbitalperiod":                   "Orbital Period",
-    "period":                          "Orbital Period",
-
-    "periheliondistance":              "Perihelion Distance",
-    "perihelionarg":                   "Perihelion Arg",
-    "apheliondist":                    "Aphelion Dist",
-
-    "periheliontime":                  "Perihelion Time",
-
-    "meananomaly":                     "Mean Anomaly",
-    "meanmotion":                      "Mean Motion",
-
-    "equinox":                         "Equinox",
-
-    "hazardous":                       "Hazardous",
-    "hazardflag":                     "Hazardous",
-
-     # --- tables ---
-    "personalinfo":           "personal_info",
-    "personalinformation":    "personal_info",
-    "persinfo":               "personal_info",
-
-    "missioninfo":            "mission_info",
-    "missiondata":            "mission_info",
-
-    "missionperformance":     "mission_performance",
-    "performance":            "mission_performance",
-    "perf":                   "mission_performance",
-
-    # --- personal_info columns ---
-    "id":                     "id",
-    "astronautid":            "id",
-    "crewid":                 "id",
-
-    "number":                 "number",
-    "astronautnumber":        "number",
-
-    "nationwidenumber":       "nationwide_number",
-    "nationwide":             "nationwide_number",
-    "natwidenumber":          "nationwide_number",
-
-    "name":                   "name",
-    "fullname":               "name",
-    "astronautname":          "name",
-
-    "originalname":           "original_name",
-    "origname":               "original_name",
-
-    "sex":                    "sex",
-    "gender":                 "sex",
-
-    "yearofbirth":            "year_of_birth",
-    "birthyear":              "year_of_birth",
-    "born":                   "year_of_birth",
-
-    "nationality":            "nationality",
-    "citizenship":            "nationality",
-    "country":                "nationality",
-
-    "militarycivilian":       "military_civilian",
-    "status":                 "military_civilian",
-    "militaryorcivilian":     "military_civilian",
-
-    # --- mission_info columns ---
-    "selection":              "selection",
-    "selectionyear":          "selection",
-    "astronautselection":     "selection",
-
-    "yearofselection":        "year_of_selection",
-
-    "missionnumber":          "mission_number",
-    "missionno":              "mission_number",
-
-    "totalnumberofmissions":  "total_number_of_missions",
-    "totalmissions":          "total_number_of_missions",
-
-    "occupation":             "occupation",
-    "job":                    "occupation",
-    "role":                   "occupation",
-
-    "yearofmission":          "year_of_mission",
-    "missionyear":            "year_of_mission",
-
-    "missiontitle":           "mission_title",
-    "missionname":            "mission_title",
-    "title":                  "mission_title",
-
-    # --- mission_performance columns ---
-    "ascendshuttle":          "ascend_shuttle",
-    "launchshuttle":          "ascend_shuttle",
-    "boarding":               "ascend_shuttle",
-
-    "inorbit":                "in_orbit",
-    "orbiting":               "in_orbit",
-
-    "descendshuttle":         "descend_shuttle",
-    "landing":                "descend_shuttle",
-    "return":                 "descend_shuttle",
-
-    "hoursmission":           "hours_mission",
-    "missionhours":           "hours_mission",
-    "duration":               "hours_mission",
-
-    "totalhrssum":            "total_hrs_sum",
-    "totalhours":             "total_hrs_sum",
-    "totalhrs":               "total_hrs_sum",
-
-    "field21":                "field21",
-
-    "evahrsmission":          "eva_hrs_mission",
-    "evahours":               "eva_hrs_mission",
-    "eva":                    "eva_hrs_mission",
-
-    "totalevahrs":            "total_eva_hrs",
-    "totalevahours":          "total_eva_hrs",
-    "totaleva":               "total_eva_hrs",
-
-      # --- basic_info table ---  
-    "satelliteidfake":                    "Satellite ID(Fake)",
-    "satelliteidf":                       "Satellite ID(Fake)",
-    "satidf":                             "Satellite ID(Fake)",
-
-    "nameofsatellitealternatenames":      "Name of Satellite, Alternate Names",
-    "alternatenames":                     "Name of Satellite, Alternate Names",
-    "satellitenames":                     "Name of Satellite, Alternate Names",
-
-    "currentofficialnameofsatellite":     "Current Official Name of Satellite",
-    "officialname":                       "Current Official Name of Satellite",
-
-    "countryorgofunregistry":             "Country/Org of UN Registry",
-    "countryofunregistry":                "Country/Org of UN Registry",
-    "unregistrycountry":                  "Country/Org of UN Registry",
-
-    "countryofoperatorowner":             "Country of Operator/Owner",
-    "operatorcountry":                    "Country of Operator/Owner",
-    "countryowner":                       "Country of Operator/Owner",
-
-    "operatorowner":                      "Operator/Owner",
-    "operator":                           "Operator/Owner",
-    "owner":                              "Operator/Owner",
-
-    "users":                              "Users",
-    "user":                               "Users",
-
-    "purpose":                            "Purpose",
-    "detailedpurpose":                    "Detailed Purpose",
-    "details":                            "Detailed Purpose",
-
-    # --- orbital_info table ---
-    "satelliteidfake":                    "Satellite ID(Fake)",
-
-    "classoforbit":                       "Class of Orbit",
-    "orbitclass":                         "Class of Orbit",
-
-    "typeoforbit":                        "Type of Orbit",
-    "orbittype":                          "Type of Orbit",
-
-    "longitudeofgeodegrees":              "Longitude of GEO (degrees)",
-    "geolongitude":                       "Longitude of GEO (degrees)",
-    "longitudegeo":                       "Longitude of GEO (degrees)",
-
-    "perigeekm":                          "Perigee (km)",
-    "perigee":                            "Perigee (km)",
-    "perigeedistancekm":                  "Perigee (km)",
-
-    "apogeekm":                           "Apogee (km)",
-    "apogee":                             "Apogee (km)",
-    "apogeedistancekm":                   "Apogee (km)",
-
-    "eccentricity":                       "Eccentricity",
-    "inclinationdegrees":                 "Inclination (degrees)",
-    "inclination":                        "Inclination (degrees)",
-
-    "periodminutes":                      "Period (minutes)",
-    "orbitalperiod":                     "Period (minutes)",
-    "period":                             "Period (minutes)",
-
-    # --- launch_info table ---
-    "satelliteidfake":                    "Satellite ID(Fake)",
-    "launchmasskg":                       "Launch Mass (kg.)",
-    "launchmass":                         "Launch Mass (kg.)",
-
-    "drymasskg":                          "Dry Mass (kg.)",
-    "drymass":                            "Dry Mass (kg.)",
-
-    "powerwatts":                         "Power (watts)",
-    "power":                              "Power (watts)",
-
-    "dateoflaunch":                       "Date of Launch",
-    "launchepoch":                        "Date of Launch",
-    "launchdate":                         "Date of Launch",
-
-    "expectedlifetimeryrs":               "Expected Lifetime (yrs.)",
-    "expectedlifetime":                   "Expected Lifetime (yrs.)",
-
-    "contractor":                         "Contractor",
-    "countryofcontractor":                "Country of Contractor",
-    "contractorcountry":                  "Country of Contractor",
-
-    "launchsite":                         "Launch Site",
-    "site":                               "Launch Site",
-
-    "launchvehicle":                      "Launch Vehicle",
-    "vehicle":                            "Launch Vehicle",
-
-    "cosparnumber":                       "COSPAR Number",
-    "cosparid":                           "COSPAR Number",
-
-    "noradnumber":                        "NORAD Number",
-    "noradid":                            "NORAD Number",
-
-    "comments":                           "Comments",
-    "note":                               "Comments",
-
-    # --- tables ---
-    "satelliteidentity":       "satellite_identity",
-    "identity":                "satellite_identity",
-    "satidentity":             "satellite_identity",
-
-    "satellitephysical":       "satellite_physical",
-    "physical":                "satellite_physical",
-    "satphysical":             "satellite_physical",
-
-    # --- common columns ---
-    "planet":                  "planet",
-    "planets":                 "planet",
-    "world":                   "planet",
-
-    "name":                    "name",
-    "satellitename":           "name",
-    "bodyname":                "name",
-
-    # --- gm (standard gravitational parameter) ---
-    "gm":                      "gm",
-    "gravitationalparameter":  "gm",
-    "standardgravparameter":   "gm",
-    "gravparam":               "gm",
-
-    # --- radius ---
-    "radius":                  "radius",
-    "meanradius":              "radius",
-    "equatorialradius":        "radius",
-    "polarradius":             "radius",
-    "rad":                     "radius",
-
-    # --- density ---
-    "density":                 "density",
-    "massdensity":             "density",
-    "averagedensity":          "density",
-
-    # --- magnitude ---
-    "magnitude":               "magnitude",
-    "mag":                     "magnitude",
-    "visualmagnitude":         "magnitude",
-
-    # --- albedo ---
-    "albedo":                  "albedo",
-    "reflectivity":            "albedo",
-    "surfacealbedo":           "albedo",
-    "geometricalbedo":         "albedo",
-
-     # --- tables ---
-    "rockergeneralinfo":        "rocket_general_info",
-    "rocket_general_info":      "rocket_general_info",
-    "generalinfo":              "rocket_general_info",
-    "rocketgeneral":            "rocket_general_info",
-
-    "rockettechnicalspecs":     "rocket_technical_specs",
-    "rocket_technical_specs":   "rocket_technical_specs",
-    "technicalspecs":           "rocket_technical_specs",
-    "rockettechspecs":          "rocket_technical_specs",
-
-    # --- rocket_general_info columns ---
-    "name":                     "Name",
-    "rocketname":               "Name",
-
-    "cmp":                      "Cmp",
-    "company":                  "Cmp",
-
-    "wiki":                     "Wiki",
-    "wikipedia":                "Wiki",
-    "wikilink":                 "Wiki",
-
-    "status":                   "Status",
-    "rocketstatus":             "Status",
-    "state":                    "Status",
-
-    # --- rocket_technical_specs columns ---
-    "liftoffthrust":            "Liftoff_Thrust",
-    "liftoff":                  "Liftoff_Thrust",
-    "launchthrust":             "Liftoff_Thrust",
-    "thrust":                   "Liftoff_Thrust",
-
-    "payloadleo":               "Payload_LEO",
-    "payloadtoleo":             "Payload_LEO",
-    "leopayload":               "Payload_LEO",
-    "leo":                      "Payload_LEO",
-
-    "stages":                   "Stages",
-    "stage":                    "Stages",
-
-    "strapons":                 "Strap_ons",
-    "strapons":                 "Strap_ons",
-    "strap-ons":                "Strap_ons",
-    "strapon":                  "Strap_ons",
-
-    "rocketheightm":            "Rocket_Height_m",
-    "rocketheight":             "Rocket_Height_m",
-    "heightm":                  "Rocket_Height_m",
-
-    "pricemusd":                "Price_MUSD",
-    "priceusd":                 "Price_MUSD",
-    "price":                    "Price_MUSD",
-    "cost":                     "Price_MUSD",
-
-    "payloadgto":               "Payload_GTO",
-    "gtopayload":               "Payload_GTO",
-    "gto":                      "Payload_GTO",
-
-    "fairingdiameterm":         "Fairing_Diameter_m",
-    "fairingdiameter":          "Fairing_Diameter_m",
-    "diameterfairingm":         "Fairing_Diameter_m",
-
-    "fairingheightm":           "Fairing_Height_m",
-    "fairingheight":            "Fairing_Height_m",
-    "heightfairingm":           "Fairing_Height_m",
-
-    # --- tables ---
-    "newsarticlestable":    "news_articles_table",
-    "newsarticles":         "news_articles_table",
-    "newsarticle":          "news_articles_table",
-    "news":                 "news_articles_table",
-    "articles":             "news_articles_table",
-    "articlestable":        "news_articles_table",
-    "news_table":           "news_articles_table",
-
-    "publishinginfo":       "publishing_info",
-    "publishing":           "publishing_info",
-    "pubinfo":              "publishing_info",
-    "pub":                  "publishing_info",
-    "publishinfo":          "publishing_info",
-
-    # --- news_articles_table columns ---
-    "title":                "title",
-    "headline":             "title",
-    "heading":              "title",
-    "articletitle":         "title",
-
-    "url":                  "url",
-    "link":                 "url",
-    "weblink":              "url",
-    "articleurl":           "url",
-
-    "content":              "content",
-    "body":                 "content",
-    "articlecontent":       "content",
-    "text":                 "content",
-
-    "postexcerpt":          "postexcerpt",
-    "excerpt":              "postexcerpt",
-    "summary":              "postexcerpt",
-    "teaser":               "postexcerpt",
-
-    # --- publishing_info columns ---
-    "author":               "author",
-    "writer":               "author",
-    "journalist":           "author",
-    "postedby":             "author",
-
-    "date":                 "date",
-    "publishdate":          "date",
-    "publicationdate":      "date",
-    "postdate":             "date",
-    "pdate":                "date",
-
-     # --- table “stars” ---
-    "star":            "stars",
-    "stars":           "stars",
-    "stardb":          "stars",
-    "starsdb":         "stars",
-    "starstable":      "stars",
-
-    # --- column “star name” ---
-    "starname":        "star name",
-    "starnames":       "star name",
-
-    # --- column “distance” ---
-    "distance":        "distance",
-    "dist":            "distance",
-    "range":           "distance",
-
-    # --- column “mass” ---
-    "mass":            "mass",
-
-    # --- column “radius” ---
-    "radius":          "radius",
-    "rad":             "radius",
-
-    # --- column “luminosity” ---
-    "luminosity":      "luminosity",
-    "lumin":           "luminosity",
-    "bright":          "luminosity",
-    "brightness":      "luminosity",
-
-     # --- tables ---
-    # organizations table
-    "organizations":         "organizations",
-    "organisationstable":    "organizations",
-    "organizationstable":    "organizations",
-    "orgs":                  "organizations",
-    "orgstable":             "organizations",
-
-    # rockets table
-    "rockets":               "rockets",
-    "rocketstable":          "rockets",
-    "rocketstable":          "rockets",
-
-    # missions table
-    "missions":              "missions",
-    "missionstable":         "missions",
-    "missionstable":         "missions",
-
-    # --- organizations columns ---
-    "organisation":          "organisation",
-    "organization":          "organisation",
-    "org":                   "organisation",
-
-    "location":              "location",
-    "loc":                   "location",
-    "site":                  "location",
-    "place":                 "location",
-
-    # --- rockets columns ---
-    "organisation":          "organisation",
-    "organization":          "organisation",
-    "org":                   "organisation",
-
-    "details":               "details",
-    "detail":                "details",
-    "description":           "details",
-    "desc":                  "details",
-
-    "rocketstatus":          "rocket_status",
-    "rocket_state":          "rocket_status",
-    "status":                "rocket_status",
-    "state":                 "rocket_status",
-
-    "price":                 "price",
-    "cost":                  "price",
-    "budget":                "price",
-
-    # --- missions columns ---
-    "organisation":          "organisation",
-    "organization":          "organisation",
-    "org":                   "organisation",
-
-    "missionstatus":         "mission_status",
-    "mission_state":         "mission_status",
-    "status":                "mission_status",
-    "state":                 "mission_status",
-    "missionstate":          "mission_status",
-}
-
+            # ===== ASTEROIDS DATABASE =====
+            # Table names
+            "asteroid": "asteroids_db",
+            "asteroids": "asteroids_db",
+            "asteroiddb": "asteroids_db",
+            "asteroidsdb": "asteroids_db",
+            "asteroidsdatabase": "asteroids_db",
+            "asteroidtable": "asteroids_db",
+            
+            # NEO Reference table
+            "neo_reference": "neo_reference",
+            "neoreference": "neo_reference",
+            "neo": "neo_reference",
+            "neodb": "neo_reference",
+            "nearearth": "neo_reference",
+            "nearearthobject": "neo_reference",
+            
+            # Close Approach table
+            "close_approach": "close_approach",
+            "closeapproach": "close_approach",
+            "approach": "close_approach",
+            "closeapproachdata": "close_approach",
+            
+            # Orbit Data table
+            "orbit_data": "orbit_data",
+            "orbitdata": "orbit_data",
+            "orbit": "orbit_data",
+            "orbitaldata": "orbit_data",
+            
+            # Common asteroid columns
+            "id": "id",
+            "asteroidid": "id",
+            "objectid": "id",
+            "neoid": "id",
+            
+            "name": "name",
+            "asteroidname": "name",
+            "objectname": "name",
+            "designation": "name",
+            
+            "absolutemagnitude": "absolute magnitude",
+            "absolutemag": "absolute magnitude",
+            "absmag": "absolute magnitude",
+            "magnitude": "absolute magnitude",
+            "abs_magnitude": "absolute magnitude",
+            "h_magnitude": "absolute magnitude",
+            
+            # Diameter estimates - kilometers
+            "estdiainkmmin": "est dia in km(min)",
+            "estimatediameterinkmmin": "est dia in km(min)",
+            "mindiameterkm": "est dia in km(min)",
+            "mindiainkm": "est dia in km(min)",
+            "diameterkmmin": "est dia in km(min)",
+            
+            "estdiainkmmax": "est dia in km(max)",
+            "estimatediameterinkmmax": "est dia in km(max)",
+            "maxdiameterkm": "est dia in km(max)",
+            "maxdiainkm": "est dia in km(max)",
+            "diameterkmmax": "est dia in km(max)",
+            
+            # Diameter estimates - meters
+            "estdiainmmin": "est dia in m(min)",
+            "estimatediameterinmmin": "est dia in m(min)",
+            "mindiameterm": "est dia in m(min)",
+            "mindiainm": "est dia in m(min)",
+            "diametermmin": "est dia in m(min)",
+            
+            "estdiainmmax": "est dia in m(max)",
+            "estimatediameterinmmax": "est dia in m(max)",
+            "maxdiameterm": "est dia in m(max)",
+            "maxdiainm": "est dia in m(max)",
+            "diametermmax": "est dia in m(max)",
+            
+            # Diameter estimates - miles
+            "estdiainmilesmin": "est dia in miles(min)",
+            "estimatediameterinmilesmin": "est dia in miles(min)",
+            "mindiametermiles": "est dia in miles(min)",
+            "mindiamiles": "est dia in miles(min)",
+            "diametermilesmin": "est dia in miles(min)",
+            
+            "estdiainmilesmax": "est dia in miles(max)",
+            "estimatediameterinmilesmax": "est dia in miles(max)",
+            "maxdiametermiles": "est dia in miles(max)",
+            "maxdiamiles": "est dia in miles(max)",
+            "diametermilesmax": "est dia in miles(max)",
+            
+            # Diameter estimates - feet
+            "estdiainfeetmin": "est dia in feet(min)",
+            "estimatediameterinfeetmin": "est dia in feet(min)",
+            "mindiameterfeet": "est dia in feet(min)",
+            "mindiafeet": "est dia in feet(min)",
+            "diameterfeetmin": "est dia in feet(min)",
+            
+            "estdiainfeetmax": "est dia in feet(max)",
+            "estimatediameterinfeetmax": "est dia in feet(max)",
+            "maxdiameterfeet": "est dia in feet(max)",
+            "maxdiafeet": "est dia in feet(max)",
+            "diameterfeetmax": "est dia in feet(max)",
+            
+            # Close approach data
+            "closeapproachdate": "close approach date",
+            "close_approach_date": "close approach date",
+            "approachdate": "close approach date",
+            "dateofcloseapproach": "close approach date",
+            "approachtime": "close approach date",
+            
+            "epochdatecloseapproach": "epoch date close approach",
+            "epoch_date_close_approach": "epoch date close approach",
+            "epochapproach": "epoch date close approach",
+            
+            # Velocity data
+            "relativevelocitykmpersec": "relative velocity km per sec",
+            "velocitykmps": "relative velocity km per sec",
+            "speedkmps": "relative velocity km per sec",
+            "relvelkmps": "relative velocity km per sec",
+            "kmpersec": "relative velocity km per sec",
+            
+            "relativevelocitykmperhr": "relative velocity km per hr",
+            "velocitykmph": "relative velocity km per hr",
+            "speedkmph": "relative velocity km per hr",
+            "relvelkmph": "relative velocity km per hr",
+            "kmperhr": "relative velocity km per hr",
+            
+            "milesperhour": "miles per hour",
+            "mph": "miles per hour",
+            "speedmph": "miles per hour",
+            "velocitymph": "miles per hour",
+            
+            # Miss distance data
+            "missdistastronomical": "miss dist.(astronomical)",
+            "missdistanceastronomical": "miss dist.(astronomical)",
+            "astronomicalmissdistance": "miss dist.(astronomical)",
+            "astronomicaldistance": "miss dist.(astronomical)",
+            "au_distance": "miss dist.(astronomical)",
+            
+            "missdistlunar": "miss dist.(lunar)",
+            "missdistancelunar": "miss dist.(lunar)",
+            "lunarmissdistance": "miss dist.(lunar)",
+            "lunardistance": "miss dist.(lunar)",
+            "ld_distance": "miss dist.(lunar)",
+            
+            "missdistkilometers": "miss dist.(kilometers)",
+            "missdistancekilometers": "miss dist.(kilometers)",
+            "kmmissdistance": "miss dist.(kilometers)",
+            "kmdistance": "miss dist.(kilometers)",
+            
+            "missdistmiles": "miss dist.(miles)",
+            "missdistancemiles": "miss dist.(miles)",
+            "milesmissdistance": "miss dist.(miles)",
+            "milesdistance": "miss dist.(miles)",
+            
+            "orbitingbody": "orbiting body",
+            "orbiting": "orbiting body",
+            "centralbody": "orbiting body",
+            "primarybody": "orbiting body",
+            
+            # Orbital elements
+            "orbitid": "orbit id",
+            "orbit_id": "orbit id",
+            "orbitalid": "orbit id",
+            
+            "orbitdeterminationdate": "orbit determination date",
+            "orbit_determination_date": "orbit determination date",
+            "dateoforbitdetermination": "orbit determination date",
+            "orbitepoch": "orbit determination date",
+            
+            "orbituncertainity": "orbit uncertainity",
+            "orbituncertainty": "orbit uncertainity",
+            "uncertainity": "orbit uncertainity",
+            "uncertainty": "orbit uncertainity",
+            "orbitaluncertainty": "orbit uncertainity",
+            
+            "minimumorbitintersection": "minimum orbit intersection",
+            "minorbitintersection": "minimum orbit intersection",
+            "moid": "minimum orbit intersection",
+            
+            "jupitertisserandinvariant": "jupiter tisserand invariant",
+            "tisserandinvariant": "jupiter tisserand invariant",
+            "tisserand": "jupiter tisserand invariant",
+            "tj": "jupiter tisserand invariant",
+            
+            "epochosculation": "epoch osculation",
+            "osculation": "epoch osculation",
+            "osculatingepoch": "epoch osculation",
+            
+            "eccentricity": "eccentricity",
+            "ecc": "eccentricity",
+            "e": "eccentricity",
+            
+            "semimajoraxis": "semi major axis",
+            "semi_major_axis": "semi major axis",
+            "semimajor": "semi major axis",
+            "a": "semi major axis",
+            "sma": "semi major axis",
+            
+            "inclination": "inclination",
+            "inc": "inclination",
+            "i": "inclination",
+            "orbitalinclination": "inclination",
+            
+            "ascnodelongitude": "asc node longitude",
+            "asc_node_longitude": "asc node longitude",
+            "nodelongitude": "asc node longitude",
+            "ascendingnode": "asc node longitude",
+            "omega": "asc node longitude",
+            "raan": "asc node longitude",
+            
+            "orbitalperiod": "orbital period",
+            "orbital_period": "orbital period",
+            "period": "orbital period",
+            "p": "orbital period",
+            
+            "periheliondistance": "perihelion distance",
+            "perihelion_distance": "perihelion distance",
+            "perihelion": "perihelion distance",
+            "q": "perihelion distance",
+            
+            "perihelionarg": "perihelion arg",
+            "perihelion_arg": "perihelion arg",
+            "argumentofperihelion": "perihelion arg",
+            "argperihelion": "perihelion arg",
+            "w": "perihelion arg",
+            
+            "apheliondist": "aphelion dist",
+            "aphelion_dist": "aphelion dist",
+            "apheliondistance": "aphelion dist",
+            "aphelion": "aphelion dist",
+            "Q": "aphelion dist",
+            
+            "periheliontime": "perihelion time",
+            "perihelion_time": "perihelion time",
+            "timeofperihelion": "perihelion time",
+            "tp": "perihelion time",
+            
+            "meananomaly": "mean anomaly",
+            "mean_anomaly": "mean anomaly",
+            "M": "mean anomaly",
+            
+            "meanmotion": "mean motion",
+            "mean_motion": "mean motion",
+            "n": "mean motion",
+            
+            "equinox": "equinox",
+            "referenceequinox": "equinox",
+            
+            "hazardous": "hazardous",
+            "hazardousflag": "hazardous",
+            "ishazardous": "hazardous",
+            "pha": "hazardous",
+            "potentiallyhazardous": "hazardous",
+            
+            # ===== ASTRONAUTS DATABASE =====
+            # Table names
+            "astronaut": "astronauts_db",
+            "astronauts": "astronauts_db",
+            "astronautdb": "astronauts_db",
+            "astronautsdb": "astronauts_db",
+            "crew": "astronauts_db",
+            "crewdb": "astronauts_db",
+            "astronautrecord": "astronauts_db",
+            "cosmonauts": "astronauts_db",
+            "spacefarers": "astronauts_db",
+            
+            # Sub-tables
+            "personalinfo": "personal_info",
+            "personal_info": "personal_info",
+            "personalinformation": "personal_info",
+            "persinfo": "personal_info",
+            "biodata": "personal_info",
+            
+            "missioninfo": "mission_info",
+            "mission_info": "mission_info",
+            "missiondata": "mission_info",
+            "flightinfo": "mission_info",
+            
+            "missionperformance": "mission_performance",
+            "mission_performance": "mission_performance",
+            "performance": "mission_performance",
+            "flightperformance": "mission_performance",
+            "perf": "mission_performance",
+            
+            # Personal info columns
+            "number": "number",
+            "astronautnumber": "number",
+            "crewnumber": "number",
+            "num": "number",
+            "no": "number",
+            "serialnumber": "number",
+            
+            "nationwidenumber": "nationwide_number",
+            "nationwide": "nationwide_number",
+            "natwidenumber": "nationwide_number",
+            "nationalnumber": "nationwide_number",
+            
+            "originalname": "original_name",
+            "orig_name": "original_name",
+            "fullname": "original_name",
+            "astronautname": "original_name",
+            "realname": "original_name",
+            "birthname": "original_name",
+            
+            "sex": "sex",
+            "gender": "sex",
+            "male": "sex",
+            "female": "sex",
+            "m": "sex",
+            "f": "sex",
+            
+            "yearofbirth": "year_of_birth",
+            "year_of_birth": "year_of_birth",
+            "birthyear": "year_of_birth",
+            "birth": "year_of_birth",
+            "born": "year_of_birth",
+            "dob": "year_of_birth",
+            "birthdate": "year_of_birth",
+            
+            "nationality": "nationality",
+            "citizenship": "nationality",
+            "country": "nationality",
+            "nation": "nationality",
+            "countryoforigin": "nationality",
+            
+            "militarycivilian": "military_civilian",
+            "military_civilian": "military_civilian",
+            "status": "military_civilian",
+            "militaryorcivilian": "military_civilian",
+            "background": "military_civilian",
+            "service": "military_civilian",
+            
+            # Mission info columns
+            "selection": "selection",
+            "selectionyear": "selection",
+            "astronautselection": "selection",
+            "group": "selection",
+            "class": "selection",
+            "astronautgroup": "selection",
+            
+            "yearofselection": "year_of_selection",
+            "year_of_selection": "year_of_selection",
+            "selectedyear": "year_of_selection",
+            
+            "missionnumber": "mission_number",
+            "mission_number": "mission_number",
+            "missionnum": "mission_number",
+            "missionno": "mission_number",
+            "flightnumber": "mission_number",
+            
+            "totalnumberofmissions": "total_number_of_missions",
+            "total_number_of_missions": "total_number_of_missions",
+            "totalmissions": "total_number_of_missions",
+            "nummissions": "total_number_of_missions",
+            "missioncount": "total_number_of_missions",
+            "flightcount": "total_number_of_missions",
+            
+            "occupation": "occupation",
+            "job": "occupation",
+            "role": "occupation",
+            "profession": "occupation",
+            "career": "occupation",
+            "specialty": "occupation",
+            
+            "yearofmission": "year_of_mission",
+            "year_of_mission": "year_of_mission",
+            "missionyear": "year_of_mission",
+            "flightyear": "year_of_mission",
+            
+            "missiontitle": "mission_title",
+            "mission_title": "mission_title",
+            "missionname": "mission_title",
+            "flightname": "mission_title",
+            "title": "mission_title",
+            
+            # Mission performance columns
+            "ascendshuttle": "ascend_shuttle",
+            "ascend_shuttle": "ascend_shuttle",
+            "launchshuttle": "ascend_shuttle",
+            "launchvehicle": "ascend_shuttle",
+            "boarding": "ascend_shuttle",
+            "ascent": "ascend_shuttle",
+            "launch": "ascend_shuttle",
+            
+            "inorbit": "in_orbit",
+            "in_orbit": "in_orbit",
+            "orbiting": "in_orbit",
+            "onorbit": "in_orbit",
+            "orbital": "in_orbit",
+            
+            "descendshuttle": "descend_shuttle",
+            "descend_shuttle": "descend_shuttle",
+            "landingshuttle": "descend_shuttle",
+            "landingvehicle": "descend_shuttle",
+            "landing": "descend_shuttle",
+            "return": "descend_shuttle",
+            "descent": "descend_shuttle",
+            
+            "hoursmission": "hours_mission",
+            "hours_mission": "hours_mission",
+            "missionhours": "hours_mission",
+            "flighthours": "hours_mission",
+            "duration": "hours_mission",
+            "missionduration": "hours_mission",
+            "flightduration": "hours_mission",
+            
+            "totalhrssum": "total_hrs_sum",
+            "total_hrs_sum": "total_hrs_sum",
+            "totalhours": "total_hrs_sum",
+            "totalhrs": "total_hrs_sum",
+            "totalflighthours": "total_hrs_sum",
+            "cumulativehours": "total_hrs_sum",
+            
+            "field21": "field21",
+            
+            "evahrsmission": "eva_hrs_mission",
+            "eva_hrs_mission": "eva_hrs_mission",
+            "evahours": "eva_hrs_mission",
+            "evahour": "eva_hrs_mission",
+            "evamissionhours": "eva_hrs_mission",
+            "spacewalkhours": "eva_hrs_mission",
+            "extravehicular": "eva_hrs_mission",
+            "eva": "eva_hrs_mission",
+            
+            "totalevahrs": "total_eva_hrs",
+            "total_eva_hrs": "total_eva_hrs",
+            "totalevahours": "total_eva_hrs",
+            "totaleva": "total_eva_hrs",
+            "totalspacewalkhours": "total_eva_hrs",
+            "cumulativeeva": "total_eva_hrs",
+            
+            # ===== ISRO SATELLITES DATABASE =====
+            "isro_satellites_db": "isro_satellites_db",
+            "isrosatellitesdb": "isro_satellites_db",
+            "isrosatellites": "isro_satellites_db",
+            "isrosat": "isro_satellites_db",
+            "isrospacecraft": "isro_satellites_db",
+            "indiansatellites": "isro_satellites_db",
+            
+            # Sub-tables
+            "basicinfo": "basic_info",
+            "basic_info": "basic_info",
+            "generalinfo": "basic_info",
+            "satelliteinfo": "basic_info",
+            
+            "orbitalinfo": "orbital_info",
+            "orbital_info": "orbital_info",
+            "orbitinfo": "orbital_info",
+            "orbitdata": "orbital_info",
+            
+            "launchinfo": "launch_info",
+            "launch_info": "launch_info",
+            "launchdata": "launch_info",
+            
+            # Basic info columns
+            "satelliteidfake": "satellite id(fake)",
+            "satellite_id_fake": "satellite id(fake)",
+            "satelliteid": "satellite id(fake)",
+            "satid": "satellite id(fake)",
+            
+            "nameofsatellitealternatenames": "name of satellite, alternate names",
+            "name_of_satellite_alternate_names": "name of satellite, alternate names",
+            "satellitename": "name of satellite, alternate names",
+            "alternatenames": "name of satellite, alternate names",
+            "satellitenames": "name of satellite, alternate names",
+            "names": "name of satellite, alternate names",
+            
+            "currentofficialnameofsatellite": "current official name of satellite",
+            "current_official_name_of_satellite": "current official name of satellite",
+            "officialname": "current official name of satellite",
+            "currentname": "current official name of satellite",
+            
+            "countryorgofunregistry": "country/org of un registry",
+            "country_org_of_un_registry": "country/org of un registry",
+            "countryofunregistry": "country/org of un registry",
+            "unregistrycountry": "country/org of un registry",
+            "unregistry": "country/org of un registry",
+            
+            "countryofoperatorowner": "country of operator/owner",
+            "country_of_operator_owner": "country of operator/owner",
+            "operatorcountry": "country of operator/owner",
+            "ownercountry": "country of operator/owner",
+            "countryowner": "country of operator/owner",
+            
+            "operatorowner": "operator/owner",
+            "operator_owner": "operator/owner",
+            "operator": "operator/owner",
+            "owner": "operator/owner",
+            "agency": "operator/owner",
+            
+            "users": "users",
+            "user": "users",
+            "customers": "users",
+            "clients": "users",
+            
+            "purpose": "purpose",
+            "mission": "purpose",
+            "objective": "purpose",
+            "function": "purpose",
+            
+            "detailedpurpose": "detailed purpose",
+            "detailed_purpose": "detailed purpose",
+            "details": "detailed purpose",
+            "description": "detailed purpose",
+            "missiondetails": "detailed purpose",
+            
+            # Orbital info columns
+            "classoforbit": "class of orbit",
+            "class_of_orbit": "class of orbit",
+            "orbitclass": "class of orbit",
+            "orbittype": "class of orbit",
+            
+            "typeoforbit": "type of orbit",
+            "type_of_orbit": "type of orbit",
+            "orbitcategory": "type of orbit",
+            
+            "longitudeofgeodegrees": "longitude of geo (degrees)",
+            "longitude_of_geo_degrees": "longitude of geo (degrees)",
+            "geolongitude": "longitude of geo (degrees)",
+            "longitudegeo": "longitude of geo (degrees)",
+            "geoposition": "longitude of geo (degrees)",
+            
+            "perigeekm": "perigee (km)",
+            "perigee_km": "perigee (km)",
+            "perigee": "perigee (km)",
+            "perigeedistancekm": "perigee (km)",
+            "perigeealitude": "perigee (km)",
+            
+            "apogeekm": "apogee (km)",
+            "apogee_km": "apogee (km)",
+            "apogee": "apogee (km)",
+            "apogeedistancekm": "apogee (km)",
+            "apogeealtitude": "apogee (km)",
+            
+            "inclinationdegrees": "inclination (degrees)",
+            "inclination_degrees": "inclination (degrees)",
+            "orbitalinclination": "inclination (degrees)",
+            
+            "periodminutes": "period (minutes)",
+            "period_minutes": "period (minutes)",
+            "orbitalperiodminutes": "period (minutes)",
+            "revolutionperiod": "period (minutes)",
+            
+            # Launch info columns
+            "launchmasskg": "launch mass (kg.)",
+            "launch_mass_kg": "launch mass (kg.)",
+            "launchmass": "launch mass (kg.)",
+            "mass": "launch mass (kg.)",
+            "weight": "launch mass (kg.)",
+            
+            "drymasskg": "dry mass (kg.)",
+            "dry_mass_kg": "dry mass (kg.)",
+            "drymass": "dry mass (kg.)",
+            
+            "powerwatts": "power (watts)",
+            "power_watts": "power (watts)",
+            "power": "power (watts)",
+            "solarpower": "power (watts)",
+            
+            "dateoflaunch": "date of launch",
+            "date_of_launch": "date of launch",
+            "launchdate": "date of launch",
+            "launchtime": "date of launch",
+            "liftoff": "date of launch",
+            
+            "expectedlifetimeyrs": "expected lifetime (yrs.)",
+            "expected_lifetime_yrs": "expected lifetime (yrs.)",
+            "expectedlifetime": "expected lifetime (yrs.)",
+            "lifetime": "expected lifetime (yrs.)",
+            "missionlife": "expected lifetime (yrs.)",
+            "designlife": "expected lifetime (yrs.)",
+            
+            "contractor": "contractor",
+            "manufacturer": "contractor",
+            "builder": "contractor",
+            "supplier": "contractor",
+            
+            "countryofcontractor": "country of contractor",
+            "country_of_contractor": "country of contractor",
+            "contractorcountry": "country of contractor",
+            "manufacturercountry": "country of contractor",
+            
+            "launchsite": "launch site",
+            "launch_site": "launch site",
+            "site": "launch site",
+            "launchpad": "launch site",
+            "spaceport": "launch site",
+            
+            "launchvehicle": "launch vehicle",
+            "launch_vehicle": "launch vehicle",
+            "vehicle": "launch vehicle",
+            "rocket": "launch vehicle",
+            "launcher": "launch vehicle",
+            
+            "cosparnumber": "cospar number",
+            "cospar_number": "cospar number",
+            "cosparid": "cospar number",
+            "cospar": "cospar number",
+            "internationaldesignator": "cospar number",
+            
+            "noradnumber": "norad number",
+            "norad_number": "norad number",
+            "noradid": "norad number",
+            "norad": "norad number",
+            "cataloguenumber": "norad number",
+            "ssn": "norad number",
+            
+            "comments": "comments",
+            "notes": "comments",
+            "remarks": "comments",
+            "note": "comments",
+            
+            # ===== NATURAL SATELLITES DATABASE =====
+            "natural_satellites_db": "natural_satellites_db",
+            "naturalsatellitesdb": "natural_satellites_db",
+            "naturalsatellites": "natural_satellites_db",
+            "moons": "natural_satellites_db",
+            "moonsdb": "natural_satellites_db",
+            "planetarymoons": "natural_satellites_db",
+            
+            # Sub-tables
+            "satelliteidentity": "satellite_identity",
+            "satellite_identity": "satellite_identity",
+            "identity": "satellite_identity",
+            "satidentity": "satellite_identity",
+            "moonidentity": "satellite_identity",
+            
+            "satellitephysical": "satellite_physical",
+            "satellite_physical": "satellite_physical",
+            "physical": "satellite_physical",
+            "satphysical": "satellite_physical",
+            "moonphysical": "satellite_physical",
+            
+            # Common columns
+            "planet": "planet",
+            "planets": "planet",
+            "world": "planet",
+            "primarybody": "planet",
+            "parentplanet": "planet",
+            
+            "gm": "gm",
+            "gravitationalparameter": "gm",
+            "standardgravparameter": "gm",
+            "gravparam": "gm",
+            "mu": "gm",
+            
+            "radius": "radius",
+            "meanradius": "radius",
+            "equatorialradius": "radius",
+            "polarradius": "radius",
+            "rad": "radius",
+            "size": "radius",
+            
+            "density": "density",
+            "massdensity": "density",
+            "averagedensity": "density",
+            "bulkdensity": "density",
+            
+            "albedo": "albedo",
+            "reflectivity": "albedo",
+            "surfacealbedo": "albedo",
+            "geometricalbedo": "albedo",
+            "bondalbedo": "albedo",
+            
+            # ===== ROCKETS DATABASE =====
+            "rockets_db": "rockets_db",
+            "rocketsdb": "rockets_db",
+            "rockets": "rockets_db",
+            "launchvehicles": "rockets_db",
+            "launchers": "rockets_db",
+            
+            # Sub-tables
+            "rocketgeneralinfo": "rocket_general_info",
+            "rocket_general_info": "rocket_general_info",
+            "generalinfo": "rocket_general_info",
+            "rocketgeneral": "rocket_general_info",
+            "rocketinfo": "rocket_general_info",
+            
+            "rockettechnicalspecs": "rocket_technical_specs",
+            "rocket_technical_specs": "rocket_technical_specs",
+            "technicalspecs": "rocket_technical_specs",
+            "rockettechspecs": "rocket_technical_specs",
+            "rocketspecs": "rocket_technical_specs",
+            "specifications": "rocket_technical_specs",
+            
+            # Rocket general info columns
+            "cmp": "cmp",
+            "company": "cmp",
+            "manufacturer": "cmp",
+            "builder": "cmp",
+            "agency": "cmp",
+            
+            "wiki": "wiki",
+            "wikipedia": "wiki",
+            "wikilink": "wiki",
+            "wikipedialink": "wiki",
+            
+            "rocketstatus": "status",
+            "rocket_status": "status",
+            "state": "status",
+            "operational": "status",
+            "active": "status",
+            "retired": "status",
+            
+            # Rocket technical specs columns
+            "liftoffthrust": "liftoff_thrust",
+            "liftoff_thrust": "liftoff_thrust",
+            "liftoff": "liftoff_thrust",
+            "launchthrust": "liftoff_thrust",
+            "thrust": "liftoff_thrust",
+            "takeoffthrust": "liftoff_thrust",
+            
+            "payloadleo": "payload_leo",
+            "payload_leo": "payload_leo",
+            "payloadtoleo": "payload_leo",
+            "leopayload": "payload_leo",
+            "leo": "payload_leo",
+            "lowearth": "payload_leo",
+            
+            "stages": "stages",
+            "stage": "stages",
+            "numberstages": "stages",
+            "stagecount": "stages",
+            
+            "strapons": "strap_ons",
+            "strap_ons": "strap_ons",
+            "strap-ons": "strap_ons",
+            "strapon": "strap_ons",
+            "boosters": "strap_ons",
+            "solidboosters": "strap_ons",
+            
+            "rocketheightm": "rocket_height_m",
+            "rocket_height_m": "rocket_height_m",
+            "rocketheight": "rocket_height_m",
+            "heightm": "rocket_height_m",
+            "height": "rocket_height_m",
+            "length": "rocket_height_m",
+            
+            "pricemusd": "price_musd",
+            "price_musd": "price_musd",
+            "priceusd": "price_musd",
+            "cost": "price_musd",
+            "launchcost": "price_musd",
+            "costperlaunch": "price_musd",
+            
+            "payloadgto": "payload_gto",
+            "payload_gto": "payload_gto",
+            "gtopayload": "payload_gto",
+            "gto": "payload_gto",
+            "geotransfer": "payload_gto",
+            
+            "fairingdiameterm": "fairing_diameter_m",
+            "fairing_diameter_m": "fairing_diameter_m",
+            "fairingdiameter": "fairing_diameter_m",
+            "diameterfairingm": "fairing_diameter_m",
+            "payloadfairingdiameter": "fairing_diameter_m",
+            
+            "fairingheightm": "fairing_height_m",
+            "fairing_height_m": "fairing_height_m",
+            "fairingheight": "fairing_height_m",
+            "heightfairingm": "fairing_height_m",
+            "payloadfairingheight": "fairing_height_m",
+            
+            # ===== SPACE MISSIONS DATABASE =====
+            "space_missions_db": "space_missions_db",
+            "spacemissionsdb": "space_missions_db",
+            "spacemissions": "space_missions_db",
+            "missions": "space_missions_db",
+            "missionsdb": "space_missions_db",
+            
+            # Sub-tables for missions
+            "organizations": "organizations",
+            "organisations": "organizations",
+            "organizationstable": "organizations",
+            "orgs": "organizations",
+            "agencies": "organizations",
+            "spaceagencies": "organizations",
+            
+            "missionstable": "missions",
+            "missiondata": "missions",
+            "flightdata": "missions",
+            
+            # Organizations columns
+            "organisation": "organisation",
+            "organization": "organisation",
+            "org": "organisation",
+            "agency": "organisation",
+            "spaceagency": "organisation",
+            
+            "location": "location",
+            "loc": "location",
+            "site": "location",
+            "place": "location",
+            "headquarters": "location",
+            "country": "location",
+            
+            # Missions columns
+            "details": "details",
+            "detail": "details",
+            "description": "details",
+            "desc": "details",
+            "missiondescription": "details",
+            "summary": "details",
+            
+            "missionstatus": "mission_status",
+            "mission_status": "mission_status",
+            "mission_state": "mission_status",
+            "missionstate": "mission_status",
+            "flightstatus": "mission_status",
+            "successful": "mission_status",
+            "failed": "mission_status",
+            "ongoing": "mission_status",
+            
+            "price": "price",
+            "budget": "price",
+            "missioncost": "price",
+            "funding": "price",
+            
+            # ===== SPACE NEWS DATABASE =====
+            "spacenews_db": "spacenews_db",
+            "spacenewsdb": "spacenews_db",
+            "spacenews": "spacenews_db",
+            "news": "spacenews_db",
+            "newsdb": "spacenews_db",
+            
+            # Sub-tables
+            "newsarticlestable": "news_articles_table",
+            "news_articles_table": "news_articles_table",
+            "newsarticles": "news_articles_table",
+            "newsarticle": "news_articles_table",
+            "articles": "news_articles_table",
+            "articlestable": "news_articles_table",
+            "news_table": "news_articles_table",
+            "spacearticles": "news_articles_table",
+            
+            "publishinginfo": "publishing_info",
+            "publishing_info": "publishing_info",
+            "publishing": "publishing_info",
+            "pubinfo": "publishing_info",
+            "pub": "publishing_info",
+            "publishinfo": "publishing_info",
+            "publicationinfo": "publishing_info",
+            
+            # News articles columns
+            "title": "title",
+            "headline": "title",
+            "heading": "title",
+            "articletitle": "title",
+            "subject": "title",
+            
+            "url": "url",
+            "link": "url",
+            "weblink": "url",
+            "articleurl": "url",
+            "webpage": "url",
+            "website": "url",
+            
+            "content": "content",
+            "body": "content",
+            "articlecontent": "content",
+            "text": "content",
+            "fulltext": "content",
+            "article": "content",
+            
+            "postexcerpt": "postexcerpt",
+            "post_excerpt": "postexcerpt",
+            "excerpt": "postexcerpt",
+            "summary": "postexcerpt",
+            "teaser": "postexcerpt",
+            "abstract": "postexcerpt",
+            "snippet": "postexcerpt",
+            
+            # Publishing info columns
+            "author": "author",
+            "writer": "author",
+            "journalist": "author",
+            "reporter": "author",
+            "postedby": "author",
+            "byline": "author",
+            "contributor": "author",
+            
+            "date": "date",
+            "publishdate": "date",
+            "publicationdate": "date",
+            "postdate": "date",
+            "pdate": "date",
+            "timestamp": "date",
+            "published": "date",
+            "created": "date",
+            
+            # ===== STARS DATABASE =====
+            "stars_db": "stars_db",
+            "starsdb": "stars_db",
+            "stars": "stars_db",
+            "stardb": "stars_db",
+            "starstable": "stars_db",
+            "stellardb": "stars_db",
+            "stellardatabase": "stars_db",
+            
+            # Stars columns
+            "starname": "star name",
+            "star_name": "star name",
+            "starnames": "star name",
+            "stellarname": "star name",
+            "designation": "star name",
+            "catalog": "star name",
+            
+            "distance": "distance",
+            "dist": "distance",
+            "range": "distance",
+            "stellardistance": "distance",
+            "parsecs": "distance",
+            "lightyears": "distance",
+            "ly": "distance",
+            "pc": "distance",
+            
+            "mass": "mass",
+            "stellarmass": "mass",
+            "solarmass": "mass",
+            "msun": "mass",
+            
+            "luminosity": "luminosity",
+            "lumin": "luminosity",
+            "bright": "luminosity",
+            "brightness": "luminosity",
+            "stellarluminosity": "luminosity",
+            "solarluminosity": "luminosity",
+            "lsun": "luminosity",
+            
+            # Additional common space-related terms
+            "spacecraft": "spacecraft",
+            "probe": "spacecraft",
+            "orbiter": "spacecraft",
+            "lander": "spacecraft",
+            "rover": "spacecraft",
+            "capsule": "spacecraft",
+            
+            "launch": "launch",
+            "liftoff": "launch",
+            "takeoff": "launch",
+            "blastoff": "launch",
+            
+            "orbit": "orbit",
+            "orbital": "orbit",
+            "trajectory": "orbit",
+            "path": "orbit",
+            
+            "space": "space",
+            "outerspace": "space",
+            "cosmos": "space",
+            "universe": "space",
+            
+            "solar": "solar",
+            "solarsystem": "solar",
+            "sun": "solar",
+            
+            "planetary": "planetary",
+            "interplanetary": "planetary",
+            
+            "galactic": "galactic",
+            "galaxy": "galactic",
+            "milkyway": "galactic",
+            
+            "stellar": "stellar",
+            "interstellar": "stellar",
+            
+            "cosmic": "cosmic",
+            "cosmological": "cosmic",
+            
+            "astronomical": "astronomical",
+            "astronomy": "astronomical",
+            "astrophysical": "astronomical",
+            "astrophysics": "astronomical",
+        }
+
+    def classify_entity_type(schema_term):
+        databases = {
+            'asteroids_db', 'astronauts_db', 'isro_satellites_db', 
+            'natural_satellites_db', 'rockets_db', 'space_missions_db', 
+            'spacenews_db', 'stars_db'
+        }
+
+        tables = {
+            # Asteroid tables
+            'neo_reference', 'close_approach', 'orbit_data',
+            # Astronaut tables  
+            'personal_info', 'mission_info', 'mission_performance',
+            # Satellite tables
+            'basic_info', 'orbital_info', 'launch_info',
+            'satellite_identity', 'satellite_physical',
+            # Rocket tables
+            'rocket_general_info', 'rocket_technical_specs',
+            # Mission tables
+            'organizations', 'rockets', 'missions',
+            # News tables
+            'news_articles_table', 'publishing_info',
+            # Star tables
+            'stars'
+        }
+        
+        columns = {
+            # Common columns across tables
+            'id', 'name', 'title', 'date', 'status', 'location', 'details',
+            
+            # Asteroid specific columns
+            'neo reference id', 'absolute magnitude', 'est dia in km(min)', 'est dia in km(max)',
+            'est dia in m(min)', 'est dia in m(max)', 'est dia in miles(min)', 'est dia in miles(max)',
+            'est dia in feet(min)', 'est dia in feet(max)', 'close approach date', 'epoch date close approach',
+            'relative velocity km per sec', 'relative velocity km per hr', 'miles per hour',
+            'miss dist.(astronomical)', 'miss dist.(lunar)', 'miss dist.(kilometers)', 'miss dist.(miles)',
+            'orbiting body', 'orbit id', 'orbit determination date', 'orbit uncertainity',
+            'minimum orbit intersection', 'jupiter tisserand invariant', 'epoch osculation',
+            'eccentricity', 'semi major axis', 'inclination', 'asc node longitude', 'orbital period',
+            'perihelion distance', 'perihelion arg', 'aphelion dist', 'perihelion time', 'mean anomaly',
+            'mean motion', 'equinox', 'hazardous',
+            
+            # Astronaut specific columns
+            'number', 'nationwide_number', 'original_name', 'sex', 'year_of_birth', 'nationality',
+            'military_civilian', 'selection', 'year_of_selection', 'mission_number', 'total_number_of_missions',
+            'occupation', 'year_of_mission', 'mission_title', 'ascend_shuttle', 'in_orbit',
+            'descend_shuttle', 'hours_mission', 'total_hrs_sum', 'field21', 'eva_hrs_mission', 'total_eva_hrs',
+            
+            # Satellite specific columns
+            'satellite id(fake)', 'name of satellite, alternate names', 'current official name of satellite',
+            'country/org of un registry', 'country of operator/owner', 'operator/owner', 'users',
+            'purpose', 'detailed purpose', 'class of orbit', 'type of orbit', 'longitude of geo (degrees)',
+            'perigee (km)', 'apogee (km)', 'inclination (degrees)', 'period (minutes)',
+            'launch mass (kg.)', 'dry mass (kg.)', 'power (watts)', 'date of launch', 'expected lifetime (yrs.)',
+            'contractor', 'country of contractor', 'launch site', 'launch vehicle', 'cospar number',
+            'norad number', 'comments',
+            
+            # Natural satellite columns
+            'planet', 'gm', 'radius', 'density', 'magnitude', 'albedo',
+            
+            # Rocket columns
+            'cmp', 'wiki', 'liftoff_thrust', 'payload_leo', 'stages', 'strap_ons',
+            'rocket_height_m', 'price_musd', 'payload_gto', 'fairing_diameter_m', 'fairing_height_m',
+            
+            # Mission columns
+            'organisation', 'rocket_status', 'price', 'mission_status',
+            
+            # News columns
+            'url', 'content', 'postexcerpt', 'author',
+            
+            # Star columns
+            'star name', 'distance', 'mass', 'luminosity'
+        }
+        
+        if schema_term in databases:
+            return 'database'
+        elif schema_term in tables:
+            return 'table'
+        elif schema_term in columns:
+            return 'column'
+        else:
+            if schema_term.endswith('_db'):
+                return 'database'
+            elif ('_info' in schema_term or '_data' in schema_term or 
+                  '_table' in schema_term or schema_term in ['organizations', 'rockets', 'missions', 'stars']):
+                return 'table'
+            else:
+                return 'column'
 
     matched_entities = []
-
-    normalized_schema = {term.lower().replace("_", ""): term for term in schema_terms}
-
+    
+    normalized_schema = {
+        term.lower().replace("_", "").replace(" ", "").replace("(", "").replace(")", "").replace(".", ""): term 
+        for term in schema_terms
+    }
+    
     for token in tokens:
-        base = token.lower().replace("_", "")
-        if base in normalized_schema:
-            original = normalized_schema[base]
+        normalized_token = token.lower().replace("_", "").replace(" ", "").replace("(", "").replace(")", "").replace(".", "")
+
+        if normalized_token in normalized_schema:
+            original = normalized_schema[normalized_token]
+            entity_type = classify_entity_type(original)
             matched_entities.append({
-                'type': 'table' if original.endswith('_db') else 'column',
-                'value': original
+                'type': entity_type,
+                'value': original,
+                'matched_token': token,
+                'match_method': 'direct'
             })
-        elif token in synonym_map:
-            mapped = synonym_map[token]
+        
+        elif normalized_token in synonym_map:
+            mapped = synonym_map[normalized_token]
             if mapped in schema_terms:
+                entity_type = classify_entity_type(mapped)
                 matched_entities.append({
-                    'type': 'table' if mapped.endswith('_db') else 'column',
-                    'value': mapped
+                    'type': entity_type,
+                    'value': mapped,
+                    'matched_token': token,
+                    'match_method': 'synonym'
                 })
 
     return matched_entities
+

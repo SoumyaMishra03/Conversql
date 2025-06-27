@@ -1,20 +1,5 @@
-#!/usr/bin/env python3
-"""
-normalize_units.py
-
-Detects numeric+unit expressions (km, m, cm, mm, mi, ft) in text,
-converts them into meters (m), and returns both the normalized text
-and a list of conversion details.
-"""
-
 import re
-import sys
-import subprocess
 
-# 1) Ensure nothing shadows our unit module
-#    (no stanza.py or normalize_units.py conflict)
-
-# 2) Unit conversion factors to meters
 _UNIT_FACTORS = {
     'km':       1_000.0,
     'kilometer':1_000.0, 'kilometers':1_000.0,
@@ -30,7 +15,6 @@ _UNIT_FACTORS = {
     'foot':     0.3048,  'feet':      0.3048
 }
 
-# 3) Regex to find number+unit
 _PATTERN = re.compile(
     r"\b(?P<val>\d+(?:\.\d+)?)\s*"
     r"(?P<unit>km|kilometer[s]?|m|meter[s]?|cm|centimeter[s]?|"
@@ -39,19 +23,6 @@ _PATTERN = re.compile(
 )
 
 def normalize_units(text: str):
-    """
-    Finds all <number><unit> occurrences and:
-      - normalizes each to meters (value_in_meters)
-      - returns (new_text, conversions)
-    conversions: list of dicts {
-      raw:    original text,
-      start:  start idx,
-      end:    end idx,
-      value:  float(original number),
-      unit:   normalized unit string,
-      norm:   float(value_in_meters)
-    }
-    """
     conversions = []
     offset = 0
     new_text = text
@@ -71,7 +42,6 @@ def normalize_units(text: str):
             'unit': unit,
             'norm': norm
         })
-        # replace in new_text, adjusting for prior replacements
         repl = f"{norm:.3f} m"
         adj_lo = lo + offset
         adj_hi = hi + offset
@@ -80,7 +50,7 @@ def normalize_units(text: str):
 
     return new_text, conversions
 
-# Self-test
+# for a self test
 if __name__ == "__main__":
     samples = [
         "Distance traveled: 5 km and then 300 m.",

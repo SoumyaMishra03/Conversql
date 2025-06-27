@@ -1,9 +1,6 @@
-# intent_recognizer.py
-
 import re
 from typing import List
 
-# Patterns for each intent category
 INTENT_PATTERNS = [
     (r'\b(count|how many|number of|total number of)\b',       'COUNT_ROWS'),
     (r'\b(sum of|total sum|add up|aggregate)\b',              'AGGREGATE_SUM'),
@@ -14,10 +11,6 @@ INTENT_PATTERNS = [
 ]
 
 class IntentRecognizer:
-    """
-    Rule-based intent recognizer that matches regex patterns 
-    against the final token list from the tokenizer.
-    """
     def __init__(self, patterns: List = INTENT_PATTERNS):
         self.patterns = [
             (re.compile(pat, re.IGNORECASE), intent)
@@ -25,9 +18,6 @@ class IntentRecognizer:
         ]
 
     def predict_from_tokens(self, tokens: List[str]) -> str:
-        """
-        Join final tokens and run regex patterns to determine intent.
-        """
         text = " ".join(tokens)
         for regex, intent in self.patterns:
             if regex.search(text):

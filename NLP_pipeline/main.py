@@ -1,14 +1,3 @@
-#!/usr/bin/env python3
-"""
-main.py
-
-End‐to‐end pipeline demo with diverse test queries covering:
-  • Date normalization
-  • Unit normalization
-  • Tokenization & intent recognition
-  • Schema, operator & value entity recognition
-"""
-
 import re
 
 from tokenizer_stanza import tokenize, SCHEMA_PHRASES
@@ -20,48 +9,37 @@ from normalize_dates import normalize_dates
 
 from intent_recognizer import IntentRecognizer
 
-# treat 4-digit integers as dates
 YEAR_PATTERN = re.compile(r"^\d{4}$")
 
-# initialize intent recognizer
 intent_recognizer = IntentRecognizer()
 
-# Expanded list of queries to exercise every module
 queries = [
-    # Asteroids
     "How many asteroids have an absolute magnitude less than 5?",
     "Show me asteroid names and est dia in km(max) for those larger than 2 km.",
     "What is the average orbital period of asteroids in days?",
 
-    # Stars
     "What is the average mass of stars in stars_db?",
     "List the top 5 most luminous stars.",
     "List star names within 100 light years of Earth.",
 
-    # Astronauts
     "Give me the count of astronauts selected in 2005.",
     "Show mission_title and hours_mission for astronaut number 42.",
     "Show astronauts who have more than 10 total_eva_hrs.",
 
-    # ISRO Satellites
     "Describe table basic_info in isro_satellites_db.",
     "What was the launch date of the Chandrayaan-2 satellite?",
     "Count satellites with perigee less than 500 km.",
 
-    # Natural Satellites
     "Display all natural satellites with radius greater than 1000 km.",
     "What is the minimum gm value among natural satellites?",
 
-    # Rockets
     "Find rockets with Payload_GTO above 2 tons.",
     "List rocket names with liftoff thrust above 5000 kN.",
     "Describe schema of rocket_technical_specs.",
 
-    # Space News
     "List news headlines published after January 1, 2020.",
     "Count the number of news articles related to Mars.",
 
-    # Space Missions
     "Which space missions cost more than 100 million dollars?",
     "List organizations in space_missions_db.",
     "Tell me which missions have been completed by SpaceX.",
@@ -78,7 +56,6 @@ for query in queries:
     print("Original Query:")
     print(" ", query)
 
-    # 1. Normalize dates
     text_dates, date_conversions = normalize_dates(query)
     if date_conversions:
         print("\nAfter date normalization:")
@@ -89,7 +66,6 @@ for query in queries:
     else:
         text_dates = query
 
-    # 2. Normalize units
     text_units, unit_conversions = normalize_units(text_dates)
     if unit_conversions:
         print("\nAfter unit normalization:")
@@ -101,18 +77,15 @@ for query in queries:
     else:
         text_units = text_dates
 
-    # 3. Tokenize & filter
     tok = tokenize(text_units)
     final_tokens = tok["Final Tokens"]
     print("\nFinal Tokens:")
     print(" ", final_tokens)
 
-    # 4. Intent recognition on tokens
     intent = intent_recognizer.predict_from_tokens(final_tokens)
     print("\nIntent:")
     print(" ", intent)
 
-    # 5. Schema entity recognition
     schema_entities = schema_entity_recognizer(final_tokens, SCHEMA_PHRASES)
     print("\nSchema Entities:")
     if schema_entities:
@@ -121,7 +94,6 @@ for query in queries:
     else:
         print("   None found")
 
-    # 6. Comparison operator recognition
     raw_ops = comparison_operator_recognizer(text_units)
     print("\nComparison Operators:")
     if raw_ops:
@@ -130,7 +102,6 @@ for query in queries:
     else:
         print("   None found")
 
-    # 7. Value entity recognition
     raw_vals = value_entity_recognizer(text_units)
     val_entities = []
     for typ, val, lo, hi in raw_vals:
