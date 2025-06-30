@@ -1,24 +1,13 @@
-#!/usr/bin/env python3
-"""
-normalize_dates.py
-
-Detects fuzzy date expressions in text and converts them
-to ISO 'YYYY-MM-DD'. Returns (new_text, conversions).
-Relies on python-dateutil for parsing.
-"""
-
 import re
 import sys
 import subprocess
 
-# 1) Ensure dateutil is available
 try:
     from dateutil import parser as _p
 except ImportError:
     subprocess.check_call([sys.executable, "-m", "pip", "install", "python-dateutil"])
     from dateutil import parser as _p
 
-# 2) Patterns to locate candidate date substrings
 _DATE_PATTERNS = [
     r"\b\d{4}-\d{2}-\d{2}\b",                 # 2025-06-23
     r"\b\d{1,2}/\d{1,2}/\d{2,4}\b",           # 6/23/2025 or 06/23/25
@@ -65,19 +54,3 @@ def normalize_dates(text: str):
 
     return new_text, conversions
 
-# Self-test
-if __name__ == "__main__":
-    samples = [
-        "Event on 2025-06-23 should be logged.",
-        "Deadline: 6/23/2025 or 06/23/25 variant.",
-        "Meeting Jan 5, 2020 was moved.",
-        "Backup date feb 12 without year.",
-        "Nothing here."
-    ]
-
-    for s in samples:
-        print(f"\nInput:  {s}")
-        nt, conv = normalize_dates(s)
-        print("Output: ", nt)
-        for c in conv:
-            print(f"  • {c['raw']} → {c['normalized']} [{c['start']}–{c['end']}]")

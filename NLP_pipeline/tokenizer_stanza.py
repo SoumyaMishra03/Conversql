@@ -10,7 +10,7 @@ nlp = stanza.Pipeline('en', processors='tokenize,pos,lemma')
 STOPWORDS = set(stopwords.words('english'))
 
 SCHEMA_PHRASES = [
-    "asteroids", "astronauts_db", "isro_satellites_db", "natural_satellites_db",
+    "asteroids_db", "astronauts_db", "isro_satellites_db", "natural_satellites_db",
     "rockets_db", "space_missions_db", "spacenews_db", "stars_db",
     "neo_reference", "close_approach", "orbit_data",
     "personal_info", "mission_info", "mission_performance",

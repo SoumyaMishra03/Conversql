@@ -50,19 +50,4 @@ def normalize_units(text: str):
 
     return new_text, conversions
 
-# for a self test
-if __name__ == "__main__":
-    samples = [
-        "Distance traveled: 5 km and then 300 m.",
-        "Tiny gap: 12.5 cm, also 250 mm.",
-        "Walked 2 miles, then 10 ft down.",
-        "Edge: 1000 millimeters in blueprint.",
-        "Nothing to change here."
-    ]
 
-    for s in samples:
-        print(f"\nInput:  {s}")
-        nt, conv = normalize_units(s)
-        print("Output: ", nt)
-        for c in conv:
-            print(f"  • {c['raw']} → {c['norm']:.3f} m [{c['start']}–{c['end']}]")
