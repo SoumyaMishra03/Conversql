@@ -30,7 +30,7 @@ queries = [
     "Show entries where miss_dist.(miles) is less than 0.1.",
     "List stars with mass less than 2 solar mass in stars_db.",
     "Find missions costing more than 100 million dollars.",
-    "Display all entries where eccentricity equals 0.2."
+    "Display all incometaxreturn entries where eccentricity equals 0.2."
 ]
 
 
