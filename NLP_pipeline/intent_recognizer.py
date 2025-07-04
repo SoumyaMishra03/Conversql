@@ -1,13 +1,24 @@
+# intent_recognizer.py
+
 import re
 from typing import List
 
 INTENT_PATTERNS = [
-    (r'\b(count|how many|number of|total number of)\b',       'COUNT_ROWS'),
-    (r'\b(sum of|total sum|add up|aggregate)\b',              'AGGREGATE_SUM'),
-    (r'\b(average|mean of|avg)\b',                             'AGGREGATE_AVG'),
-    (r'\b(min|max|highest|lowest|minimum|maximum)\b',         'AGGREGATE_MINMAX'),
-    (r'\b(list|show|display|give|tell me|find|which)\b',      'SELECT_ROWS'),
-    (r'.*',                                                    'SELECT_ROWS'),
+    # Count / Aggregates
+    (r'\b(count|how many|number of|total number of)\b',                   'COUNT_ROWS'),
+    (r'\b(sum of|total sum|add up|total of|combined)\b',                  'AGGREGATE_SUM'),
+    (r'\b(average|mean of|avg)\b',                                        'AGGREGATE_AVG'),
+    (r'\b(min|max|highest|lowest|minimum|maximum|smallest|largest)\b',   'AGGREGATE_MINMAX'),
+
+    # Sorting / Ranking
+    (r'\b(top|most|least|best|first \d+|last \d+)\b',                      'ORDER_BY'),
+    (r'\b(first|top|last)\s+\d+',                                         'LIMIT'),
+
+    # Basic Retrieval
+    (r'\b(list|show|display|give|tell me|find|fetch|get|which|what)\b',  'SELECT_ROWS'),
+
+    # Table description
+    (r'\b(describe|structure of|schema of|explain|definition of)\b',     'DESCRIPTION'),
 ]
 
 class IntentRecognizer:
@@ -17,9 +28,16 @@ class IntentRecognizer:
             for pat, intent in patterns
         ]
 
-    def predict_from_tokens(self, tokens: List[str]) -> str:
-        text = " ".join(tokens)
+    def predict_from_tokens(self, tokens: List[str]) -> List[str]:
+        text = " ".join(tokens).lower()
+        found_intents = set()
+
         for regex, intent in self.patterns:
             if regex.search(text):
-                return intent
-        return 'SELECT_ROWS'
+                found_intents.add(intent)
+
+        # Ensure SELECT_ROWS is always included for fallback
+        if not found_intents:
+            found_intents.add("SELECT_ROWS")
+
+        return sorted(found_intents)
