@@ -1,0 +1,414 @@
+[2025-07-04T10:00:30] User: alice | Role: analyst | Access: read
+  Query: List all neo_reference data.
+  Target DB: asteroids_db
+ SQL: SELECT * FROM `asteroids_db`.`neo_reference`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:00:31] User: alice | Role: analyst | Access: read
+  Query: Show close_approach information.
+  Target DB: asteroids_db
+ SQL: SELECT * FROM `asteroids_db`.`close_approach`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:00:31] User: alice | Role: analyst | Access: read
+  Query: Display everything in orbit_data.
+  Target DB: asteroids_db
+ SQL: SELECT * FROM `asteroids_db`.`orbit_data`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:00:32] User: alice | Role: analyst | Access: read
+  Query: Count records in orbit_data.
+  Target DB: asteroids_db
+ SQL: SELECT * FROM `asteroids_db`.`orbit_data`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:00:33] User: alice | Role: analyst | Access: read
+  Query: What is the average eccentricity in orbit_data?
+  Target DB: asteroids_db
+ SQL: SELECT * FROM `asteroids_db`.`orbit_data`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:00:33] User: alice | Role: analyst | Access: read
+  Query: Show all personal_info records.
+  Target DB: astronauts_db
+ SQL: SELECT * FROM `astronauts_db`.`personal_info`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:00:34] User: alice | Role: analyst | Access: read
+  Query: Give me the total number of astronauts in personal_info.
+  Target DB: astronauts_db
+ SQL: SELECT * FROM `astronauts_db`.`personal_info`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:00:35] User: alice | Role: analyst | Access: read
+  Query: List names and year_of_birth from personal_info.
+  Target DB: astronauts_db
+ SQL: SELECT * FROM `astronauts_db`.`personal_info`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:00:35] User: alice | Role: analyst | Access: read
+  Query: Display satellite_identity details.
+  Target DB: natural_satellites_db
+ SQL: SELECT * FROM `natural_satellites_db`.`satellite_identity`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:00:36] User: alice | Role: analyst | Access: read
+  Query: List data in satellite_physical.
+  Target DB: natural_satellites_db
+ SQL: SELECT * FROM `natural_satellites_db`.`satellite_physical`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:00:36] User: alice | Role: analyst | Access: read
+  Query: Show the average launch mass in satellite_physical.
+  Target DB: natural_satellites_db
+ SQL: SELECT * FROM `natural_satellites_db`.`satellite_physical`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:00:37] User: alice | Role: analyst | Access: read
+  Query: List all entries in basic_info.
+  Target DB: isro_satellites_db
+ SQL: SELECT * FROM `isro_satellites_db`.`basic_info`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:00:38] User: alice | Role: analyst | Access: read
+  Query: Show orbital_info data.
+  Target DB: isro_satellites_db
+ SQL: SELECT * FROM `isro_satellites_db`.`orbital_info`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:00:38] User: alice | Role: analyst | Access: read
+  Query: Give me rocket_general_info records.
+  Target DB: rockets_db
+ SQL: SELECT * FROM `rockets_db`.`rocket_general_info`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:02:02] User: alice | Role: analyst | Access: read
+  Query: List all neo_reference data.
+  Target DB: asteroids_db
+ SQL: SELECT * FROM `asteroids_db`.`neo_reference`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:02:03] User: alice | Role: analyst | Access: read
+  Query: Show close_approach information.
+  Target DB: asteroids_db
+ SQL: SELECT * FROM `asteroids_db`.`close_approach`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:02:03] User: alice | Role: analyst | Access: read
+  Query: Display everything in orbit_data.
+  Target DB: asteroids_db
+ SQL: SELECT * FROM `asteroids_db`.`orbit_data`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:02:04] User: alice | Role: analyst | Access: read
+  Query: Count records in orbit_data.
+  Target DB: asteroids_db
+ SQL: SELECT * FROM `asteroids_db`.`orbit_data`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:02:04] User: alice | Role: analyst | Access: read
+  Query: What is the average eccentricity in orbit_data.
+  Target DB: asteroids_db
+ SQL: SELECT * FROM `asteroids_db`.`orbit_data`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:02:05] User: alice | Role: analyst | Access: read
+  Query: Show all personal_info records.
+  Target DB: astronauts_db
+ SQL: SELECT * FROM `astronauts_db`.`personal_info`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:02:06] User: alice | Role: analyst | Access: read
+  Query: Give me the total number of astronauts in personal_info.
+  Target DB: astronauts_db
+ SQL: SELECT * FROM `astronauts_db`.`personal_info`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:02:06] User: alice | Role: analyst | Access: read
+  Query: List names and year_of_birth from personal_info.
+  Target DB: astronauts_db
+ SQL: SELECT * FROM `astronauts_db`.`personal_info`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:02:07] User: alice | Role: analyst | Access: read
+  Query: Display satellite_identity details.
+  Target DB: natural_satellites_db
+ SQL: SELECT * FROM `natural_satellites_db`.`satellite_identity`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:02:08] User: alice | Role: analyst | Access: read
+  Query: List data in satellite_physical.
+  Target DB: natural_satellites_db
+ SQL: SELECT * FROM `natural_satellites_db`.`satellite_physical`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:02:08] User: alice | Role: analyst | Access: read
+  Query: Show the average launch mass in satellite_physical.
+  Target DB: natural_satellites_db
+ SQL: SELECT * FROM `natural_satellites_db`.`satellite_physical`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:02:09] User: alice | Role: analyst | Access: read
+  Query: List all entries in basic_info.
+  Target DB: isro_satellites_db
+ SQL: SELECT * FROM `isro_satellites_db`.`basic_info`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:02:09] User: alice | Role: analyst | Access: read
+  Query: Show orbital_info data.
+  Target DB: isro_satellites_db
+ SQL: SELECT * FROM `isro_satellites_db`.`orbital_info`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:02:10] User: alice | Role: analyst | Access: read
+  Query: Give me rocket_general_info records.
+  Target DB: rockets_db
+ SQL: SELECT * FROM `rockets_db`.`rocket_general_info`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:02:11] User: alice | Role: analyst | Access: read
+  Query: Display rocket_technical_specs.
+  Target DB: unknown
+ SQL: ERROR: Could not resolve table.
+ Status: FAILED | Error: ERROR: Could not resolve table.
+--------------------------------------------------------------------------------
+[2025-07-04T10:02:11] User: alice | Role: analyst | Access: read
+  Query: What is the total sum of liftoff_thrust in rocket_general_info.
+  Target DB: rockets_db
+ SQL: SELECT * FROM `rockets_db`.`rocket_general_info`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:02:12] User: alice | Role: analyst | Access: read
+  Query: List organizations.
+  Target DB: space_missions_db
+ SQL: SELECT * FROM `space_missions_db`.`organizations`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:02:13] User: alice | Role: analyst | Access: read
+  Query: Show all rockets data.
+  Target DB: space_missions_db
+ SQL: SELECT * FROM `space_missions_db`.`rockets`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:02:13] User: alice | Role: analyst | Access: read
+  Query: Display missions.
+  Target DB: space_missions_db
+ SQL: SELECT * FROM `space_missions_db`.`missions`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:02:14] User: alice | Role: analyst | Access: read
+  Query: Count missions.
+  Target DB: space_missions_db
+ SQL: SELECT * FROM `space_missions_db`.`missions`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:02:15] User: alice | Role: analyst | Access: read
+  Query: List news_articles_table entries.
+  Target DB: spacenews_db
+ SQL: SELECT * FROM `spacenews_db`.`news_articles_table`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:02:16] User: alice | Role: analyst | Access: read
+  Query: Show publishing_info.
+  Target DB: spacenews_db
+ SQL: SELECT * FROM `spacenews_db`.`publishing_info`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:02:16] User: alice | Role: analyst | Access: read
+  Query: List all stars.
+  Target DB: stars_db
+ SQL: SELECT * FROM `stars_db`.`stars`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:02:17] User: alice | Role: analyst | Access: read
+  Query: Show the maximum luminosity in stars.
+  Target DB: stars_db
+ SQL: SELECT * FROM `stars_db`.`stars`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:02:17] User: alice | Role: analyst | Access: read
+  Query: What is the average mass in stars.
+  Target DB: stars_db
+ SQL: SELECT * FROM `stars_db`.`stars`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:02:18] User: alice | Role: analyst | Access: read
+  Query: Show orbit_data where eccentricity is greater than 0.5.
+  Target DB: asteroids_db
+ SQL: SELECT * FROM `asteroids_db`.`orbit_data` WHERE `eccentricity` > 0.5;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:02:19] User: alice | Role: analyst | Access: read
+  Query: Find close_approach records where miss dist.(kilometers) is less than 100000.
+  Target DB: asteroids_db
+ SQL: SELECT * FROM `asteroids_db`.`close_approach` WHERE `distance` < 100000;
+ Status: FAILED | Error: 1054 (42S22): Unknown column 'distance' in 'where clause'
+--------------------------------------------------------------------------------
+[2025-07-04T10:02:19] User: alice | Role: analyst | Access: read
+  Query: List neo_reference entries where absolute magnitude is more than 22.
+  Target DB: asteroids_db
+ SQL: SELECT * FROM `asteroids_db`.`neo_reference` WHERE `absolute magnitude` > 22;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:02:20] User: alice | Role: analyst | Access: read
+  Query: Find personal_info where year_of_birth is before 1970.
+  Target DB: astronauts_db
+ SQL: SELECT * FROM `astronauts_db`.`personal_info`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:02:21] User: alice | Role: analyst | Access: read
+  Query: Show astronauts in personal_info where total_number_of_missions is above 3.
+  Target DB: astronauts_db
+ SQL: SELECT * FROM `astronauts_db`.`personal_info` WHERE `id` > 3;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:02:21] User: alice | Role: analyst | Access: read
+  Query: List satellite_physical data where launch mass (kg.) exceeds 2000.
+  Target DB: natural_satellites_db
+ SQL: SELECT * FROM `natural_satellites_db`.`satellite_physical`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:02:22] User: alice | Role: analyst | Access: read
+  Query: Show satellite_identity where purpose is 'communication'.
+  Target DB: natural_satellites_db
+ SQL: SELECT * FROM `natural_satellites_db`.`satellite_identity`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:02:23] User: alice | Role: analyst | Access: read
+  Query: Display rocket_general_info where price is over 50.
+  Target DB: rockets_db
+ SQL: SELECT * FROM `rockets_db`.`rocket_general_info` WHERE `price` > 50;
+ Status: FAILED | Error: 1054 (42S22): Unknown column 'price' in 'where clause'
+--------------------------------------------------------------------------------
+[2025-07-04T10:02:23] User: alice | Role: analyst | Access: read
+  Query: Find rocket_technical_specs where payload_leo is greater than 10000.
+  Target DB: rockets_db
+ SQL: SELECT * FROM `rockets_db`.`rocket_technical_specs` WHERE `payload_leo` > 10000;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:02:24] User: alice | Role: analyst | Access: read
+  Query: Show missions where mission_status is 'completed'.
+  Target DB: space_missions_db
+ SQL: SELECT * FROM `space_missions_db`.`missions`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:02:25] User: alice | Role: analyst | Access: read
+  Query: List news_articles_table where date is after '2020-01-01'.
+  Target DB: spacenews_db
+ SQL: SELECT * FROM `spacenews_db`.`news_articles_table`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:02:26] User: alice | Role: analyst | Access: read
+  Query: Show stars where mass is below 2.
+  Target DB: stars_db
+ SQL: SELECT * FROM `stars_db`.`stars` WHERE `mass` < 2;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:02:26] User: alice | Role: analyst | Access: read
+  Query: Find stars where luminosity exceeds 5000.
+  Target DB: stars_db
+ SQL: SELECT * FROM `stars_db`.`stars`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:06:38] User: alice | Role: analyst | Access: read
+  Query: Count the number of astronauts selected before 2000.List all neo_reference data.
+  Target DB: astronauts_db
+ SQL: SELECT * FROM `astronauts_db`.`neo_reference`;
+ Status: FAILED | Error: 1146 (42S02): Table 'astronauts_db.neo_reference' doesn't exist
+--------------------------------------------------------------------------------
+[2025-07-04T10:06:39] User: alice | Role: analyst | Access: read
+  Query: Show close_approach information.
+  Target DB: asteroids_db
+ SQL: SELECT * FROM `asteroids_db`.`close_approach`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:06:40] User: alice | Role: analyst | Access: read
+  Query: Display everything in orbit_data.
+  Target DB: asteroids_db
+ SQL: SELECT * FROM `asteroids_db`.`orbit_data`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:07:41] User: alice | Role: analyst | Access: read
+  Query: Count the number of astronauts selected before 2000.
+  Target DB: unknown
+ SQL: ERROR: Could not resolve table.
+ Status: FAILED | Error: ERROR: Could not resolve table.
+--------------------------------------------------------------------------------
+[2025-07-04T10:07:41] User: alice | Role: analyst | Access: read
+  Query: List all neo_reference data.
+  Target DB: asteroids_db
+ SQL: SELECT * FROM `asteroids_db`.`neo_reference`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:10:54] User: admin | Role: admin | Access: read
+  Query: List all neo_reference data.
+  Target DB: asteroids_db
+ SQL: SELECT * FROM `asteroids_db`.`neo_reference`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:10:54] User: admin | Role: admin | Access: read
+  Query: Show close_approach information.
+  Target DB: asteroids_db
+ SQL: SELECT * FROM `asteroids_db`.`close_approach`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:10:55] User: admin | Role: admin | Access: read
+  Query: Display everything in orbit_data.
+  Target DB: asteroids_db
+ SQL: SELECT * FROM `asteroids_db`.`orbit_data`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:10:56] User: admin | Role: admin | Access: read
+  Query: Count records in orbit_data.
+  Target DB: asteroids_db
+ SQL: SELECT * FROM `asteroids_db`.`orbit_data`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:10:56] User: admin | Role: admin | Access: read
+  Query: What is the average eccentricity in orbit_data.
+  Target DB: asteroids_db
+ SQL: SELECT * FROM `asteroids_db`.`orbit_data`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:10:57] User: admin | Role: admin | Access: read
+  Query: Show all personal_info records.
+  Target DB: astronauts_db
+ SQL: SELECT * FROM `astronauts_db`.`personal_info`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:10:58] User: admin | Role: admin | Access: read
+  Query: Give me the total number of astronauts in personal_info.
+  Target DB: astronauts_db
+ SQL: SELECT * FROM `astronauts_db`.`personal_info`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:10:58] User: admin | Role: admin | Access: read
+  Query: List names and year_of_birth from personal_info.
+  Target DB: astronauts_db
+ SQL: SELECT * FROM `astronauts_db`.`personal_info`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:20:59] User: admin | Role: admin | Access: read
+  Query: show all astronauts
+  Target DB: unknown
+ SQL: ERROR: Could not resolve table.
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:21:17] User: admin | Role: admin | Access: read
+  Query: show all astronauts personal info
+  Target DB: unknown
+ SQL: ERROR: Could not resolve table.
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:21:22] User: admin | Role: admin | Access: read
+  Query: show all astronauts personal_info
+  Target DB: astronauts_db
+ SQL: SELECT * FROM `astronauts_db`.`personal_info`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
+[2025-07-04T10:21:36] User: admin | Role: admin | Access: read
+  Query: show all astronauts personal_info
+  Target DB: astronauts_db
+ SQL: SELECT * FROM `astronauts_db`.`personal_info`;
+  Status: SUCCESS
+--------------------------------------------------------------------------------
