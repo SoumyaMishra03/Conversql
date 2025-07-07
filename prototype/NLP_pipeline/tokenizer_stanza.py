@@ -5,8 +5,23 @@ from nltk.corpus import stopwords
 
 nltk.download('stopwords')
 
-nlp = stanza.Pipeline('en', processors='tokenize,pos,lemma')
+lang = "en"
 
+def get_pipeline(language):
+    return stanza.Pipeline(language, processors='tokenize,pos,lemma')
+
+nlp = get_pipeline(lang)
+
+def set_language(new_lang):
+    global lang, nlp, STOPWORDS
+    lang = new_lang
+    nlp = get_pipeline(lang)
+    if lang == "hi":
+        STOPWORDS = set()
+    else:
+        STOPWORDS = set(stopwords.words('english'))
+
+set_language(lang)
 STOPWORDS = set(stopwords.words('english'))
 
 SCHEMA_PHRASES = [

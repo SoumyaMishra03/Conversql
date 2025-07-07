@@ -1,25 +1,18 @@
-#!/usr/bin/env python3
-
 import mysql.connector
 from mysql.connector import Error
 
 HOST     = "localhost"
-PORT     = 3306
 USER     = "root"
-PASSWORD = "Helloworld@2025"
+PASSWORD = "root"
 
 def main():
     try:
         conn = mysql.connector.connect(
-            host=HOST, port=PORT, user=USER, password=PASSWORD
+            host=HOST, user=USER, password=PASSWORD
         )
         cur = conn.cursor()
-
-        # 1) Create the auth DB
         cur.execute("CREATE DATABASE IF NOT EXISTS your_auth_db;")
         cur.execute("USE your_auth_db;")
-
-        # 2) users table
         cur.execute("""
         CREATE TABLE IF NOT EXISTS users (
           username VARCHAR(50) PRIMARY KEY,
@@ -27,8 +20,6 @@ def main():
           role     VARCHAR(20)  NOT NULL
         );
         """)
-
-        # 3) access_log table
         cur.execute("""
         CREATE TABLE IF NOT EXISTS access_log (
           id         INT AUTO_INCREMENT PRIMARY KEY,
@@ -37,8 +28,6 @@ def main():
           status     VARCHAR(50)
         );
         """)
-
-        # 4) sql_log table
         cur.execute("""
         CREATE TABLE IF NOT EXISTS sql_log (
           id         INT AUTO_INCREMENT PRIMARY KEY,
@@ -51,13 +40,11 @@ def main():
           log_time   DATETIME DEFAULT CURRENT_TIMESTAMP
         );
         """)
-
-        # 5) Seed an admin user (and any others)
         users = [
-            ("admin",    "rootaccess",    "admin"),
-            ("soumya",  "nebula123",          "science"),
-            ("anita",    "headlines22",        "news"),
-            ("kabir",    "rocketmissions",     "missions")
+            ("admin",  "rootaccess",      "admin"),
+            ("soumya", "nebula123",       "science"),
+            ("anita",  "headlines22",     "news"),
+            ("kabir",  "rocketmissions",  "missions")
         ]
         cur.executemany("""
           REPLACE INTO users (username, password, role)
@@ -65,9 +52,9 @@ def main():
         """, users)
 
         conn.commit()
-        print("✅ your_auth_db + tables created; users seeded.")
+        print("your_auth_db and tables created; users seeded.")
     except Error as e:
-        print("❌ MySQL error during setup:", e)
+        print("MySQL error during setup:", e)
     finally:
         if conn.is_connected():
             cur.close()

@@ -1,11 +1,7 @@
 import mysql.connector
 from mysql.connector import Error
 
-def verify_query(sql, host, user, password, database):
-    """
-    Execute `sql` against MySQL database named `database`.
-    Returns (True, rows) on success, or (False, error_message).
-    """
+def verify_query(sql, host, user, password, database=None):
     conn = None
     try:
         conn = mysql.connector.connect(

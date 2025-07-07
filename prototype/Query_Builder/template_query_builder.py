@@ -21,7 +21,8 @@ def get_full_schema_map(host, user, password):
     conn.close()
     return full_map
 
-def build_query(intent, schema_entities, operators, values, db_host='localhost', db_user='root', db_pass='Helloworld@2025'):
+def build_query(intent, schema_entities, operators, values,
+                db_host='localhost', db_user='root', db_pass='root'):
     database = None
     table = None
     columns = []
@@ -46,7 +47,6 @@ def build_query(intent, schema_entities, operators, values, db_host='localhost',
 
     if table and not database:
         database = table_to_db.get(table)
-
     if database is None and table is None and columns:
         for col in columns:
             norm_col = col.lower().replace(' ', '')
@@ -54,19 +54,15 @@ def build_query(intent, schema_entities, operators, values, db_host='localhost',
                 database, table = column_to_table_db[norm_col]
                 break
 
-    # fallback 1: only database detected
     if database and not table:
-        return f"SHOW TABLES FROM `{database}`;"
-    # fallback 2: nothing detected, show all dbs
+        return f"SHOW TABLES FROM `{database}`;", database
     if database is None and table is None and not columns:
-        return "SHOW DATABASES;"
-
+        return "SHOW DATABASES;", None
     if database and table:
         full_table = f"`{database}`.`{table}`"
     else:
-        return "ERROR: Could not resolve table."
+        return "ERROR: Could not resolve table.", None
 
-    # build SELECT clause
     select_clause = "*"
     if "COUNT_ROWS" in intent:
         select_clause = "COUNT(*)"
@@ -74,22 +70,18 @@ def build_query(intent, schema_entities, operators, values, db_host='localhost',
         select_clause = f"AVG(`{columns[0]}`)" if columns else "AVG(`id`)"
     elif "AGGREGATE_SUM" in intent:
         select_clause = f"SUM(`{columns[0]}`)" if columns else "SUM(`id`)"
-    elif "AGGREGATE_MINMAX" in intent:
+    elif "AGGREGATE_MIN" in intent:
+        select_clause = f"MIN(`{columns[0]}`)" if columns else "MIN(`id`)"
+    elif "AGGREGATE_MAX" in intent:
         select_clause = f"MAX(`{columns[0]}`)" if columns else "MAX(`id`)"
+    elif columns:
+        select_clause = ", ".join(f"`{c}`" for c in columns)
 
-    # build WHERE clause
     where_clauses = []
     for i, ((raw, op), val) in enumerate(zip(operators, values)):
         nearest_col = columns[-1] if columns else 'id'
-        if len(columns) > 1 and val.get('span'):
-            v_pos = val['span'][0]
-            col_dist = [(abs(v_pos - schema_entities[j]['matched_token_span'][0]), c)
-                        for j, c in enumerate(columns) if 'matched_token_span' in schema_entities[j]]
-            if col_dist:
-                nearest_col = min(col_dist)[1]
-        elif i < len(columns):
+        if i < len(columns):
             nearest_col = columns[i]
-
         if val["type"] in ("STRING", "DATE"):
             clause = f"`{nearest_col}` {op} '{val['value']}'"
         else:
@@ -98,4 +90,4 @@ def build_query(intent, schema_entities, operators, values, db_host='localhost',
 
     where = f" WHERE {' AND '.join(where_clauses)}" if where_clauses else ""
     query = f"SELECT {select_clause} FROM {full_table}{where};"
-    return query
+    return query, database

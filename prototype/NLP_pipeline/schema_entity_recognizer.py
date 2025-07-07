@@ -4,7 +4,7 @@ import os
 from nltk.corpus import wordnet as wn
 
 MODULE_DIR = os.path.dirname(os.path.abspath(__file__))
-BASE_MAP_PATH = os.path.join(MODULE_DIR, 'base_synonym_map.json')
+BASE_MAP_PATH = os.path.join(MODULE_DIR, 'json/base_synonym_map.json')
 
 def normalize(text):
     return re.sub(r'[\\s_().]', '', text.lower())
@@ -35,7 +35,7 @@ def expand_with_wordnet(schema_terms, base_map):
             if syn not in expanded_map:
                 expanded_map[syn] = original_value
                 wordnet_only_map[syn] = original_value
-    with open(os.path.join(MODULE_DIR, 'expanded_wordnet_synonyms.json'), 'w') as f:
+    with open(os.path.join(MODULE_DIR, 'json/expanded_wordnet_synonyms.json'), 'w') as f:
         json.dump(wordnet_only_map, f, indent=2)
     return expanded_map, wordnet_only_map
 

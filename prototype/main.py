@@ -1,25 +1,22 @@
-#!/usr/bin/env python3
-
 import re
 import getpass
 from datetime import datetime, timedelta
-from NLP_pipeline.tokenizer_stanza            import tokenize, SCHEMA_PHRASES
-from NLP_pipeline.schema_entity_recognizer    import schema_entity_recognizer
+from NLP_pipeline.tokenizer_stanza import tokenize, SCHEMA_PHRASES
+from NLP_pipeline.schema_entity_recognizer import schema_entity_recognizer
 from NLP_pipeline.comparison_operator_recognizer import comparison_operator_recognizer
-from NLP_pipeline.value_entity_recognizer     import value_entity_recognizer
-from NLP_pipeline.normalize_units             import normalize_units
-from NLP_pipeline.normalize_dates             import normalize_dates
-from NLP_pipeline.intent_recognizer           import IntentRecognizer
+from NLP_pipeline.value_entity_recognizer import value_entity_recognizer
+from NLP_pipeline.normalize_units import normalize_units
+from NLP_pipeline.normalize_dates import normalize_dates
+from NLP_pipeline.intent_recognizer import IntentRecognizer
+from Query_Builder.template_query_builder import build_query
+from Query_Builder.query_verifier import verify_query
+from Query_Builder.query_logger import log_query, log_access, fetch_access_logs
+from Query_Builder.users_manager import get_user
+from Query_Builder.rbac import validate_query_access, explain_denial
 
-from Query_Builder.template_query_builder     import build_query
-from Query_Builder.query_verifier             import verify_query
-from Query_Builder.query_logger               import log_query, log_access, fetch_access_logs
-from Query_Builder.users_manager              import get_user
-from Query_Builder.rbac                       import validate_query_access, explain_denial
-
-YEAR_PATTERN      = re.compile(r"^\d{4}$")
+YEAR_PATTERN = re.compile(r"^\d{4}$")
 intent_recognizer = IntentRecognizer()
-_failed_logins    = {}
+_failed_logins = {}
 
 def login_prompt():
     while True:
@@ -84,30 +81,30 @@ def handle_query(user):
 
     query_str, resolved_db = build_query(
         intent, ents, ops, vals,
-        db_host='localhost', db_user='root', db_pass='Helloworld@2025'
+        db_host='localhost', db_user='root', db_pass='root'
     )
     print("\nGenerated SQL Query:\n", query_str)
 
     if not validate_query_access(user["role"], resolved_db):
         reason = explain_denial(user["role"], resolved_db)
         print("\nACCESS DENIED:", reason)
-        log_query(user["username"], user["role"], q, resolved_db, "denied", query_str)
+        log_query(user["username"], user["role"], q, resolved_db, "denied", sql=query_str)
         return
 
     success, result = verify_query(
         query_str,
         host='localhost',
         user='root',
-        password='Helloworld@2025',
+        password='root',
         database=resolved_db
     )
 
     if success:
         print("\nQuery executed successfully. Sample rows:\n", result[:3])
-        log_query(user["username"], user["role"], q, resolved_db, "read", query_str)
+        log_query(user["username"], user["role"], q, resolved_db, "read", sql=query_str)
     else:
         print("\nQuery failed to execute:\n", result)
-        log_query(user["username"], user["role"], q, resolved_db, "fail", query_str)
+        log_query(user["username"], user["role"], q, resolved_db, "fail", sql=query_str)
 
 def repl(user):
     role = user["role"]
@@ -129,9 +126,9 @@ def repl(user):
         elif role == "admin" and choice == "4":
             logs = fetch_access_logs(20)
             print("Recent Access Log:")
-            print("Line# | Username | Timestamp           | Status")
-            for line_no, usernm, ts, status in logs:
-                print(f"{line_no:>5} | {usernm:<8} | {ts:<19} | {status}")
+            print("ID | Username | Event Time | Status")
+            for row in logs:
+                print(f"{row[0]} | {row[1]} | {row[2]} | {row[3]}")
         elif role == "admin" and choice == "5":
             target = input("Username to lock out: ").strip()
             dur_str = input("Lockout duration (minutes): ").strip()
