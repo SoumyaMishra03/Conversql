@@ -1,11 +1,7 @@
 import mysql.connector
 
 def get_full_schema_map(host, user, password):
-    conn = mysql.connector.connect(
-        host=host,
-        user=user,
-        password=password
-    )
+    conn = mysql.connector.connect(host=host, user=user, password=password)
     cursor = conn.cursor()
     cursor.execute("SHOW DATABASES;")
     databases = [row[0] for row in cursor.fetchall()]
@@ -25,9 +21,7 @@ def get_full_schema_map(host, user, password):
     conn.close()
     return full_map
 
-def build_query(intent, schema_entities, operators, values,
-                db_host='localhost', db_user='root', db_pass='root'):
-
+def build_query(intent, schema_entities, operators, values, db_host='localhost', db_user='root', db_pass='Helloworld@2025'):
     database = None
     table = None
     columns = []
@@ -60,28 +54,46 @@ def build_query(intent, schema_entities, operators, values,
                 database, table = column_to_table_db[norm_col]
                 break
 
+    # fallback 1: only database detected
+    if database and not table:
+        return f"SHOW TABLES FROM `{database}`;"
+    # fallback 2: nothing detected, show all dbs
+    if database is None and table is None and not columns:
+        return "SHOW DATABASES;"
+
     if database and table:
         full_table = f"`{database}`.`{table}`"
     else:
         return "ERROR: Could not resolve table."
 
+    # build SELECT clause
     select_clause = "*"
-    if intent == "COUNT_ROWS":
+    if "COUNT_ROWS" in intent:
         select_clause = "COUNT(*)"
-    elif intent == "AGGREGATE_AVG":
+    elif "AGGREGATE_AVG" in intent:
         select_clause = f"AVG(`{columns[0]}`)" if columns else "AVG(`id`)"
-    elif intent == "AGGREGATE_SUM":
+    elif "AGGREGATE_SUM" in intent:
         select_clause = f"SUM(`{columns[0]}`)" if columns else "SUM(`id`)"
-    elif intent == "AGGREGATE_MINMAX":
+    elif "AGGREGATE_MINMAX" in intent:
         select_clause = f"MAX(`{columns[0]}`)" if columns else "MAX(`id`)"
 
+    # build WHERE clause
     where_clauses = []
     for i, ((raw, op), val) in enumerate(zip(operators, values)):
-        col = columns[i] if i < len(columns) else (columns[-1] if columns else 'id')
+        nearest_col = columns[-1] if columns else 'id'
+        if len(columns) > 1 and val.get('span'):
+            v_pos = val['span'][0]
+            col_dist = [(abs(v_pos - schema_entities[j]['matched_token_span'][0]), c)
+                        for j, c in enumerate(columns) if 'matched_token_span' in schema_entities[j]]
+            if col_dist:
+                nearest_col = min(col_dist)[1]
+        elif i < len(columns):
+            nearest_col = columns[i]
+
         if val["type"] in ("STRING", "DATE"):
-            clause = f"`{col}` {op} '{val['value']}'"
+            clause = f"`{nearest_col}` {op} '{val['value']}'"
         else:
-            clause = f"`{col}` {op} {val['value']}"
+            clause = f"`{nearest_col}` {op} {val['value']}"
         where_clauses.append(clause)
 
     where = f" WHERE {' AND '.join(where_clauses)}" if where_clauses else ""
