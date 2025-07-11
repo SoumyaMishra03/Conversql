@@ -1,0 +1,70 @@
+{
+  ">=": [
+    "greater than or equal to",
+    "more than or equal to",
+    "at least",
+    "not less than",
+    "no less than",
+    "minimum of",
+    "minimum",
+    "greater or equal",
+    "≥",
+    ">="
+  ],
+  "<=": [
+    "less than or equal to",
+    "at most",
+    "no more than",
+    "not more than",
+    "maximum of",
+    "maximum",
+    "less or equal",
+    "≤",
+    "<="
+  ],
+  "!=": [
+    "not equal to",
+    "is not equal to",
+    "does not equal",
+    "different from",
+    "not same as",
+    "unequal to",
+    "≠",
+    "!=",
+    "<>"
+  ],
+  ">": [
+    "greater than",
+    "more than",
+    "above",
+    "exceeds",
+    "over",
+    "larger than",
+    "higher than",
+    "surpassing",
+    ">",
+    "strictly greater"
+  ],
+  "<": [
+    "less",
+    "less than",
+    "lesser than",
+    "below",
+    "under",
+    "smaller than",
+    "lower than",
+    "falls short of",
+    "<",
+    "strictly less"
+  ],
+  "=": [
+    "equal to",
+    "equals",
+    "is equal to",
+    "same as",
+    "exactly",
+    "identical to",
+    "equals to",
+    "="
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "organiation": [
+    "organizations",
+    "space organizations",
+    "agencies",
+    "companies",
+    "space agencies",
+    "organizations data",
+    "organization records",
+    "space firms",
+    "aerospace companies",
+    "organizations list",
+    "organizations info"
+  ],
+  "projectile": [
+    "rockets",
+    "rocket data",
+    "rocket list",
+    "rocket records",
+    "space rockets",
+    "rocket inventory",
+    "rocket catalog",
+    "rocket details",
+    "rocket information",
+    "launch vehicles",
+    "rocket database"
+  ],
+  "foreignmiion": [
+    "missions",
+    "mission data",
+    "mission list",
+    "mission records",
+    "space missions",
+    "mission history",
+    "mission catalog",
+    "mission details",
+    "mission information",
+    "exploration missions",
+    "mission database"
+  ],
+  "miionarypot": [
+    "missions",
+    "mission data",
+    "mission list",
+    "mission records",
+    "space missions",
+    "mission history",
+    "mission catalog",
+    "mission details",
+    "mission information",
+    "exploration missions",
+    "mission database"
+  ],
+  "miionarytation": [
+    "missions",
+    "mission data",
+    "mission list",
+    "mission records",
+    "space missions",
+    "mission history",
+    "mission catalog",
+    "mission details",
+    "mission information",
+    "exploration missions",
+    "mission database"
+  ],
+  "idaho": [
+    "id",
+    "identifier",
+    "unique id",
+    "record id",
+    "primary key",
+    "reference id",
+    "id number",
+    "database id",
+    "entry id"
+  ],
+  "gemtate": [
+    "id",
+    "identifier",
+    "unique id",
+    "record id",
+    "primary key",
+    "reference id",
+    "id number",
+    "database id",
+    "entry id"
+  ],
+  "rubric": [
+    "title",
+    "headline",
+    "heading",
+    "article title",
+    "mission title",
+    "story title",
+    "entry title",
+    "publication title"
+  ],
+  "tatutetitle": [
+    "title",
+    "headline",
+    "heading",
+    "article title",
+    "mission title",
+    "story title",
+    "entry title",
+    "publication title"
+  ],
+  "dayofthemonth": [
+    "date",
+    "recorded date",
+    "event date",
+    "observation date",
+    "capture date",
+    "log date",
+    "time of record"
+  ],
+  "poition": [
+    "status",
+    "current status",
+    "operational status",
+    "activity status",
+    "mission status",
+    "health status",
+    "state"
+  ],
+  "inideinformation": [
+    "details",
+    "description",
+    "extra info",
+    "more info",
+    "remarks",
+    "notes",
+    "additional details",
+    "specifications"
+  ],
+  "tendency": [
+    "inclination",
+    "orbital tilt",
+    "orbit inclination",
+    "angle of inclination",
+    "inclination angle"
+  ],
+  "dipoition": [
+    "inclination",
+    "orbital tilt",
+    "orbit inclination",
+    "angle of inclination",
+    "inclination angle"
+  ]
+}
