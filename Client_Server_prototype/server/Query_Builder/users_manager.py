@@ -1,5 +1,6 @@
 import mysql.connector
 from mysql.connector import Error
+
 MYSQL_HOST     = "localhost"
 MYSQL_USER     = "root"
 MYSQL_PASSWORD = "root"
@@ -31,3 +32,22 @@ def get_user(username: str, password: str):
             cur.close()
             conn.close()
     return None
+
+def user_exists(username: str):
+    conn = None
+    try:
+        conn = get_db_connection()
+        cur = conn.cursor()
+        cur.execute(
+            "SELECT username FROM users WHERE username=%s",
+            (username,)
+        )
+        exists = cur.fetchone() is not None
+        return exists
+    except Error as e:
+        print("users_manager MySQL error:", e)
+    finally:
+        if conn and conn.is_connected():
+            cur.close()
+            conn.close()
+    return False

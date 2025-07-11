@@ -40,6 +40,16 @@ def main():
           log_time   DATETIME DEFAULT CURRENT_TIMESTAMP
         );
         """)
+        cur.execute("""
+        CREATE TABLE IF NOT EXISTS messages (
+          id INT AUTO_INCREMENT PRIMARY KEY,
+          from_user VARCHAR(50),
+          to_user VARCHAR(50),
+          message TEXT,
+          created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+        );
+        """)
+
         users = [
             ("admin",  "rootaccess",      "admin"),
             ("soumya", "nebula123",       "science"),
@@ -50,7 +60,6 @@ def main():
           REPLACE INTO users (username, password, role)
           VALUES (%s, %s, %s);
         """, users)
-
         conn.commit()
         print("your_auth_db and tables created; users seeded.")
     except Error as e:

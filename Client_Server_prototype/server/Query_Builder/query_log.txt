@@ -47,3 +47,12 @@
 2025-07-11 10:03:25	admin	admin	read	asteroids_db	What is the average eccentricity in orbit_data where inclination is above 0?	SELECT AVG(`eccentricity`) FROM `asteroids_db`.`orbit_data` WHERE `eccentricity` > 0;
 2025-07-11 10:03:52	admin	admin	read	asteroids_db	What is the average eccentricity in orbit_data where inclination is above 0?	SELECT AVG(`eccentricity`) FROM `asteroids_db`.`orbit_data` WHERE `eccentricity` > 0;
 2025-07-11 10:04:08	admin	admin	read	asteroids_db	What is the average eccentricity in orbit_data where inclination is above 0?	SELECT AVG(`eccentricity`) FROM `asteroids_db`.`orbit_data` WHERE `eccentricity` > 0;
+2025-07-11 12:07:22	admin	admin	read	space_missions_db	count price	SELECT COUNT(*) FROM `space_missions_db`.`rockets`;
+2025-07-11 12:07:40	admin	admin	read	isro_satellites_db	count eccentricity	SELECT COUNT(*) FROM `isro_satellites_db`.`orbital_info`;
+2025-07-11 12:13:19	admin	admin	read	space_missions_db	coutn price	SELECT `price` FROM `space_missions_db`.`rockets`;
+2025-07-11 12:13:33	admin	admin	read	space_missions_db	count price	SELECT COUNT(*) FROM `space_missions_db`.`rockets`;
+2025-07-11 12:25:16	admin	admin	read		lolz	SHOW DATABASES;
+2025-07-11 12:25:20	admin	admin	read		lolz	SHOW DATABASES;
+2025-07-11 12:25:25	admin	admin	read		emp	SHOW DATABASES;
+2025-07-11 12:25:33	admin	admin	read	stars_db	mass	SELECT `mass` FROM `stars_db`.`stars`;
+2025-07-11 12:57:42	soumya	science	denied		hello	SHOW DATABASES;

@@ -38,19 +38,6 @@
     "exploration missions",
     "mission database"
   ],
-  "miionarypot": [
-    "missions",
-    "mission data",
-    "mission list",
-    "mission records",
-    "space missions",
-    "mission history",
-    "mission catalog",
-    "mission details",
-    "mission information",
-    "exploration missions",
-    "mission database"
-  ],
   "miionarytation": [
     "missions",
     "mission data",
@@ -64,16 +51,18 @@
     "exploration missions",
     "mission database"
   ],
-  "idaho": [
-    "id",
-    "identifier",
-    "unique id",
-    "record id",
-    "primary key",
-    "reference id",
-    "id number",
-    "database id",
-    "entry id"
+  "miionarypot": [
+    "missions",
+    "mission data",
+    "mission list",
+    "mission records",
+    "space missions",
+    "mission history",
+    "mission catalog",
+    "mission details",
+    "mission information",
+    "exploration missions",
+    "mission database"
   ],
   "gemtate": [
     "id",
@@ -86,7 +75,18 @@
     "database id",
     "entry id"
   ],
-  "rubric": [
+  "idaho": [
+    "id",
+    "identifier",
+    "unique id",
+    "record id",
+    "primary key",
+    "reference id",
+    "id number",
+    "database id",
+    "entry id"
+  ],
+  "tatutetitle": [
     "title",
     "headline",
     "heading",
@@ -96,7 +96,7 @@
     "entry title",
     "publication title"
   ],
-  "tatutetitle": [
+  "rubric": [
     "title",
     "headline",
     "heading",
