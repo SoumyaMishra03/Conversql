@@ -1,5 +1,6 @@
 import mysql.connector
 from mysql.connector import Error
+import secrets
 
 MYSQL_HOST     = "localhost"
 MYSQL_USER     = "root"
@@ -51,3 +52,23 @@ def user_exists(username: str):
             cur.close()
             conn.close()
     return False
+
+def create_user(new_username: str, role: str, position: str):
+    password = secrets.token_hex(4)
+    conn = None
+    try:
+        conn = get_db_connection()
+        cur = conn.cursor()
+        cur.execute(
+            "INSERT INTO users (username, password, role, position) VALUES (%s, %s, %s, %s)",
+            (new_username, password, role, position)
+        )
+        conn.commit()
+        return password
+    except Error as e:
+        print("users_manager MySQL error:", e)
+    finally:
+        if conn and conn.is_connected():
+            cur.close()
+            conn.close()
+    return None

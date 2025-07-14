@@ -14,12 +14,14 @@ ALL_DATABASES = {
 }
 
 def validate_query_access(user_role: str, db_name: str) -> bool:
+    db_name=db_name.lower()
     allowed = ROLE_DATABASE_ACCESS.get(user_role)
     if not allowed:
         return False
     return "*" in allowed or db_name in allowed
 
 def explain_denial(user_role: str, db_name: str) -> str:
+    db_name=db_name.lower()
     if user_role not in ROLE_DATABASE_ACCESS:
         return f"Unknown role: '{user_role}'. No database access granted."
     allowed = ROLE_DATABASE_ACCESS[user_role]

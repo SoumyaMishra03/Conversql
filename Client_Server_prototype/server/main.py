@@ -118,6 +118,8 @@ def handle_query(data: QueryRequest):
         intent, ents, ops, vals,
         db_host='localhost', db_user='root', db_pass='root'
     )
+    if not resolved_db:
+        raise HTTPException(status_code=400, detail="Could not determine target database from your query.")
     if not validate_query_access(user["role"], resolved_db):
         reason = explain_denial(user["role"], resolved_db)
         log_query(user["username"], user["role"], q, resolved_db, "denied", sql=query_str)

@@ -56,3 +56,18 @@
 2025-07-11 12:25:25	admin	admin	read		emp	SHOW DATABASES;
 2025-07-11 12:25:33	admin	admin	read	stars_db	mass	SELECT `mass` FROM `stars_db`.`stars`;
 2025-07-11 12:57:42	soumya	science	denied		hello	SHOW DATABASES;
+2025-07-14 09:06:15	shreyas	user	denied	asteroids_db	show asteroids_db	SHOW TABLES FROM `asteroids_db`;
+2025-07-14 09:06:31	shreyas	user	denied	stars_db	show stars	SELECT * FROM `stars_db`.`stars`;
+2025-07-14 09:06:58	shreyas	user	denied	stars_db	show stars_db	SHOW TABLES FROM `stars_db`;
+2025-07-14 09:41:18	admin	admin	read	stars_db	show stars	SELECT * FROM `stars_db`.`stars`;
+2025-07-14 09:47:39	suhas	science	denied	asteroids_db	show asteroids_db	SHOW TABLES FROM `asteroids_db`;
+2025-07-14 09:47:55	suhas	science	read	stars_db	show stars_db	SHOW TABLES FROM `stars_db`;
+2025-07-14 09:53:59	suhas	science	read	stars_db	show stars_db	SHOW TABLES FROM `stars_db`;
+2025-07-14 09:54:10	suhas	science	denied	space_missions_db	show price	SELECT `price` FROM `space_missions_db`.`rockets`;
+2025-07-14 09:54:42	suhas	science	read		show me th eaverage ecentricity	SHOW DATABASES;
+2025-07-14 10:00:07	admin	admin	read	stars_db	show stars	SELECT * FROM `stars_db`.`stars`;
+2025-07-14 10:00:54	admin	admin	read	astronauts_db	show astronauts_db	SHOW TABLES FROM `astronauts_db`;
+2025-07-14 10:05:33	suhas	science	denied	isro_satellites_db	count eccentricity	SELECT COUNT(*) FROM `isro_satellites_db`.`orbital_info`;
+2025-07-14 10:05:46	suhas	science	read	stars_db	show stars	SELECT * FROM `stars_db`.`stars`;
+2025-07-14 10:06:48	suhas	science	read	natural_satellites_db	show satellite_identity	SELECT * FROM `natural_satellites_db`.`satellite_identity`;
+2025-07-14 10:07:29	suhas	science	read	natural_satellites_db	show satellite_physical where albedo greater than 0.01	SELECT `albedo` FROM `natural_satellites_db`.`satellite_physical` WHERE `albedo` > 0.01;
