@@ -1,0 +1,28 @@
+{
+  "COUNT_ROWS": ["count", "how many", "number of", "total number of"],
+  "AGGREGATE_SUM": ["sum of", "total sum", "add up", "total of", "combined", "sum", "total", "overall", "addition"],
+  "AGGREGATE_AVG": ["average", "mean of", "avg"],
+  "AGGREGATE_MIN": ["min", "lowest", "minimum", "smallest"],
+  "AGGREGATE_MAX": ["max", "highest", "maximum", "largest"],
+  "ORDER_BY": ["top", "most", "least", "best", "first \\d+", "last \\d+"],
+  "LIMIT": ["first \\d+", "top \\d+", "last \\d+"],
+  "SELECT_ROWS": ["list", "show", "display", "give", "tell me", "find", "fetch", "get", "which", "what"],
+  "DESCRIPTION": ["describe", "structure of", "schema of", "explain", "definition of"],
+  "INSERT_ROWS": [
+    "insert",
+    "add",
+    "create",
+    "put in",
+    "record",
+    "enter",
+    "include",
+    "add new",
+    "create new",
+    "insert into"
+  ],
+  "UPDATE_ROWS": ["update", "modify", "change", "edit", "alter", "set", "revise", "adjust", "correct"],
+  "DELETE_ROWS": ["delete", "remove", "drop rows", "eliminate", "erase", "clear", "purge", "destroy"],
+  "DROP_TABLE": ["drop table", "delete table", "remove table", "destroy table", "eliminate table"],
+  "DROP_DATABASE": ["drop database", "delete database", "remove database", "destroy database", "eliminate database"],
+  "TRUNCATE_TABLE": ["truncate", "empty table", "clear table", "remove all from"]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "natural_satellites_db",
+  "tables": [
+    {
+      "name": "satellite_identity",
+      "columns": [
+        "planet",
+        "name"
+      ]
+    },
+    {
+      "name": "satellite_physical",
+      "columns": [
+        "planet",
+        "name",
+        "gm",
+        "radius",
+        "density",
+        "magnitude",
+        "albedo"
+      ]
+    }
+  ]
+}

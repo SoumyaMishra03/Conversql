@@ -1,0 +1,61 @@
+/* Styling for the single value "stat card" */
+.stat-card {
+  margin-top: 16px;
+  background-color: var(--background-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  padding: 20px;
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--primary-blue);
+  line-height: 1.2;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: var(--text-light);
+  margin-top: 4px;
+  text-transform: capitalize;
+}
+
+/* Styling for the results table (now lives here) */
+.message-results-table {
+  margin-top: 16px;
+  background-color: var(--background-card);
+  border-radius: var(--border-radius-sm);
+  overflow-x: auto;
+  border: 1px solid var(--border-color);
+  max-width: 100%;
+}
+
+.message-results-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.message-results-table th,
+.message-results-table td {
+  padding: 10px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+  white-space: nowrap;
+}
+
+.message-results-table th {
+  background-color: var(--background-main);
+  font-weight: 600;
+  color: var(--text-medium);
+}
+
+.message-results-table tr:last-child td {
+  border-bottom: none;
+}
+
+.message-results-table tr:hover {
+  background-color: #F9FAFB;
+}

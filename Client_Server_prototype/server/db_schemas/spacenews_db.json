@@ -1,0 +1,24 @@
+{
+  "name": "spacenews_db",
+  "tables": [
+    {
+      "name": "news_articles_table",
+      "columns": [
+        "id",
+        "title",
+        "url",
+        "content",
+        "postexcerpt"
+      ]
+    },
+    {
+      "name": "publishing_info",
+      "columns": [
+        "id",
+        "title",
+        "author",
+        "date"
+      ]
+    }
+  ]
+}

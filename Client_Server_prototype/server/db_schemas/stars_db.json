@@ -1,0 +1,15 @@
+{
+  "name": "stars_db",
+  "tables": [
+    {
+      "name": "stars",
+      "columns": [
+        "Star_name",
+        "Distance",
+        "Mass",
+        "Radius",
+        "Luminosity"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "name": "rockets_db",
+  "tables": [
+    {
+      "name": "rocket_general_info",
+      "columns": [
+        "Name",
+        "Cmp",
+        "Wiki",
+        "Status"
+      ]
+    },
+    {
+      "name": "rocket_technical_specs",
+      "columns": [
+        "Name",
+        "Liftoff_Thrust",
+        "Payload_LEO",
+        "Stages",
+        "Strap_ons",
+        "Rocket_Height_m",
+        "Price_MUSD",
+        "Payload_GTO",
+        "Fairing_Diameter_m",
+        "Fairing_Height_m"
+      ]
+    }
+  ]
+}

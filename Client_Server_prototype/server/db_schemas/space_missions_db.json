@@ -1,0 +1,31 @@
+{
+  "name": "space_missions_db",
+  "tables": [
+    {
+      "name": "missions",
+      "columns": [
+        "id",
+        "Organisation",
+        "Mission_Status"
+      ]
+    },
+    {
+      "name": "organizations",
+      "columns": [
+        "id",
+        "Organisation",
+        "Location"
+      ]
+    },
+    {
+      "name": "rockets",
+      "columns": [
+        "id",
+        "Organisation",
+        "Details",
+        "Rocket_Status",
+        "Price"
+      ]
+    }
+  ]
+}

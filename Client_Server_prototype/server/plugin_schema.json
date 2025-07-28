@@ -1,0 +1,285 @@
+{
+  "databases": [
+    {
+      "name": "asteroids_db",
+      "tables": [
+        {
+          "name": "close_approach",
+          "columns": [
+            "Neo Reference ID",
+            "Close Approach Date",
+            "Epoch Date Close Approach",
+            "Relative Velocity km per sec",
+            "Relative Velocity km per hr",
+            "Miles per hour",
+            "Miss Dist.(Astronomical)",
+            "Miss Dist.(lunar)",
+            "Miss Dist.(kilometers)",
+            "Miss Dist.(miles)"
+          ]
+        },
+        {
+          "name": "neo_reference",
+          "columns": [
+            "Name",
+            "Absolute Magnitude",
+            "Est Dia in KM(min)",
+            "Est Dia in KM(max)",
+            "Est Dia in M(min)",
+            "Est Dia in M(max)",
+            "Est Dia in Miles(min)",
+            "Est Dia in Miles(max)",
+            "Est Dia in Feet(min)",
+            "Est Dia in Feet(max)"
+          ]
+        },
+        {
+          "name": "orbit_data",
+          "columns": [
+            "Neo Reference ID",
+            "Orbiting Body",
+            "Orbit ID",
+            "Orbit Determination Date",
+            "Orbit Uncertainity",
+            "Minimum Orbit Intersection",
+            "Jupiter Tisserand Invariant",
+            "Epoch Osculation",
+            "Eccentricity",
+            "Semi Major Axis",
+            "Inclination",
+            "Asc Node Longitude",
+            "Orbital Period",
+            "Perihelion Distance",
+            "Perihelion Arg",
+            "Aphelion Dist",
+            "Perihelion Time",
+            "Mean Anomaly",
+            "Mean Motion",
+            "Equinox",
+            "Hazardous"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "astronauts_db",
+      "tables": [
+        {
+          "name": "mission_info",
+          "columns": [
+            "id",
+            "selection",
+            "year_of_selection",
+            "mission_number",
+            "total_number_of_missions",
+            "occupation",
+            "year_of_mission",
+            "mission_title"
+          ]
+        },
+        {
+          "name": "mission_performance",
+          "columns": [
+            "id",
+            "ascend_shuttle",
+            "in_orbit",
+            "descend_shuttle",
+            "hours_mission",
+            "total_hrs_sum",
+            "field21",
+            "eva_hrs_mission",
+            "total_eva_hrs"
+          ]
+        },
+        {
+          "name": "personal_info",
+          "columns": [
+            "id",
+            "number",
+            "nationwide_number",
+            "name",
+            "original_name",
+            "sex",
+            "year_of_birth",
+            "nationality",
+            "military_civilian"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "isro_satellites_db",
+      "tables": [
+        {
+          "name": "basic_info",
+          "columns": [
+            "Satellite ID(Fake)",
+            "Name of Satellite, Alternate Names",
+            "Current Official Name of Satellite",
+            "Country/Org of UN Registry",
+            "Country of Operator/Owner",
+            "Operator/Owner",
+            "Users",
+            "Purpose",
+            "Detailed Purpose"
+          ]
+        },
+        {
+          "name": "launch_info",
+          "columns": [
+            "Satellite ID(Fake)",
+            "Launch Mass (kg.)",
+            "Dry Mass (kg.)",
+            "Power (watts)",
+            "Date of Launch",
+            "Expected Lifetime (yrs.)",
+            "Contractor",
+            "Country of Contractor",
+            "Launch Site",
+            "Launch Vehicle",
+            "COSPAR Number",
+            "NORAD Number",
+            "Comments"
+          ]
+        },
+        {
+          "name": "orbital_info",
+          "columns": [
+            "Satellite ID(Fake)",
+            "Class of Orbit",
+            "Type of Orbit",
+            "Longitude of GEO (degrees)",
+            "Perigee (km)",
+            "Apogee (km)",
+            "Eccentricity",
+            "Inclination (degrees)",
+            "Period (minutes)"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "natural_satellites_db",
+      "tables": [
+        {
+          "name": "satellite_identity",
+          "columns": [
+            "planet",
+            "name"
+          ]
+        },
+        {
+          "name": "satellite_physical",
+          "columns": [
+            "planet",
+            "name",
+            "gm",
+            "radius",
+            "density",
+            "magnitude",
+            "albedo"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "rockets_db",
+      "tables": [
+        {
+          "name": "rocket_general_info",
+          "columns": [
+            "Name",
+            "Cmp",
+            "Wiki",
+            "Status"
+          ]
+        },
+        {
+          "name": "rocket_technical_specs",
+          "columns": [
+            "Name",
+            "Liftoff_Thrust",
+            "Payload_LEO",
+            "Stages",
+            "Strap_ons",
+            "Rocket_Height_m",
+            "Price_MUSD",
+            "Payload_GTO",
+            "Fairing_Diameter_m",
+            "Fairing_Height_m"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "space_missions_db",
+      "tables": [
+        {
+          "name": "missions",
+          "columns": [
+            "id",
+            "Organisation",
+            "Mission_Status"
+          ]
+        },
+        {
+          "name": "organizations",
+          "columns": [
+            "id",
+            "Organisation",
+            "Location"
+          ]
+        },
+        {
+          "name": "rockets",
+          "columns": [
+            "id",
+            "Organisation",
+            "Details",
+            "Rocket_Status",
+            "Price"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "spacenews_db",
+      "tables": [
+        {
+          "name": "news_articles_table",
+          "columns": [
+            "id",
+            "title",
+            "url",
+            "content",
+            "postexcerpt"
+          ]
+        },
+        {
+          "name": "publishing_info",
+          "columns": [
+            "id",
+            "title",
+            "author",
+            "date"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "stars_db",
+      "tables": [
+        {
+          "name": "stars",
+          "columns": [
+            "Star_name",
+            "Distance",
+            "Mass",
+            "Radius",
+            "Luminosity"
+          ]
+        }
+      ]
+    }
+  ]
+}
